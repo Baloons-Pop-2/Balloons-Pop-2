@@ -4,79 +4,108 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 
-//niamam obfuskator i zatova sym cepil na ryka, kojto mu se padne, da ne me tyrsi, zaminavam v cuzbina v kurmandirovka
 namespace BalloonsPops
 {
-    public class igra
+    public class Game
     {
-        const int shirina = 5;
-        const int length = 10;
+        const int Rows = 5;
+        const int Cols = 10;
+        const string WelcomeMessage = "Welcome to “Balloons Pops” game. Please try to pop the balloons. Use 'top' to view the top scoreboard, 'restart' to start a new game and 'exit' to quit the game.";
+        const string EmptyCell = ".";
+        const int HighscoresMaxCount = 4;
+        const string ExitCommand = "exit";
+        const string RestartCommand = "restart";
+        const string TopCommand = "top";
 
-        private static int ost = shirina * length;
+        private static int initialBalloonsCount = Rows * Cols;
         private static int userMoves = 0;
-        private static int clearedCells = 0;
+        private static int poppedBalloons = 0;
 
-
-
-        public static string[,] _t = new string[shirina, length];
-        public static StringBuilder userInput = new StringBuilder();
+        private static string[,] board = new string[Rows, Cols];
+        private static StringBuilder userInput = new StringBuilder();
         private static SortedDictionary<int, string> statistics = new SortedDictionary<int, string>();
 
         public static void Start()
         {
-            Console.WriteLine("Welcome to “Balloons Pops” game. Please try to pop the balloons. Use 'top' to view the top scoreboard, 'restart' to start a new game and 'exit' to quit the game.");
-            ost = shirina * length;
+            Console.WriteLine(WelcomeMessage);
+            initialBalloonsCount = Rows * Cols;
             userMoves = 0;
 
-
-            clearedCells = 0;
-            CreateTable();
+            poppedBalloons = 0;
+            CreateBoard();
             PrintTable();
-            GameLogic(userInput);
+            while (true)
+            {
+                GameLogic(userInput);
+            }
         }
 
-        public static void CreateTable()
+        public static void CreateBoard()
         {
-            for (int i = 0; i < shirina; i++)
+            for (int row = 0; row < Rows; row++)
             {
-                for (int j = 0; j < length; j++)
+                for (int col = 0; col < Cols; col++)
                 {
-                    _t[i, j] = RandomGenerator.GetRandomInt();
+                    board[row, col] = RandomGenerator.GetRandomInt();
                 }
             }
         }
+
         public static void PrintTable()
         {
-            Console.WriteLine("    0 1 2 3 4 5 6 7 8 9");
-            Console.WriteLine("   ---------------------");
+            StringBuilder output = new StringBuilder();
+            string leftPadding = new String(' ', 4);
 
-            for (int i = 0; i < shirina; i++)
+            output.Append(leftPadding);
+            for (int col = 0; col < Cols; col++)
             {
-                Console.Write(i + " | ");
-
-                for (int j = 0; j < length; j++)
-                {
-                    Console.Write(_t[i, j] + " ");
-                }
-                Console.Write("| ");
-                Console.WriteLine();
+                output.Append(col + " ");
             }
 
-            Console.WriteLine("   ---------------------");
+            output.AppendLine();
+            string separator = leftPadding + new string('-', 21);
+            output.AppendLine(separator);
+
+            for (int row = 0; row < Rows; row++)
+            {
+                output.Append(row + " | ");
+
+                for (int col = 0; col < Cols; col++)
+                {
+                    output.Append(board[row, col] + " ");
+                }
+                output.AppendLine("| ");
+            }
+
+            output.AppendLine(separator);
+
+            Console.WriteLine(output);
         }
         public static void GameLogic(StringBuilder userInput)
         {
             PlayGame();
             userMoves++;
             userInput.Clear();
-            GameLogic(userInput);
-
-
         }
-        private static bool IsLegalMove(int i, int j)
+
+        private static bool IsInRange(int row, int col)
         {
-            if ((i < 0) || (j < 0) || (j > length - 1) || (i > shirina - 1)) return false;
-            else return (_t[i, j] != ".");
+            bool rowIsInRange = row >= 0 && row < Rows;
+            bool colIsInRange = col >= 0 && col < Cols;
+
+            return rowIsInRange && colIsInRange;
+        }
+
+        private static bool IsLegalMove(int row, int col)
+        {
+            if (!IsInRange(row, col))
+            {
+                return false;
+            }
+            else
+            {
+                return board[row, col] != EmptyCell;
+            }
         }
 
         private static void InvalidInput()
@@ -91,8 +120,6 @@ namespace BalloonsPops
             Console.WriteLine("Illegal move: cannot pop missing ballon!");
             userInput.Clear();
             GameLogic(userInput);
-
-
         }
 
         private static void ShowStatistics()
@@ -105,14 +132,12 @@ namespace BalloonsPops
             Console.WriteLine("Good Bye");
             Thread.Sleep(1000);
             Console.WriteLine(userMoves.ToString());
-            Console.WriteLine(ost.ToString());
+            Console.WriteLine(initialBalloonsCount.ToString());
             Environment.Exit(0);
         }
 
         private static void Restart()
         {
-
-
             Start();
         }
 
@@ -125,7 +150,7 @@ namespace BalloonsPops
             }
             else
             {
-                Console.Write("opal;aaaaaaaa! You popped all baloons in " + userMoves + " moves."
+                Console.Write("You popped all baloons in " + userMoves + " moves."
                                  + "Please enter your name for the top scoreboard:");
                 userInput.Append(Console.ReadLine());
                 statistics.Add(userMoves, userInput.ToString());
@@ -137,103 +162,127 @@ namespace BalloonsPops
 
         private static void PrintTheScoreBoard()
         {
-            int p = 0;
-
-
+            int position = 0;
 
             Console.WriteLine("Scoreboard:");
-            foreach (KeyValuePair<int, string> s in statistics)
+            foreach (KeyValuePair<int, string> stat in statistics)
             {
-                if (p == 4) break;
+                if (position == HighscoresMaxCount)
+                {
+                    break;
+                }
                 else
                 {
-                    p++;
-                    Console.WriteLine("{0}. {1} --> {2} moves", p, s.Value, s.Key);
+                    position++;
+                    Console.WriteLine("{0}. {1} --> {2} moves", position, stat.Value, stat.Key);
                 }
             }
         }
+
+        private static void ProcessInput()
+        {
+            ReadTheIput();
+            string inputCommand = userInput.ToString();
+
+            if (userInput.ToString() == string.Empty)
+            {
+                InvalidInput();
+            }
+            else if (userInput.ToString() == TopCommand)
+            {
+                ShowStatistics();
+                userInput.Clear();
+                ProcessInput();
+            }
+            else if (userInput.ToString() == RestartCommand)
+            {
+                userInput.Clear();
+                Restart();
+            }
+            else if (userInput.ToString() == ExitCommand)
+            {
+                Exit();
+            }
+        }
+
         private static void PlayGame()
         {
-            int i = -1;
-            int j = -1;
-
-        Play: ReadTheIput();
-
-            string hop = userInput.ToString();
-
-            if (userInput.ToString() == "") InvalidInput();
-            if (userInput.ToString() == "top") { ShowStatistics(); userInput.Clear(); goto Play; }
-            if (userInput.ToString() == "restart") { userInput.Clear(); Restart(); }
-            if (userInput.ToString() == "exit") Exit();
+            ProcessInput();
 
             string activeCell;
-            userInput.Replace(" ", "");
+            int row = -1;
+            int col = -1;
+            int[] rowAndCol = userInput.ToString().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
             try
             {
-                i = Int32.Parse(userInput.ToString()) / 10;
-                j = Int32.Parse(userInput.ToString()) % 10;
+                row = rowAndCol[0];
+                col = rowAndCol[1];
             }
             catch (Exception)
             {
                 InvalidInput();
             }
-            if (IsLegalMove(i, j))
+
+            if (IsLegalMove(row, col))
             {
-                activeCell = _t[i, j];
-                RemoveAllBaloons(i, j, activeCell);
+                activeCell = board[row, col];
+                RemoveAllBaloons(row, col, activeCell);
             }
             else InvalidMove(); ClearEmptyCells(); PrintTable();
         }
-        private static void RemoveAllBaloons(int i, int j, string activeCell)
+        private static void RemoveAllBaloons(int row, int col, string currentCell)
         {
-            if ((i >= 0) && (i <= 4) && (j <= 9) && (j >= 0) && (_t[i, j] == activeCell))
+            if (IsInRange(row, col) && (board[row, col] == currentCell))
             {
-                _t[i, j] = ".";
-                clearedCells++;
+                board[row, col] = EmptyCell;
+                poppedBalloons++;
                 //Up
-                RemoveAllBaloons(i - 1, j, activeCell);
+                RemoveAllBaloons(row - 1, col, currentCell);
                 //Down
-                RemoveAllBaloons(i + 1, j, activeCell);
+                RemoveAllBaloons(row + 1, col, currentCell);
                 //Left
-                RemoveAllBaloons(i, j + 1, activeCell);
+                RemoveAllBaloons(row, col + 1, currentCell);
                 //Right
-                RemoveAllBaloons(i, j - 1, activeCell);
+                RemoveAllBaloons(row, col - 1, currentCell);
             }
             else
             {
-                ost -= clearedCells;
-                clearedCells = 0;
+                initialBalloonsCount -= poppedBalloons;
+                poppedBalloons = 0;
                 return;
             }
         }
 
         private static void ClearEmptyCells()
         {
-            int i;
-            int j;
-            Queue<string> temp = new Queue<string>();
-            for (j = length - 1; j >= 0; j--)
+            int row;
+            int col;
+
+            Queue<string> baloonsToPop = new Queue<string>();
+            for (col = Cols - 1; col >= 0; col--)
             {
-                for (i = shirina - 1; i >= 0; i--)
+                for (row = Rows - 1; row >= 0; row--)
                 {
-                    if (_t[i, j] != ".")
+                    if (board[row, col] != EmptyCell)
                     {
-                        temp.Enqueue(_t[i, j]);
-                        _t[i, j] = ".";
+                        baloonsToPop.Enqueue(board[row, col]);
+                        board[row, col] = EmptyCell;
                     }
                 }
-                i = 4;
-                while (temp.Count > 0)
+
+                row = Rows - 1;
+                while (baloonsToPop.Count > 0)
                 {
-                    _t[i, j] = temp.Dequeue();
-                    i--;
+                    board[row, col] = baloonsToPop.Dequeue();
+                    row--;
                 }
-                temp.Clear();
+
+                baloonsToPop.Clear();
             }
         }
         private static bool IsFinished()
         {
-            return (ost == 0);
+            return initialBalloonsCount == 0;
         }
     }
 }
