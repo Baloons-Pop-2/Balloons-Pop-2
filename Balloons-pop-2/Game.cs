@@ -10,7 +10,7 @@ namespace BalloonsPops
     {
         const int Rows = 5;
         const int Cols = 10;
-        const string WelcomeMessage = "Welcome to “Balloons Pops” game. Please try to pop the balloons. Use 'top' to view the top scoreboard, 'restart' to start a new game and 'exit' to quit the game.";
+        const string WelcomeMessage = "Welcome to \"Balloons Pops\" game. Please try to pop the balloons. Use 'top' to view the top scoreboard, 'restart' to start a new game and 'exit' to quit the game.";
         const string EmptyCell = ".";
         const int HighscoresMaxCount = 4;
         const string ExitCommand = "exit";
@@ -228,7 +228,12 @@ namespace BalloonsPops
                 activeCell = board[row, col];
                 RemoveAllBaloons(row, col, activeCell);
             }
-            else InvalidMove(); ClearEmptyCells(); PrintTable();
+            else
+            {
+                InvalidMove();
+                ClearEmptyCells();
+                PrintTable();
+            }
         }
         private static void RemoveAllBaloons(int row, int col, string currentCell)
         {
@@ -236,13 +241,13 @@ namespace BalloonsPops
             {
                 board[row, col] = EmptyCell;
                 poppedBalloons++;
-                //Up
+                // Up
                 RemoveAllBaloons(row - 1, col, currentCell);
-                //Down
+                // Down
                 RemoveAllBaloons(row + 1, col, currentCell);
-                //Left
+                // Left
                 RemoveAllBaloons(row, col + 1, currentCell);
-                //Right
+                // Right
                 RemoveAllBaloons(row, col - 1, currentCell);
             }
             else
@@ -280,6 +285,7 @@ namespace BalloonsPops
                 baloonsToPop.Clear();
             }
         }
+
         private static bool IsFinished()
         {
             return initialBalloonsCount == 0;
