@@ -231,9 +231,10 @@ namespace BalloonsPops
             else
             {
                 InvalidMove();
-                ClearEmptyCells();
-                PrintTable();
             }
+
+            ClearEmptyCells();
+            PrintTable();
         }
         private static void RemoveAllBaloons(int row, int col, string currentCell)
         {
