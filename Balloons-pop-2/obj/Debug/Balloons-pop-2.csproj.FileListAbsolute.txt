@@ -10,3 +10,15 @@ C:\Users\HOMEX\Dropbox\HQC-Teamwork\Baloons-Pop-2\Balloons-pop-2\obj\Debug\Ballo
 C:\Users\HOMEX\Dropbox\HQC-Teamwork\Baloons-Pop-2\Balloons-pop-2\bin\Debug\Balloons-pop-2.exe
 C:\Users\HOMEX\Dropbox\HQC-Teamwork\Baloons-Pop-2\Balloons-pop-2\bin\Debug\Balloons-pop-2.pdb
 C:\Users\HOMEX\Dropbox\HQC-Teamwork\Baloons-Pop-2\Balloons-pop-2\obj\Debug\Balloons-pop-2.csprojResolveAssemblyReference.cache
+C:\Users\100X\Dropbox\HQC-Teamwork\Baloons-Pop-2\Balloons-pop-2\bin\Debug\Balloons-pop-2.exe.config
+C:\Users\100X\Dropbox\HQC-Teamwork\Baloons-Pop-2\Balloons-pop-2\obj\Debug\Balloons-pop-2.exe
+C:\Users\100X\Dropbox\HQC-Teamwork\Baloons-Pop-2\Balloons-pop-2\obj\Debug\Balloons-pop-2.pdb
+C:\Users\100X\Dropbox\HQC-Teamwork\Baloons-Pop-2\Balloons-pop-2\bin\Debug\Balloons-pop-2.exe
+C:\Users\100X\Dropbox\HQC-Teamwork\Baloons-Pop-2\Balloons-pop-2\bin\Debug\Balloons-pop-2.pdb
+C:\Users\100X\Dropbox\HQC-Teamwork\Baloons-Pop-2\Balloons-pop-2\obj\Debug\Balloons-pop-2.csprojResolveAssemblyReference.cache
+C:\Users\HomeTr\Dropbox\HQC-Teamwork\Baloons-Pop-2\Balloons-pop-2\bin\Debug\Balloons-pop-2.exe.config
+C:\Users\HomeTr\Dropbox\HQC-Teamwork\Baloons-Pop-2\Balloons-pop-2\obj\Debug\Balloons-pop-2.exe
+C:\Users\HomeTr\Dropbox\HQC-Teamwork\Baloons-Pop-2\Balloons-pop-2\obj\Debug\Balloons-pop-2.pdb
+C:\Users\HomeTr\Dropbox\HQC-Teamwork\Baloons-Pop-2\Balloons-pop-2\obj\Debug\Balloons-pop-2.csprojResolveAssemblyReference.cache
+C:\Users\HomeTr\Dropbox\HQC-Teamwork\Baloons-Pop-2\Balloons-pop-2\bin\Debug\Balloons-pop-2.exe
+C:\Users\HomeTr\Dropbox\HQC-Teamwork\Baloons-Pop-2\Balloons-pop-2\bin\Debug\Balloons-pop-2.pdb

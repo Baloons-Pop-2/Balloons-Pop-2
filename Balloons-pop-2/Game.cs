@@ -11,7 +11,7 @@ namespace BalloonsPops
         const int Rows = 5;
         const int Cols = 10;
         const string WelcomeMessage = "Welcome to \"Balloons Pops\" game. Please try to pop the balloons. Use 'top' to view the top scoreboard, 'restart' to start a new game and 'exit' to quit the game.";
-        const string EmptyCell = ".";
+        const Balloon EmptyCell = null;
         const int HighscoresMaxCount = 4;
         const string ExitCommand = "exit";
         const string RestartCommand = "restart";
@@ -21,7 +21,7 @@ namespace BalloonsPops
         private static int userMoves = 0;
         private static int poppedBalloons = 0;
 
-        private static string[,] board = new string[Rows, Cols];
+        private static Balloon[,] board = new Balloon[Rows, Cols];
         private static StringBuilder userInput = new StringBuilder();
         private static SortedDictionary<int, string> statistics = new SortedDictionary<int, string>();
 
@@ -42,11 +42,13 @@ namespace BalloonsPops
 
         public static void CreateBoard()
         {
+            int randomValue = 0;
             for (int row = 0; row < Rows; row++)
             {
                 for (int col = 0; col < Cols; col++)
                 {
-                    board[row, col] = RandomGenerator.GetRandomInt();
+                    randomValue = int.Parse(RandomGenerator.GetRandomInt());
+                    board[row, col] = new Balloon(randomValue);
                 }
             }
         }
@@ -72,7 +74,12 @@ namespace BalloonsPops
 
                 for (int col = 0; col < Cols; col++)
                 {
-                    output.Append(board[row, col] + " ");
+                    if (board[row, col] == null)
+                    {
+                        output.Append(". ");
+                        continue;
+                    }
+                    output.Append(board[row, col].Value + " ");
                 }
                 output.AppendLine("| ");
             }
@@ -81,6 +88,7 @@ namespace BalloonsPops
 
             Console.WriteLine(output);
         }
+
         public static void GameLogic(StringBuilder userInput)
         {
             PlayGame();
@@ -150,7 +158,7 @@ namespace BalloonsPops
             }
             else
             {
-                Console.Write("You popped all baloons in " + userMoves + " moves."
+                Console.Write(" You popped all baloons in " + userMoves + " moves."
                                  + "Please enter your name for the top scoreboard:");
                 userInput.Append(Console.ReadLine());
                 statistics.Add(userMoves, userInput.ToString());
@@ -209,7 +217,7 @@ namespace BalloonsPops
         {
             ProcessInput();
 
-            string activeCell;
+            int activeCell;
             int row = -1;
             int col = -1;
             int[] rowAndCol = userInput.ToString().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
@@ -225,7 +233,7 @@ namespace BalloonsPops
 
             if (IsLegalMove(row, col))
             {
-                activeCell = board[row, col];
+                activeCell = board[row, col].Value;
                 RemoveAllBaloons(row, col, activeCell);
             }
             else
@@ -236,15 +244,19 @@ namespace BalloonsPops
             ClearEmptyCells();
             PrintTable();
         }
-        private static void RemoveAllBaloons(int row, int col, string currentCell)
+        private static void RemoveAllBaloons(int row, int col, int currentCell)
         {
-            if (IsInRange(row, col) && (board[row, col] == currentCell))
+            if (
+                IsInRange(row, col) &&
+                (board[row, col] != null) &&
+                (board[row, col].Value == currentCell)
+            )
             {
                 board[row, col] = EmptyCell;
                 poppedBalloons++;
                 // Up
                 RemoveAllBaloons(row - 1, col, currentCell);
-                // Down
+                // Down 
                 RemoveAllBaloons(row + 1, col, currentCell);
                 // Left
                 RemoveAllBaloons(row, col + 1, currentCell);
@@ -264,7 +276,7 @@ namespace BalloonsPops
             int row;
             int col;
 
-            Queue<string> baloonsToPop = new Queue<string>();
+            Queue<Balloon> baloonsToPop = new Queue<Balloon>();
             for (col = Cols - 1; col >= 0; col--)
             {
                 for (row = Rows - 1; row >= 0; row--)
