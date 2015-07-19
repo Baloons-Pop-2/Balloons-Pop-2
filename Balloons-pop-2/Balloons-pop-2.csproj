@@ -7,7 +7,7 @@
     <ProjectGuid>{105A02C2-7E36-4205-B0B3-86A7F522EEAE}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Balloons_pop_2</RootNamespace>
+    <RootNamespace>BalloonsPops</RootNamespace>
     <AssemblyName>Balloons-pop-2</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -41,10 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Balloon.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomGenerator.cs" />
+    <Compile Include="TraversalPattern.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
