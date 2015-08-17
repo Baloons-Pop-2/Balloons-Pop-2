@@ -244,6 +244,7 @@ namespace BalloonsPops
             ClearEmptyCells();
             PrintTable();
         }
+
         private static void RemoveAllBaloons(int row, int col, int currentCell)
         {
             if (
