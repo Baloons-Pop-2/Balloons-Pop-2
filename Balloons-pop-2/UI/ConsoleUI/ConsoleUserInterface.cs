@@ -3,16 +3,16 @@ using BalloonsPops.UI.InputHandler;
 
 namespace BalloonsPops.UI.ConsoleUI
 {
-    class ConsoleUserInterface : IUserInterface
+    public class ConsoleUserInterface : IUserInterface
     {
-        public IPicasso Drawer
+        public ConsoleUserInterface()
         {
-            get { throw new System.NotImplementedException(); }
+            this.Drawer = new ConsoleDrawer();
+            this.Reader = new ConsoleInputHandler();
         }
 
-        public IInputHandler Reader
-        {
-            get { throw new System.NotImplementedException(); }
-        }
+        public IPicasso Drawer { get; private set; }
+
+        public IInputHandler Reader { get; private set; }
     }
 }
