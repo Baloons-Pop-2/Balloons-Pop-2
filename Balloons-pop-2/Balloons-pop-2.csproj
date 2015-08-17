@@ -47,9 +47,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomGenerator.cs" />
     <Compile Include="TraversalPattern.cs" />
+    <Compile Include="UI\ConsoleUI\ConsoleUserInterface.cs" />
+    <Compile Include="UI\Drawer\IPicasso.cs" />
+    <Compile Include="UI\InputHandler\IInputHandler.cs" />
+    <Compile Include="UI\IUserInterface.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Commands\" />
+    <Folder Include="Engine\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
