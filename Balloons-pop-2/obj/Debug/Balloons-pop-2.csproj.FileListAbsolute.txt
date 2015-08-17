@@ -22,3 +22,9 @@ C:\Users\HomeTr\Dropbox\HQC-Teamwork\Baloons-Pop-2\Balloons-pop-2\obj\Debug\Ball
 C:\Users\HomeTr\Dropbox\HQC-Teamwork\Baloons-Pop-2\Balloons-pop-2\obj\Debug\Balloons-pop-2.csprojResolveAssemblyReference.cache
 C:\Users\HomeTr\Dropbox\HQC-Teamwork\Baloons-Pop-2\Balloons-pop-2\bin\Debug\Balloons-pop-2.exe
 C:\Users\HomeTr\Dropbox\HQC-Teamwork\Baloons-Pop-2\Balloons-pop-2\bin\Debug\Balloons-pop-2.pdb
+C:\Users\Pete\Documents\GitHub\Baloons-Pop-2\Balloons-pop-2\bin\Debug\Balloons-pop-2.exe.config
+C:\Users\Pete\Documents\GitHub\Baloons-Pop-2\Balloons-pop-2\obj\Debug\Balloons-pop-2.exe
+C:\Users\Pete\Documents\GitHub\Baloons-Pop-2\Balloons-pop-2\obj\Debug\Balloons-pop-2.pdb
+C:\Users\Pete\Documents\GitHub\Baloons-Pop-2\Balloons-pop-2\bin\Debug\Balloons-pop-2.exe
+C:\Users\Pete\Documents\GitHub\Baloons-Pop-2\Balloons-pop-2\bin\Debug\Balloons-pop-2.pdb
+C:\Users\Pete\Documents\GitHub\Baloons-Pop-2\Balloons-pop-2\obj\Debug\Balloons-pop-2.csprojResolveAssemblyReference.cache
