@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace BalloonsPops
 {
@@ -68,6 +69,11 @@ namespace BalloonsPops
             }
         }
 
+        public void Reset()
+        {
+            this.Fill();
+        }
+
         private void Fill()
         {
             int randomValue;
@@ -81,6 +87,42 @@ namespace BalloonsPops
 
                 }
             }
+        }
+
+        public override string ToString()
+        {
+            StringBuilder output = new StringBuilder();
+            string leftPadding = new String(' ', 4);
+
+            output.Append(leftPadding);
+            for (int col = 0; col < this.Cols; col++)
+            {
+                output.Append(col + " ");
+            }
+
+            output.AppendLine();
+            string separator = leftPadding + new string('-', 21);
+            output.AppendLine(separator);
+
+            for (int row = 0; row < this.Rows; row++)
+            {
+                output.Append(row + " | ");
+
+                for (int col = 0; col < this.Cols; col++)
+                {
+                    if (board[row, col] == null)
+                    {
+                        output.Append(". ");
+                        continue;
+                    }
+                    output.Append(board[row, col].Value + " ");
+                }
+                output.AppendLine("| ");
+            }
+
+            output.AppendLine(separator);
+            
+            return output.ToString();
         }
     }
 }
