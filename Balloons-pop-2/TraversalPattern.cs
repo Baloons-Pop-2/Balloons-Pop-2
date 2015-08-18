@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BalloonsPops
+﻿namespace BalloonsPops
 {
-    public enum TraversalPattern { Default }
+    public enum TraversalPattern
+    {
+        Default
+    }
 }
