@@ -21,7 +21,8 @@ namespace BalloonsPops
         private static int userMoves = 0;
         private static int poppedBalloons = 0;
 
-        private static Balloon[,] board = new Balloon[Rows, Cols];
+        //private static Balloon[,] bboard = new Balloon[Rows, Cols];
+        private static Board board = new Board(Rows, Cols);
         private static StringBuilder userInput = new StringBuilder();
         private static SortedDictionary<int, string> statistics = new SortedDictionary<int, string>();
 
@@ -32,7 +33,8 @@ namespace BalloonsPops
             userMoves = 0;
 
             poppedBalloons = 0;
-            CreateBoard();
+            
+            //CreateBoard();
             PrintTable();
             while (true)
             {
@@ -40,7 +42,7 @@ namespace BalloonsPops
             }
         }
 
-        public static void CreateBoard()
+       /* public static void CreateBoard()
         {
             int randomValue = 0;
             for (int row = 0; row < Rows; row++)
@@ -48,10 +50,11 @@ namespace BalloonsPops
                 for (int col = 0; col < Cols; col++)
                 {
                     randomValue = int.Parse(RandomGenerator.GetRandomInt());
-                    board[row, col] = new Balloon(randomValue);
+                    bboard[row, col] = new Balloon(randomValue);
                 }
             }
         }
+        */
 
         public static void PrintTable()
         {
@@ -158,8 +161,8 @@ namespace BalloonsPops
             }
             else
             {
-                Console.Write(" You popped all baloons in " + userMoves + " moves."
-                                 + "Please enter your name for the top scoreboard:");
+                Console.Write(" You popped all baloons in " + userMoves + " moves." + 
+                    "Please enter your name for the top scoreboard:");
                 userInput.Append(Console.ReadLine());
                 statistics.Add(userMoves, userInput.ToString());
                 PrintTheScoreBoard();
@@ -249,7 +252,7 @@ namespace BalloonsPops
         {
             if (
                 IsInRange(row, col) &&
-                (board[row, col] != null) &&
+                (board[row, col] != EmptyCell) &&
                 (board[row, col].Value == currentCell)
             )
             {
