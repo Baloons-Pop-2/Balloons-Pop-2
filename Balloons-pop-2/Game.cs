@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading;
 
 namespace BalloonsPops
@@ -35,46 +34,7 @@ namespace BalloonsPops
                 MakeMove();
             }
         }
-
-     /*   public static void PrintTable()
-        {
-            StringBuilder output = new StringBuilder();
-            string leftPadding = new String(' ', 4);
-
-            output.Append(leftPadding);
-            for (int col = 0; col < Cols; col++)
-            {
-                output.Append(col + " ");
-            }
-
-            output.AppendLine();
-            string separator = leftPadding + new string('-', 21);
-            output.AppendLine(separator);
-
-            for (int row = 0; row < Rows; row++)
-            {
-                output.Append(row + " | ");
-
-                for (int col = 0; col < Cols; col++)
-                {
-                    if (board[row, col] == null)
-                    {
-                        output.Append(". ");
-                        continue;
-                    }
-                    output.Append(board[row, col].Value + " ");
-                }
-                output.AppendLine("| ");
-            }
-
-            output.AppendLine(separator);
-
-            Console.SetCursorPosition(0, 5);
-            Console.WriteLine(output);
-        }
-
-    */
-
+        
         public void MakeMove()
         {
             Console.Write(MessageStrings.EnterInput);
@@ -214,22 +174,17 @@ namespace BalloonsPops
 
         private static void RemoveAllBaloons(int row, int col, int currentCell)
         {
-            if (
-                IsInRange(row, col) &&
-                (board[row, col] != EmptyCell) &&
-                (board[row, col].Value == currentCell)
-            )
+            if (IsInRange(row, col) &&
+                board[row, col] != EmptyCell &&
+                board[row, col].Value == currentCell)
             {
                 board[row, col] = EmptyCell;
                 poppedBalloons++;
-                // Up
-                RemoveAllBaloons(row - 1, col, currentCell);
-                // Down 
-                RemoveAllBaloons(row + 1, col, currentCell);
-                // Left
-                RemoveAllBaloons(row, col + 1, currentCell);
-                // Right
-                RemoveAllBaloons(row, col - 1, currentCell);
+
+                RemoveAllBaloons(row - 1, col, currentCell); // Up
+                RemoveAllBaloons(row + 1, col, currentCell); // Down 
+                RemoveAllBaloons(row, col + 1, currentCell); // Left
+                RemoveAllBaloons(row, col - 1, currentCell); // Right
             }
             else
             {
