@@ -10,51 +10,31 @@ namespace BalloonsPops
     {
         const int Rows = 5;
         const int Cols = 10;
-        const string WelcomeMessage = "Welcome to \"Balloons Pops\" game. Please try to pop the balloons. Use 'top' to view the top scoreboard, 'restart' to start a new game and 'exit' to quit the game.";
         const Balloon EmptyCell = null;
         const int HighscoresMaxCount = 4;
-        const string ExitCommand = "exit";
-        const string RestartCommand = "restart";
-        const string TopCommand = "top";
 
         private static int initialBalloonsCount = Rows * Cols;
         private static int userMoves = 0;
         private static int poppedBalloons = 0;
-
-        //private static Balloon[,] bboard = new Balloon[Rows, Cols];
+        
         private static Board board = new Board(Rows, Cols);
         private static StringBuilder userInput = new StringBuilder();
         private static SortedDictionary<int, string> statistics = new SortedDictionary<int, string>();
 
         public static void Start()
         {
-            Console.WriteLine(WelcomeMessage);
+            Console.WriteLine(MessageStrings.Welcome);
             initialBalloonsCount = Rows * Cols;
             userMoves = 0;
 
             poppedBalloons = 0;
             
-            //CreateBoard();
             PrintTable();
             while (true)
             {
                 GameLogic(userInput);
             }
         }
-
-       /* public static void CreateBoard()
-        {
-            int randomValue = 0;
-            for (int row = 0; row < Rows; row++)
-            {
-                for (int col = 0; col < Cols; col++)
-                {
-                    randomValue = int.Parse(RandomGenerator.GetRandomInt());
-                    bboard[row, col] = new Balloon(randomValue);
-                }
-            }
-        }
-        */
 
         public static void PrintTable()
         {
@@ -121,14 +101,14 @@ namespace BalloonsPops
 
         private static void InvalidInput()
         {
-            Console.WriteLine("Invalid move or command");
+            Console.WriteLine(MessageStrings.IvalidMoveOrCommand);
             userInput.Clear();
             GameLogic(userInput);
         }
 
         private static void InvalidMove()
         {
-            Console.WriteLine("Illegal move: cannot pop missing ballon!");
+            Console.WriteLine(MessageStrings.MissingBalloonPop);
             userInput.Clear();
             GameLogic(userInput);
         }
@@ -140,7 +120,7 @@ namespace BalloonsPops
 
         private static void Exit()
         {
-            Console.WriteLine("Good Bye");
+            Console.WriteLine(MessageStrings.GoodBye);
             Thread.Sleep(1000);
             Console.WriteLine(userMoves.ToString());
             Console.WriteLine(initialBalloonsCount.ToString());
@@ -156,7 +136,7 @@ namespace BalloonsPops
         {
             if (!IsFinished())
             {
-                Console.Write("Enter a row and column: ");
+                Console.Write(MessageStrings.EnterInput);
                 userInput.Append(Console.ReadLine());
             }
             else
@@ -175,7 +155,7 @@ namespace BalloonsPops
         {
             int position = 0;
 
-            Console.WriteLine("Scoreboard:");
+            Console.WriteLine("Scoreboard: ");
             foreach (KeyValuePair<int, string> stat in statistics)
             {
                 if (position == HighscoresMaxCount)
@@ -199,18 +179,18 @@ namespace BalloonsPops
             {
                 InvalidInput();
             }
-            else if (userInput.ToString() == TopCommand)
+            else if (userInput.ToString() == CommandStrings.Top)
             {
                 ShowStatistics();
                 userInput.Clear();
                 ProcessInput();
             }
-            else if (userInput.ToString() == RestartCommand)
+            else if (userInput.ToString() == CommandStrings.Restart)
             {
                 userInput.Clear();
                 Restart();
             }
-            else if (userInput.ToString() == ExitCommand)
+            else if (userInput.ToString() == CommandStrings.Exit)
             {
                 Exit();
             }
