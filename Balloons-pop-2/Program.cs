@@ -9,9 +9,10 @@ namespace BalloonsPops
         {
             var consoleUi = new ConsoleUserInterface();
             var engine = new GameEngine(consoleUi);
+            var game = new Game();
 
             // engine.Start();
-            Game.Start();
+            game.Start();
         }
     }
 }
