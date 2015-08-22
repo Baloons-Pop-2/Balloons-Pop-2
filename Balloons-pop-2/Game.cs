@@ -18,6 +18,7 @@ namespace BalloonsPops
         
         private static Board board = new Board(Rows, Cols);
         private static SortedDictionary<int, string> statistics = new SortedDictionary<int, string>();
+        private static BalloonPopper bp = new BalloonPopper(board);
 
         public void Start()
         {
@@ -62,8 +63,9 @@ namespace BalloonsPops
 
             if (IsLegalMove(row, col))
             {
-                activeCell = board[row, col].Value;
-                RemoveAllBaloons(row, col, activeCell);
+                bp.Pop(row, col);
+                //activeCell = board[row, col].Value;
+                //RemoveAllBaloons(row, col, activeCell);
                 userMoves++;
             }
             else
@@ -71,7 +73,7 @@ namespace BalloonsPops
                 ManageInvalidMove();
             }
 
-            ClearEmptyCells();
+            //ClearEmptyCells();
         }
 
         private void Update()
@@ -190,7 +192,6 @@ namespace BalloonsPops
             {
                 initialBalloonsCount -= poppedBalloons;
                 poppedBalloons = 0;
-                return;
             }
         }
 

@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Balloon.cs" />
+    <Compile Include="BalloonPopper.cs" />
     <Compile Include="Board.cs" />
     <Compile Include="CommandStrings.cs" />
     <Compile Include="Commands\ExitCommand.cs" />
