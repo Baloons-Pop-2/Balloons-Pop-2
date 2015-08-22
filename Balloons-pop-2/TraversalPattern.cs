@@ -2,6 +2,7 @@
 {
     public enum TraversalPattern
     {
-        Default
+        Default = 1,
+        Cross = 2
     }
 }

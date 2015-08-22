@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Balloon.cs" />
+    <Compile Include="BalloonPopManager.cs" />
     <Compile Include="Board.cs" />
     <Compile Include="CommandStrings.cs" />
     <Compile Include="Commands\ExitCommand.cs" />
@@ -56,6 +57,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RandomGenerator.cs" />
     <Compile Include="TraversalPattern.cs" />
+    <Compile Include="Traversals\BfsPopper.cs" />
+    <Compile Include="Traversals\ITraversalPopper.cs" />
+    <Compile Include="Traversals\TraversalPopper.cs" />
+    <Compile Include="Traversals\TraversalPopperFactory.cs" />
     <Compile Include="UI\ConsoleUI\ConsoleDrawer.cs" />
     <Compile Include="UI\ConsoleUI\ConsoleInputHandler.cs" />
     <Compile Include="UI\ConsoleUI\ConsoleUserInterface.cs" />

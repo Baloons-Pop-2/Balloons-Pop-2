@@ -69,9 +69,44 @@ namespace BalloonsPops
             }
         }
 
+        public int UnpoppedBalloonsCount
+        {
+            get
+            {
+                int balloonsCount = 0;
+
+                for (int row = 0; row < this.Rows; row++)
+                {
+                    for (int col = 0; col < this.Cols; col++)
+                    {
+                        if (this[row, col] != null)
+                        {
+                            balloonsCount++;
+                        }
+                    }
+                }
+
+                return balloonsCount;
+            }
+        }
+
         public void Reset()
         {
             this.Fill();
+        }
+
+        public bool IsValidPop(int row, int col)
+        {
+            bool rowIsInRange = 0 <= row && row < this.Rows;
+            bool colIsInRange = 0 <= col && col < this.Cols;
+
+            if (rowIsInRange && colIsInRange)
+            {
+                bool balloonExists = this[row, col] != null;
+                return balloonExists;
+            }
+
+            return false;
         }
 
         private void Fill()
@@ -92,7 +127,7 @@ namespace BalloonsPops
         public override string ToString()
         {
             StringBuilder output = new StringBuilder();
-            string leftPadding = new String(' ', 4);
+            string leftPadding = new string(' ', 4);
 
             output.Append(leftPadding);
             for (int col = 0; col < this.Cols; col++)
