@@ -10,7 +10,7 @@ namespace BalloonsPops
     {
         private const Balloon EmptyCell = null;
         private Board board;
-        private Dictionary<TraversalPattern, Action<int, int, Board>> traversalPatterns;
+        private Dictionary<TraversalPattern, Action<int, int, int>> traversalPatterns;
 
         public BalloonPopper(Board board)
         {
@@ -20,7 +20,12 @@ namespace BalloonsPops
             }
 
             this.board = board;
+
+            this.traversalPatterns = new Dictionary<TraversalPattern, Action<int, int, int>>();
+            InitializeTraversals();
         }
+
+        
 
         public void Pop(int row, int col)
         {
@@ -34,11 +39,16 @@ namespace BalloonsPops
                 throw new ArgumentException("cannot pop emty balloon");
             }
 
-            RemoveAllBaloons(row, col, this.board[row, col].Value);
+            traversalPatterns[this.board[row, col].TraversalPattern](row, col, this.board[row, col].Value);
             ClearEmptyCells();
         }
 
-        private void RemoveAllBaloons(int row, int col, int currentCell)
+        private void InitializeTraversals()
+        {
+            this.traversalPatterns.Add(TraversalPattern.Default, BfsPop);
+        }
+
+        private void BfsPop(int row, int col, int currentCell)
         {
             if (this.board.IndicesAreInRange(row, col) &&
                 this.board[row, col] != EmptyCell &&
@@ -46,10 +56,10 @@ namespace BalloonsPops
             {
                 this.board[row, col] = EmptyCell;
                 
-                RemoveAllBaloons(row - 1, col, currentCell); // Up
-                RemoveAllBaloons(row + 1, col, currentCell); // Down 
-                RemoveAllBaloons(row, col + 1, currentCell); // Left
-                RemoveAllBaloons(row, col - 1, currentCell); // Right
+                BfsPop(row - 1, col, currentCell); // Up
+                BfsPop(row + 1, col, currentCell); // Down 
+                BfsPop(row, col + 1, currentCell); // Left
+                BfsPop(row, col - 1, currentCell); // Right
             }
         }
 
