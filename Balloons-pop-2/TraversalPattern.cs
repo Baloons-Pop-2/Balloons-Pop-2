@@ -2,7 +2,7 @@
 {
     public enum TraversalPattern
     {
-        Default = 0,
-        Diagonal = 1
+        Default = 1,
+        Cross = 2
     }
 }

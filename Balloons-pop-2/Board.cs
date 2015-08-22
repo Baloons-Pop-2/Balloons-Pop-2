@@ -95,12 +95,18 @@ namespace BalloonsPops
             this.Fill();
         }
 
-        public bool IndicesAreInRange(int row, int col)
+        public bool IsValidPop(int row, int col)
         {
             bool rowIsInRange = 0 <= row && row < this.Rows;
             bool colIsInRange = 0 <= col && col < this.Cols;
 
-            return rowIsInRange && colIsInRange;
+            if (rowIsInRange && colIsInRange)
+            {
+                bool balloonExists = this[row, col] != null;
+                return balloonExists;
+            }
+
+            return false;
         }
 
         private void Fill()

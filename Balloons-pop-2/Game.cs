@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Threading;
 
 namespace BalloonsPops
@@ -18,7 +19,7 @@ namespace BalloonsPops
         
         private static Board board = new Board(Rows, Cols);
         private static SortedDictionary<int, string> statistics = new SortedDictionary<int, string>();
-        private static BalloonPopper bp = new BalloonPopper(board);
+        private static BalloonPopManager popManager = new BalloonPopManager(board, new [] {TraversalPattern.Default});
 
         public void Start()
         {
@@ -61,19 +62,15 @@ namespace BalloonsPops
                 ManageInvalidInput();
             }
 
-            if (IsLegalMove(row, col))
+            if (board.IsValidPop(row, col))
             {
-                bp.Pop(row, col);
-                //activeCell = board[row, col].Value;
-                //RemoveAllBaloons(row, col, activeCell);
+                popManager.Pop(row, col);
                 userMoves++;
             }
             else
             {
                 ManageInvalidMove();
             }
-
-            //ClearEmptyCells();
         }
 
         private void Update()
@@ -100,26 +97,6 @@ namespace BalloonsPops
                 default:
                     PopBalloon(input);
                     break;
-            }
-        }
-
-        private static bool IsInRange(int row, int col)
-        {
-            bool rowIsInRange = row >= 0 && row < Rows;
-            bool colIsInRange = col >= 0 && col < Cols;
-
-            return rowIsInRange && colIsInRange;
-        }
-
-        private static bool IsLegalMove(int row, int col)
-        {
-            if (!IsInRange(row, col))
-            {
-                return false;
-            }
-            else
-            {
-                return board[row, col] != EmptyCell;
             }
         }
 
@@ -174,58 +151,9 @@ namespace BalloonsPops
             }
         }
 
-        private static void RemoveAllBaloons(int row, int col, int currentCell)
-        {
-            if (IsInRange(row, col) &&
-                board[row, col] != EmptyCell &&
-                board[row, col].Value == currentCell)
-            {
-                board[row, col] = EmptyCell;
-                poppedBalloons++;
-
-                RemoveAllBaloons(row - 1, col, currentCell); // Up
-                RemoveAllBaloons(row + 1, col, currentCell); // Down 
-                RemoveAllBaloons(row, col + 1, currentCell); // Left
-                RemoveAllBaloons(row, col - 1, currentCell); // Right
-            }
-            else
-            {
-                initialBalloonsCount -= poppedBalloons;
-                poppedBalloons = 0;
-            }
-        }
-
-        private static void ClearEmptyCells()
-        {
-            int row;
-            int col;
-
-            Queue<Balloon> baloonsToPop = new Queue<Balloon>();
-            for (col = Cols - 1; col >= 0; col--)
-            {
-                for (row = Rows - 1; row >= 0; row--)
-                {
-                    if (board[row, col] != EmptyCell)
-                    {
-                        baloonsToPop.Enqueue(board[row, col]);
-                        board[row, col] = EmptyCell;
-                    }
-                }
-
-                row = Rows - 1;
-                while (baloonsToPop.Count > 0)
-                {
-                    board[row, col] = baloonsToPop.Dequeue();
-                    row--;
-                }
-
-                baloonsToPop.Clear();
-            }
-        }
-
         private static bool IsFinished()
         {
-            return initialBalloonsCount == 0;
+            return board.UnpoppedBalloonsCount == 0;
         }
     }
 }
