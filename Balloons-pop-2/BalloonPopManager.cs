@@ -5,7 +5,7 @@ namespace BalloonsPops
     public class BalloonPopManager
     {
         private IBoard board;
-        
+
         public BalloonPopManager(IBoard board)
         {
             if (board == null)

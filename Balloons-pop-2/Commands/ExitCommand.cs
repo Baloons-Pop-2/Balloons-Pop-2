@@ -1,10 +1,12 @@
-﻿namespace BalloonsPops.Commands
+﻿using System;
+
+namespace BalloonsPops.Commands
 {
     public class ExitCommand : ICommand
     {
-        public void Execute()
+        public void Execute(CommandContext ctx)
         {
-            throw new System.NotImplementedException();
+            Environment.Exit(0);
         }
     }
 }

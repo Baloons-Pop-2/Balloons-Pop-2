@@ -5,16 +5,8 @@ namespace BalloonsPops.Commands
     public class PopBalloonCommand : ICommand
     {
         private IBoard board;
-
-        public PopBalloonCommand(IBoard board)
-        {
-            if (board == null)
-            {
-                throw new ArgumentNullException("board");
-            }
-
-            this.board = board;
-        }
+        private int activeRow;
+        private int activeCol;
 
         private void Pop(int row, int col)
         {
@@ -28,9 +20,22 @@ namespace BalloonsPops.Commands
             traversal.Pop(row, col, this.board);
         }
 
-        public void Execute()
+        public void Execute(CommandContext ctx)
         {
-             
+            if (ctx.Board == null)
+            {
+                throw new ArgumentNullException("board");
+            }
+            this.board = ctx.Board;
+
+            if (ctx.ActiveRow == null || ctx.ActiveCol == null)
+            {
+                throw new ArgumentNullException("active cell");
+            }
+            this.activeRow = ctx.ActiveRow;
+            this.activeCol = ctx.ActiveCol;
+
+            Pop(this.activeRow, this.activeCol);
         }
     }
 }

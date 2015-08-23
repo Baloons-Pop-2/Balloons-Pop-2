@@ -2,7 +2,7 @@
 {
     public class RestartCommand : ICommand
     {
-        public void Execute()
+        public void Execute(CommandContext ctx)
         {
             throw new System.NotImplementedException();
         }
