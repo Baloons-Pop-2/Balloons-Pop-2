@@ -4,7 +4,7 @@ using BalloonsPops.Traversals;
 
 namespace BalloonsPops
 {
-    public class Board
+    public class Board : IBoard
     {
         private const int MaxRowsCount = 20;
         private const int MaxColsCount = 10;

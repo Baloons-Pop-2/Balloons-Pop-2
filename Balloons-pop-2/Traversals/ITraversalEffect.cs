@@ -8,6 +8,6 @@ namespace BalloonsPops.Traversals
 {
     public interface ITraversalEffect
     {
-        void Pop(int row, int col, Board board);
+        void Pop(int row, int col, IBoard board);
     }
 }

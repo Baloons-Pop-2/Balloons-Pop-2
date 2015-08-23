@@ -50,8 +50,10 @@
     <Compile Include="Commands\PopBalloonCommand.cs" />
     <Compile Include="Commands\RestartCommand.cs" />
     <Compile Include="Commands\ShowTopScoreCommand.cs" />
-    <Compile Include="Engine\Engine.cs" />
+    <Compile Include="Engine\GameEngine.cs" />
+    <Compile Include="Engine\IGameEngine.cs" />
     <Compile Include="Game.cs" />
+    <Compile Include="IBoard.cs" />
     <Compile Include="MessageStrings.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

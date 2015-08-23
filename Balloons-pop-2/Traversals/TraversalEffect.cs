@@ -5,7 +5,7 @@ namespace BalloonsPops.Traversals
 {
     public abstract class TraversalEffect : ITraversalEffect
     {
-        public void Pop(int row, int col, Board board)
+        public void Pop(int row, int col, IBoard board)
         {
             if (board == null)
             {
@@ -19,9 +19,9 @@ namespace BalloonsPops.Traversals
             ClearEmptyCells(board);
         }
 
-        protected abstract void PopBalloons(int row, int col, Board board, int cellValue);
+        protected abstract void PopBalloons(int row, int col, IBoard board, int cellValue);
 
-        private void ClearEmptyCells(Board board)
+        private void ClearEmptyCells(IBoard board)
         {
             int row;
             int col;

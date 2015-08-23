@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using BalloonsPops.Traversals;
 
 namespace BalloonsPops
 {
     public class BalloonPopManager
     {
-        private Board board;
+        private IBoard board;
         
-        public BalloonPopManager(Board board)
+        public BalloonPopManager(IBoard board)
         {
             if (board == null)
             {

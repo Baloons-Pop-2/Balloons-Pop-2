@@ -2,7 +2,7 @@
 {
     public class BfsEffect : TraversalEffect
     {
-        protected override void PopBalloons(int row, int col, Board board, int cellValue)
+        protected override void PopBalloons(int row, int col, IBoard board, int cellValue)
         {
             if (board.IsValidPop(row, col) &&
                 board[row, col].Value == cellValue)
