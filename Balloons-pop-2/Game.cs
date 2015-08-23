@@ -10,7 +10,6 @@ namespace BalloonsPops
     {
         const int Rows = 5;
         const int Cols = 10;
-        const Balloon EmptyCell = null;
         const int HighscoresMaxCount = 4;
 
         private static int initialBalloonsCount = Rows * Cols;
@@ -19,7 +18,7 @@ namespace BalloonsPops
         
         private static Board board = new Board(Rows, Cols);
         private static SortedDictionary<int, string> statistics = new SortedDictionary<int, string>();
-        private static BalloonPopManager popManager = new BalloonPopManager(board, new [] {TraversalPattern.Default});
+        private static BalloonPopManager popManager = new BalloonPopManager(board);
 
         public void Start()
         {
@@ -48,7 +47,6 @@ namespace BalloonsPops
 
         private void PopBalloon(string input)
         {
-            int activeCell;
             int row = -1;
             int col = -1;
             int[] rowAndCol = input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).Select(int.Parse).ToArray();
