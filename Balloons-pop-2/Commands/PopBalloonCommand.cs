@@ -32,8 +32,8 @@ namespace BalloonsPops.Commands
             {
                 throw new ArgumentNullException("active cell");
             }
-            this.activeRow = ctx.ActiveRow;
-            this.activeCol = ctx.ActiveCol;
+            this.activeRow = (int)ctx.ActiveRow;
+            this.activeCol = (int)ctx.ActiveCol;
 
             Pop(this.activeRow, this.activeCol);
         }
