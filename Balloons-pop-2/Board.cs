@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using BalloonsPops.Traversals;
 
 namespace BalloonsPops
 {
@@ -102,7 +103,7 @@ namespace BalloonsPops
 
             if (rowIsInRange && colIsInRange)
             {
-                bool balloonExists = this[row, col] != null;
+                bool balloonExists = this[row, col] != Balloon.Default;
                 return balloonExists;
             }
 
@@ -118,7 +119,7 @@ namespace BalloonsPops
                 for (int col = 0; col < this.Cols; col++)
                 {
                     randomValue = int.Parse(RandomGenerator.GetRandomInt());
-                    this[row, col] = new Balloon(randomValue);
+                    this[row, col] = new Balloon(randomValue, new BfsEffect());
 
                 }
             }

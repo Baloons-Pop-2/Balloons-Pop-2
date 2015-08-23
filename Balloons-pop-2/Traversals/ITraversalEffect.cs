@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace BalloonsPops.Traversals
 {
-    public interface ITraversalPopper
+    public interface ITraversalEffect
     {
-        void Pop(int row, int col);
+        void Pop(int row, int col, Board board);
     }
 }

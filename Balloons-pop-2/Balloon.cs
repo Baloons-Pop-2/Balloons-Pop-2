@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using BalloonsPops.Traversals;
 
 namespace BalloonsPops
 {
@@ -12,12 +9,12 @@ namespace BalloonsPops
 	    private const int MaxValue = 4;
 	
 	    private int value;
-	    private TraversalPattern traversal;
+        private ITraversalEffect effect;
 	
-	    public Balloon(int value, TraversalPattern traversal = TraversalPattern.Default)
+	    public Balloon(int value, ITraversalEffect traversalEffect)
 	    {
 		    this.Value = value;
-		    this.TraversalPattern = traversal;
+	        this.TraversalEffect = traversalEffect;
 	    }
 	
 	    public int Value
@@ -32,7 +29,7 @@ namespace BalloonsPops
 			    if (value < Balloon.MinValue || value > Balloon.MaxValue)
 			    {
                     throw new ArgumentOutOfRangeException(
-                        String.Format("The value of the balloons must be between {0} and {1}",
+                        string.Format("The value of the balloons must be between {0} and {1}",
                         MinValue, MaxValue)
                     );
 			    }
@@ -41,17 +38,27 @@ namespace BalloonsPops
 		    }
 	    }
 	
-		public TraversalPattern TraversalPattern
+		public ITraversalEffect TraversalEffect
 	    {
 		    get
 		    {
-			    return this.traversal;
+			    return this.effect;
 		    }
 		
 		    private set
-		    {	
-			    this.traversal = value;
+		    {
+		        if (value == null)
+		        {
+		            throw new ArgumentNullException("effect");
+		        }
+
+			    this.effect = value;
 		    }
 	    }
+
+        public static Balloon Default
+        {
+            get { return default(Balloon); }
+        }
     }
 }
