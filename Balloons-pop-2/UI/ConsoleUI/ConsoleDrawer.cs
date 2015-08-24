@@ -1,16 +1,18 @@
-﻿using BalloonsPops.UI.Drawer;
+﻿using System;
+using BalloonsPops.UI.Drawer;
 
 namespace BalloonsPops.UI.ConsoleUI
 {
     class ConsoleDrawer : IPicasso
     {
-        public ConsoleDrawer()
+        public void Draw(object obj)
         {
+            Console.WriteLine(obj);
         }
 
-        public void Draw()
+        public void Clear()
         {
-            throw new System.NotImplementedException();
+            Console.Clear();
         }
     }
 }

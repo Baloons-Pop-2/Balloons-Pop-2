@@ -28,12 +28,8 @@ namespace BalloonsPops.Commands
             }
             this.board = ctx.Board;
 
-            if (ctx.ActiveRow == null || ctx.ActiveCol == null)
-            {
-                throw new ArgumentNullException("active cell");
-            }
-            this.activeRow = (int)ctx.ActiveRow;
-            this.activeCol = (int)ctx.ActiveCol;
+            this.activeRow = ctx.ActiveRow;
+            this.activeCol = ctx.ActiveCol;
 
             Pop(this.activeRow, this.activeCol);
         }

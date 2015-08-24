@@ -1,16 +1,19 @@
-﻿using BalloonsPops.UI.InputHandler;
+﻿using System;
+using BalloonsPops.UI.InputHandler;
 
 namespace BalloonsPops.UI.ConsoleUI
 {
     public class ConsoleInputHandler : IInputHandler
     {
-        public ConsoleInputHandler()
+        public string Read()
         {
+            var input = Console.ReadLine();
+            return input;
         }
 
-        public void Read()
+        public bool VerifyInput(string input)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

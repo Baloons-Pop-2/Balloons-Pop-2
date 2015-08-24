@@ -6,7 +6,7 @@ namespace BalloonsPops.Commands
     {
         public void Execute(CommandContext ctx)
         {
-            Environment.Exit(0);
+            Environment.Exit(42);
         }
     }
 }

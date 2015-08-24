@@ -2,6 +2,8 @@
 {
     public interface IInputHandler
     {
-        void Read();
+        string Read();
+
+        bool VerifyInput(string input);
     }
 }

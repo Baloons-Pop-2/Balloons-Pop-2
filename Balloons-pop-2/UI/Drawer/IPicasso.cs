@@ -2,6 +2,8 @@
 {
     public interface IPicasso
     {
-        void Draw();
+        void Draw(object obj);
+
+        void Clear();
     }
 }

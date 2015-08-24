@@ -5,14 +5,12 @@ namespace BalloonsPops
 {
     internal class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
             var consoleUi = new ConsoleUserInterface();
             var engine = new GameEngine(consoleUi);
-            var game = new Game();
-
-            // engine.Start();
-            game.Start();
+            
+            engine.Start();
         }
     }
 }
