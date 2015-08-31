@@ -1,7 +1,0 @@
-﻿namespace BalloonsPops.Commands
-{
-    public interface ICommand
-    {
-        void Execute(CommandContext ctx);
-    }
-}
