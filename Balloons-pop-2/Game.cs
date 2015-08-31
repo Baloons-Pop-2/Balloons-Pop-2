@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
+using BalloonsPops.UI.ScoreBoard;
 
 namespace BalloonsPops
 {
@@ -18,6 +19,7 @@ namespace BalloonsPops
         private static Board board = new Board(Rows, Cols);
         private static SortedDictionary<int, string> statistics = new SortedDictionary<int, string>();
         private static BalloonPopManager popManager = new BalloonPopManager(board);
+        private static HighScore highscore = new HighScore();
 
         public void Start()
         {
@@ -131,19 +133,27 @@ namespace BalloonsPops
 
         private static void PrintTheScoreBoard()
         {
-            int position = 0;
+            //int position = 0;
 
-            Console.WriteLine("Scoreboard: ");
-            foreach (KeyValuePair<int, string> stat in statistics)
-            {
-                if (position == HighscoresMaxCount)
-                {
-                    break;
-                }
+            //Console.WriteLine("Scoreboard: ");
+            //foreach (KeyValuePair<int, string> stat in statistics)
+            //{
+            //    if (position == HighscoresMaxCount)
+            //    {
+            //        break;
+            //    }
 
-                position++;
-                Console.WriteLine("{0}. {1} --> {2} moves", position, stat.Value, stat.Key);
-            }
+            //    position++;
+            //    Console.WriteLine("{0}. {1} --> {2} moves", position, stat.Value, stat.Key);
+            //}
+
+
+            //// TODO: Implement - When finish the game
+            //var currentResult = new ScoreResult(username, moves);
+            //highscore.AddScore(currentResult);
+            //// END "TODO: Implement"
+
+            highscore.Ranking();
         }
 
         private static bool IsFinished()

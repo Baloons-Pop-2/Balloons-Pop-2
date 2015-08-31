@@ -68,6 +68,8 @@
     <Compile Include="UI\Drawer\IPicasso.cs" />
     <Compile Include="UI\InputHandler\IInputHandler.cs" />
     <Compile Include="UI\IUserInterface.cs" />
+    <Compile Include="UI\ScoreBoard\HighScore.cs" />
+    <Compile Include="UI\ScoreBoard\ScoreResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
