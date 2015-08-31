@@ -4,6 +4,7 @@ using BalloonsPop.UI;
 using BalloonsPop.UI.ConsoleUI;
 using BalloonsPop.UI.Drawer;
 using BalloonsPop.UI.InputHandler;
+using BalloonsPop.UI.ScoreBoard;
 
 namespace BalloonsPop.Engine
 {
@@ -23,6 +24,7 @@ namespace BalloonsPop.Engine
         private int ballonsCount;
         private IBoard board;
         private ICommand popCommand;
+        private HighScore highscore;
 
         public GameEngine(IUserInterface userInterface)
         {
@@ -49,6 +51,7 @@ namespace BalloonsPop.Engine
             this.board = new Board(10, 10);
             this.userMoves = 0;
             this.ballonsCount = 0;
+            this.highscore = new HighScore();
         }
 
         public void Start()
@@ -61,6 +64,11 @@ namespace BalloonsPop.Engine
             this.drawer.Draw(this.board);
 
             ExecuteTurn();
+
+            //// TODO: Implement - When finish the game
+            //var currentResult = new ScoreResult(username, moves);
+            //highscore.AddScore(currentResult);
+            //// END "TODO: Implement"
         }
 
         public void Restart()
@@ -72,6 +80,9 @@ namespace BalloonsPop.Engine
         public void HandleCommands(ICommand command)
         {
             throw new NotImplementedException();
+
+            // When enter 'top'
+            //this.highscore.Ranking();
         }
 
         public void ExecuteTurn()
