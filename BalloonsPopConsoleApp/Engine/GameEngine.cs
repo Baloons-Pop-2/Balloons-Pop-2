@@ -1,11 +1,13 @@
 ﻿using System;
+using BalloonsPop;
 using BalloonsPop.Commands;
 using BalloonsPop.UI;
 using BalloonsPop.UI.ConsoleUI;
 using BalloonsPop.UI.Drawer;
 using BalloonsPop.UI.InputHandler;
+using BalloonsPopConsoleApp.Commands;
 
-namespace BalloonsPop.Engine
+namespace BalloonsPopConsoleApp.Engine
 {
     public class GameEngine : IGameEngine
     {
@@ -19,6 +21,7 @@ namespace BalloonsPop.Engine
         private IUserInterface userInterface;
         private readonly IPicasso drawer;
         private readonly IInputHandler reader;
+        private readonly IConstraints constraints;
         private int userMoves;
         private int ballonsCount;
         private IBoard board;
@@ -31,6 +34,7 @@ namespace BalloonsPop.Engine
                 this.userInterface = new ConsoleUserInterface();
             }
 
+            this.constraints = new Constraints(1, 4, 10, 10);
             this.userInterface = userInterface;
             this.drawer = this.userInterface.Drawer;
             this.reader = this.userInterface.Reader;
@@ -46,7 +50,7 @@ namespace BalloonsPop.Engine
             // TODO:
             // May ask for user input concerning board size
 
-            this.board = new Board(10, 10);
+            this.board = new Board(this.constraints.BoardRows, this.constraints.BoardColumns);
             this.userMoves = 0;
             this.ballonsCount = 0;
         }

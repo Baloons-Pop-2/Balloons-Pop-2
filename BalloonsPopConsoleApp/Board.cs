@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Text;
-using BalloonsPop.Traversals;
+using BalloonsPop;
 
-namespace BalloonsPop
+namespace BalloonsPopConsoleApp
 {
     public class Board : IBoard
     {
@@ -10,13 +10,15 @@ namespace BalloonsPop
         private const int MaxColsCount = 10;
         private int rowsCount;
         private int colsCount;
-        private Balloon[,] board;
+        private IBalloon[,] board;
+        private IBalloonFactory balloonFactory;
 
         public Board(int rows, int cols)
         {
             this.Rows = rows;
             this.Cols = cols;
-            this.board = new Balloon[this.Rows, this.Cols];
+            this.board = new IBalloon[this.Rows, this.Cols];
+            this.balloonFactory = new BalloonFactory(null);
             this.Fill();
         }
 
@@ -29,7 +31,7 @@ namespace BalloonsPop
 
             set
             {
-                if (value < 1 || value > Board.MaxRowsCount)
+                if (value < 1 || value > MaxRowsCount)
                 {
                     throw new ArgumentOutOfRangeException("board rows");
                 }
@@ -48,7 +50,7 @@ namespace BalloonsPop
 
             set
             {
-                if (value < 1 || value > Board.MaxColsCount)
+                if (value < 1 || value > MaxColsCount)
                 {
                     throw new ArgumentOutOfRangeException("board cols");
                 }
@@ -57,7 +59,7 @@ namespace BalloonsPop
             }
         }
 
-        public Balloon this[int row, int col]
+        public IBalloon this[int row, int col]
         {
             get
             {
@@ -119,7 +121,7 @@ namespace BalloonsPop
                 for (int col = 0; col < this.Cols; col++)
                 {
                     randomValue = int.Parse(RandomGenerator.GetRandomInt());
-                    this[row, col] = new Balloon(randomValue, new BfsEffect());
+                    this[row, col] = this.balloonFactory.GetBalloon(randomValue);
 
                 }
             }

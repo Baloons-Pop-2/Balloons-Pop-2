@@ -1,6 +1,8 @@
 ﻿using System;
+using BalloonsPop;
+using BalloonsPop.Commands;
 
-namespace BalloonsPop.Commands
+namespace BalloonsPopConsoleApp.Commands
 {
     public class PopBalloonCommand : ICommand
     {
@@ -20,7 +22,7 @@ namespace BalloonsPop.Commands
             traversal.Pop(row, col, this.board);
         }
 
-        public void Execute(CommandContext ctx)
+        public void Execute(ICommandContext ctx)
         {
             if (ctx.Board == null)
             {

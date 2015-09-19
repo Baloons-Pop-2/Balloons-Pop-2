@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using BalloonsPop;
+using BalloonsPop.Traversals;
 
-namespace BalloonsPop.Traversals
+namespace BalloonsPopConsoleApp.Effects
 {
     public abstract class TraversalEffect : ITraversalEffect
     {
@@ -26,7 +28,7 @@ namespace BalloonsPop.Traversals
             int row;
             int col;
 
-            Queue<Balloon> baloonsToPop = new Queue<Balloon>();
+            Queue<IBalloon> baloonsToPop = new Queue<IBalloon>();
             for (col = board.Cols - 1; col >= 0; col--)
             {
                 for (row = board.Rows - 1; row >= 0; row--)

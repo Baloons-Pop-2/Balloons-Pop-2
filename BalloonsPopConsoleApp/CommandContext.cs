@@ -1,6 +1,8 @@
-﻿namespace BalloonsPop
+﻿using BalloonsPop;
+
+namespace BalloonsPopConsoleApp
 {
-    public class CommandContext
+    public class CommandContext: ICommandContext
     {
         public CommandContext()
         {

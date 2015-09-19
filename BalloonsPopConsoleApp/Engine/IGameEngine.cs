@@ -1,4 +1,4 @@
-﻿namespace BalloonsPop.Engine
+﻿namespace BalloonsPopConsoleApp.Engine
 {
     public interface IGameEngine
     {

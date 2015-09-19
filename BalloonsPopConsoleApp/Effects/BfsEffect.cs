@@ -1,4 +1,6 @@
-﻿namespace BalloonsPop.Traversals
+﻿using BalloonsPop;
+
+namespace BalloonsPopConsoleApp.Effects
 {
     public class BfsEffect : TraversalEffect
     {

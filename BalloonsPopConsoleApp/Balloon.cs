@@ -1,9 +1,10 @@
 ﻿using System;
+using BalloonsPop;
 using BalloonsPop.Traversals;
 
-namespace BalloonsPop
+namespace BalloonsPopConsoleApp
 {
-    public class Balloon
+    public class Balloon : IBalloon
     {
 	    private const int MinValue = 1;
 	    private const int MaxValue = 4;
