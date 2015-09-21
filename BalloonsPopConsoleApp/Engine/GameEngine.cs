@@ -1,16 +1,19 @@
 ﻿using System;
+using System.Linq;
 using BalloonsPop;
 using BalloonsPop.Commands;
 using BalloonsPop.UI;
-using BalloonsPop.UI.ConsoleUI;
 using BalloonsPop.UI.Drawer;
 using BalloonsPop.UI.InputHandler;
-using BalloonsPopConsoleApp.Commands;
+using BalloonsPopConsoleApp.Factories;
+using BalloonsPopConsoleApp.Logs;
+using BalloonsPopConsoleApp.UI.ConsoleUI;
 
 namespace BalloonsPopConsoleApp.Engine
 {
     public class GameEngine : IGameEngine
     {
+        private readonly ILogger logger;
         private const string WelcomeMessage = "Welcome to \"Balloons Pops\" game. Please try to pop the balloons. Use 'top' to view the top scoreboard, 'restart' to start a new game and 'exit' to quit the game.";
         private const string GoodbyeMessage = "Goodbye!";
         private const string InputPrompt = "Enter a row and column: ";
@@ -18,14 +21,14 @@ namespace BalloonsPopConsoleApp.Engine
         private const string InvalidCommand = "Invalid move or command!";
         private const string GameCompleteMessagePrompt = "You popped all baloons in {0} moves.\r\nPlease enter your name for the top scoreboard: ";
 
-        private IUserInterface userInterface;
+        private readonly IUserInterface userInterface;
         private readonly IPicasso drawer;
         private readonly IInputHandler reader;
         private readonly IConstraints constraints;
         private int userMoves;
         private int ballonsCount;
         private IBoard board;
-        private ICommand popCommand;
+        private readonly ICommandFactory commandFactory;
 
         public GameEngine(IUserInterface userInterface)
         {
@@ -34,12 +37,13 @@ namespace BalloonsPopConsoleApp.Engine
                 this.userInterface = new ConsoleUserInterface();
             }
 
-            this.constraints = new Constraints(1, 5, 10, 10);
+            this.constraints = new Constraints(1, 4, 10, 10);
             this.userInterface = userInterface;
             this.drawer = this.userInterface.Drawer;
             this.reader = this.userInterface.Reader;
+            this.logger = new Logger();
 
-            this.popCommand = new PopBalloonCommand();
+            this.commandFactory = new CommandFactory();
         }
 
         private void Initialize()
@@ -95,15 +99,36 @@ namespace BalloonsPopConsoleApp.Engine
             this.drawer.Draw(InputPrompt);
 
             string input = this.reader.Read();
-            var coords = input.Split(' ');
-            var row = int.Parse(coords[0]);
-            var col = int.Parse(coords[1]);
+            string[] parsedInput = this.reader.ParseInput(input).Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToArray();
 
-            // HandleCommands
-            var ctx = new CommandContext(this.board, row, col);
-            popCommand.Execute(ctx);
-            this.drawer.Clear();
-            this.drawer.Draw(this.board);
+            var instruction = parsedInput.Length == 0 ? string.Empty : parsedInput[0];
+            ICommandContext ctx = new NullCommandContext();
+
+            if (instruction == "")
+            {
+                this.drawer.Clear();
+                this.drawer.Draw(this.board);
+                this.drawer.Draw(InvalidCommand);
+                this.logger.Log(input);
+            }
+            else
+            {
+                if (instruction == "pop")
+                {
+                    var row = int.Parse(parsedInput[1]);
+                    var col = int.Parse(parsedInput[2]);
+
+                    ctx = new CommandContext(this.board, row, col);
+                }
+
+                // HandleCommands
+                var command = this.commandFactory.GetCommand(instruction);
+
+                command.Execute(ctx);
+
+                this.drawer.Clear();
+                this.drawer.Draw(this.board);
+            }
         }
     }
 }

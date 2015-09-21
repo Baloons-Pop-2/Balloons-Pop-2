@@ -14,7 +14,7 @@ namespace BalloonsPopConsoleApp.Commands
         {
             if (!this.board.IsValidPop(row, col))
             {
-                throw new IndexOutOfRangeException("out of the board");
+                return;
             }
 
             var balloon = this.board[row, col];

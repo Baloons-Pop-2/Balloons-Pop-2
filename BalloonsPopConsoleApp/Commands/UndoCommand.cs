@@ -3,7 +3,7 @@ using BalloonsPop.Commands;
 
 namespace BalloonsPopConsoleApp.Commands
 {
-    public class ShowTopScoreCommand : ICommand
+    public class UndoCommand : ICommand
     {
         public void Execute(ICommandContext ctx)
         {

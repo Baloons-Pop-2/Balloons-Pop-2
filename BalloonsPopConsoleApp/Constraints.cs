@@ -12,7 +12,6 @@ namespace BalloonsPopConsoleApp
             this.BoardColumns = cols;
         }
 
-
         public int BalloonMinValue { get; private set; }
 
         public int BalloonMaxValue { get; private set; }

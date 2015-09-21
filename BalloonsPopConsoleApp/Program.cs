@@ -1,5 +1,5 @@
-﻿using BalloonsPop.UI.ConsoleUI;
-using BalloonsPopConsoleApp.Engine;
+﻿using BalloonsPopConsoleApp.Engine;
+using BalloonsPopConsoleApp.UI.ConsoleUI;
 
 namespace BalloonsPopConsoleApp
 {

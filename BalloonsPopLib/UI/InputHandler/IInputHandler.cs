@@ -3,7 +3,6 @@
     public interface IInputHandler
     {
         string Read();
-
-        bool VerifyInput(string input);
+        string ParseInput(string input);
     }
 }

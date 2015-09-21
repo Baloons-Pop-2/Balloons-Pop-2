@@ -49,13 +49,11 @@
     <Compile Include="IBalloonFactory.cs" />
     <Compile Include="IBoard.cs" />
     <Compile Include="ICommandContext.cs" />
+    <Compile Include="ICommandFactory.cs" />
     <Compile Include="IConstraints.cs" />
     <Compile Include="IEffectFactory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Traversals\ITraversalEffect.cs" />
-    <Compile Include="UI\ConsoleUI\ConsoleDrawer.cs" />
-    <Compile Include="UI\ConsoleUI\ConsoleInputHandler.cs" />
-    <Compile Include="UI\ConsoleUI\ConsoleUserInterface.cs" />
     <Compile Include="UI\Drawer\IPicasso.cs" />
     <Compile Include="UI\InputHandler\IInputHandler.cs" />
     <Compile Include="UI\IUserInterface.cs" />

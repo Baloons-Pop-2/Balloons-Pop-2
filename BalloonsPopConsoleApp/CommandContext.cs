@@ -2,12 +2,8 @@
 
 namespace BalloonsPopConsoleApp
 {
-    public class CommandContext: ICommandContext
+    public class CommandContext : ICommandContext
     {
-        public CommandContext()
-        {
-        }
-
         public CommandContext(IBoard board, int activeRow, int activeCol)
         {
             this.Board = board;

@@ -1,7 +1,7 @@
 ﻿using System;
 using BalloonsPop.UI.Drawer;
 
-namespace BalloonsPop.UI.ConsoleUI
+namespace BalloonsPopConsoleApp.UI.ConsoleUI
 {
     class ConsoleDrawer : IPicasso
     {
