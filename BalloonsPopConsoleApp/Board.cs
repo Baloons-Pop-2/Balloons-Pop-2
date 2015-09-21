@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using BalloonsPop;
+using BalloonsPopConsoleApp.Factories;
 
 namespace BalloonsPopConsoleApp
 {
@@ -10,15 +11,15 @@ namespace BalloonsPopConsoleApp
         private const int MaxColsCount = 10;
         private int rowsCount;
         private int colsCount;
-        private IBalloon[,] board;
-        private IBalloonFactory balloonFactory;
+        private readonly IBalloon[,] board;
+        private readonly IBalloonFactory balloonFactory;
 
         public Board(int rows, int cols)
         {
             this.Rows = rows;
             this.Cols = cols;
             this.board = new IBalloon[this.Rows, this.Cols];
-            this.balloonFactory = new BalloonFactory(null);
+            this.balloonFactory = new BalloonFactory();
             this.Fill();
         }
 
@@ -114,15 +115,12 @@ namespace BalloonsPopConsoleApp
 
         private void Fill()
         {
-            int randomValue;
-
             for (int row = 0; row < this.Rows; row++)
             {
                 for (int col = 0; col < this.Cols; col++)
                 {
-                    randomValue = int.Parse(RandomGenerator.GetRandomInt());
+                    var randomValue = int.Parse(RandomGenerator.GetRandomInt());
                     this[row, col] = this.balloonFactory.GetBalloon(randomValue);
-
                 }
             }
         }

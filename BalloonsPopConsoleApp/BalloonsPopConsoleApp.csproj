@@ -45,7 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Balloon.cs" />
-    <Compile Include="BalloonFactory.cs" />
+    <Compile Include="Effects\AreaPopEffect.cs" />
+    <Compile Include="Factories\BalloonFactory.cs" />
     <Compile Include="Binding.cs" />
     <Compile Include="Board.cs" />
     <Compile Include="CommandContext.cs" />

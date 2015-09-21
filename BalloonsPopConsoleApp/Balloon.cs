@@ -6,10 +6,6 @@ namespace BalloonsPopConsoleApp
 {
     public class Balloon : IBalloon
     {
-	    private const int MinValue = 1;
-	    private const int MaxValue = 4;
-	
-	    private int value;
         private ITraversalEffect effect;
 	
 	    public Balloon(int value, ITraversalEffect traversalEffect)
@@ -17,27 +13,8 @@ namespace BalloonsPopConsoleApp
 		    this.Value = value;
 	        this.TraversalEffect = traversalEffect;
 	    }
-	
-	    public int Value
-	    {
-		    get
-		    {
-			    return this.value;
-		    }
-		
-		    private set
-		    {
-			    if (value < Balloon.MinValue || value > Balloon.MaxValue)
-			    {
-                    throw new ArgumentOutOfRangeException(
-                        string.Format("The value of the balloons must be between {0} and {1}",
-                        MinValue, MaxValue)
-                    );
-			    }
-			
-			    this.value = value;
-		    }
-	    }
+
+        public int Value { get; set; }
 	
 		public ITraversalEffect TraversalEffect
 	    {

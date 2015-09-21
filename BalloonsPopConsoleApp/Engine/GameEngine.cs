@@ -34,7 +34,7 @@ namespace BalloonsPopConsoleApp.Engine
                 this.userInterface = new ConsoleUserInterface();
             }
 
-            this.constraints = new Constraints(1, 4, 10, 10);
+            this.constraints = new Constraints(1, 5, 10, 10);
             this.userInterface = userInterface;
             this.drawer = this.userInterface.Drawer;
             this.reader = this.userInterface.Reader;
@@ -42,7 +42,7 @@ namespace BalloonsPopConsoleApp.Engine
             this.popCommand = new PopBalloonCommand();
         }
 
-        public void Initialize()
+        private void Initialize()
         {
             // TODO: Generate board, initialize player stats
             // Partially implemented
@@ -64,7 +64,7 @@ namespace BalloonsPopConsoleApp.Engine
             this.drawer.Draw(WelcomeMessage);
             this.drawer.Draw(this.board);
 
-            ExecuteTurn();
+            Play();
         }
 
         public void Restart()
@@ -73,12 +73,20 @@ namespace BalloonsPopConsoleApp.Engine
             throw new NotImplementedException();
         }
 
-        public void HandleCommands(ICommand command)
+        private void HandleCommands(ICommand command)
         {
             throw new NotImplementedException();
         }
 
-        public void ExecuteTurn()
+        private void Play()
+        {
+            while (true)
+            {
+                ExecuteTurn();
+            }
+        }
+
+        private void ExecuteTurn()
         {
             // TODO: HandleCommands(command), increment userMoves, clear screen, redraw
             // Partially implemented
@@ -96,7 +104,6 @@ namespace BalloonsPopConsoleApp.Engine
             popCommand.Execute(ctx);
             this.drawer.Clear();
             this.drawer.Draw(this.board);
-            ExecuteTurn();
         }
     }
 }

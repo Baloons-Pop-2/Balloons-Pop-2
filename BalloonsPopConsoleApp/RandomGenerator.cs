@@ -8,7 +8,7 @@ namespace BalloonsPopConsoleApp
         static Random randomNumber = new Random();
         public static string GetRandomInt()
         {
-            string legalChars = "1234";
+            string legalChars = "11122233344411122253334454111222333444";
             string builder = null;
             builder = legalChars[randomNumber.Next(0, legalChars.Length)].ToString();
             return builder;
