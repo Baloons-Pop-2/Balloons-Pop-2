@@ -26,7 +26,6 @@ namespace BalloonsPopConsoleApp.Engine
         private readonly IInputHandler reader;
         private readonly IConstraints constraints;
         private int userMoves;
-        private int ballonsCount;
         private IBoard board;
         private readonly ICommandFactory commandFactory;
 
@@ -60,7 +59,6 @@ namespace BalloonsPopConsoleApp.Engine
 
             this.board = new Board(this.constraints.BoardRows, this.constraints.BoardColumns);
             this.userMoves = 0;
-            this.ballonsCount = 0;
         }
 
         public void Start()

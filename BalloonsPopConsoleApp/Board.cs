@@ -14,17 +14,12 @@ namespace BalloonsPopConsoleApp
         private IBalloon[,] board;
         private readonly IBalloonFactory balloonFactory;
 
-        private Board(int rows, int cols, bool empty)
+        public Board(int rows, int cols)
         {
             this.Rows = rows;
             this.Cols = cols;
             this.board = new IBalloon[this.Rows, this.Cols];
             this.balloonFactory = new BalloonFactory();
-        }
-
-        public Board(int rows, int cols)
-            :this(rows, cols, true)
-        {
             this.Fill();
         }
 
