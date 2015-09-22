@@ -9,7 +9,7 @@ namespace BalloonsPopConsoleApp
         {
             var consoleUi = new ConsoleUserInterface();
             var engine = new GameEngine(consoleUi);
-
+                
             engine.Start();
         }
     }
