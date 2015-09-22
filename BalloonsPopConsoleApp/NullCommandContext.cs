@@ -9,5 +9,7 @@ namespace BalloonsPopConsoleApp
         public int ActiveCol { get; private set; }
 
         public int ActiveRow { get; private set; }
+
+        public IBoardMemory Memory { get; private set; }
     }
 }

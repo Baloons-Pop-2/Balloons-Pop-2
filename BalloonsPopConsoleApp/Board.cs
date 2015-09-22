@@ -11,15 +11,20 @@ namespace BalloonsPopConsoleApp
         private const int MaxColsCount = 10;
         private int rowsCount;
         private int colsCount;
-        private readonly IBalloon[,] board;
+        private IBalloon[,] board;
         private readonly IBalloonFactory balloonFactory;
 
-        public Board(int rows, int cols)
+        private Board(int rows, int cols, bool empty)
         {
             this.Rows = rows;
             this.Cols = cols;
             this.board = new IBalloon[this.Rows, this.Cols];
             this.balloonFactory = new BalloonFactory();
+        }
+
+        public Board(int rows, int cols)
+            :this(rows, cols, true)
+        {
             this.Fill();
         }
 
@@ -123,6 +128,18 @@ namespace BalloonsPopConsoleApp
                     this[row, col] = this.balloonFactory.GetBalloon(randomValue);
                 }
             }
+        }
+
+        public IBoardMemento SaveMemento()
+        {
+            var clonedBoard = (IBalloon[,])this.board.Clone();
+
+            return new Memento(clonedBoard);
+        }
+
+        public void RestoreMemento(IBoardMemento memento)
+        {
+            this.board = memento.Board;
         }
 
         public override string ToString()

@@ -30,12 +30,16 @@ namespace BalloonsPopConsoleApp.Engine
         private IBoard board;
         private readonly ICommandFactory commandFactory;
 
+        private IBoardMemory memory;
+
         public GameEngine(IUserInterface userInterface)
         {
             if (userInterface == null)
             {
                 this.userInterface = new ConsoleUserInterface();
             }
+
+            this.memory = new BoardMemory();
 
             this.constraints = new Constraints(1, 4, 10, 10);
             this.userInterface = userInterface;
@@ -92,6 +96,7 @@ namespace BalloonsPopConsoleApp.Engine
 
         private void ExecuteTurn()
         {
+            
             // TODO: HandleCommands(command), increment userMoves, clear screen, redraw
             // Partially implemented
             // Currently not a viable and optimal solution to running the game, should consider using a loop
@@ -113,8 +118,15 @@ namespace BalloonsPopConsoleApp.Engine
             }
             else
             {
+                if (instruction == "undo")
+                {
+                    ctx = new CommandContext(this.board, this.memory);
+                }
+
                 if (instruction == "pop")
                 {
+                    this.memory.Memento = this.board.SaveMemento();
+
                     var row = int.Parse(parsedInput[1]);
                     var col = int.Parse(parsedInput[2]);
 

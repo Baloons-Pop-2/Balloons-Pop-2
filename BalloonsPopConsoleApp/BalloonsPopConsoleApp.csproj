@@ -48,10 +48,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Balloon.cs" />
+    <Compile Include="BoardMemory.cs" />
     <Compile Include="Commands\UndoCommand.cs" />
     <Compile Include="Effects\AreaPopEffect.cs" />
     <Compile Include="Factories\BalloonFactory.cs" />
-    <Compile Include="Binding.cs" />
     <Compile Include="Board.cs" />
     <Compile Include="CommandContext.cs" />
     <Compile Include="Commands\ExitCommand.cs" />
@@ -67,6 +67,7 @@
     <Compile Include="Factories\EffectFactory.cs" />
     <Compile Include="Logs\ILogger.cs" />
     <Compile Include="Logs\Logger.cs" />
+    <Compile Include="Memento.cs" />
     <Compile Include="NullCommandContext.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

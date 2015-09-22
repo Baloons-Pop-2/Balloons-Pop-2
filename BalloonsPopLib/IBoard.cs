@@ -1,6 +1,6 @@
 ﻿namespace BalloonsPop
 {
-    public interface IBoard
+    public interface IBoard : IMemorizeable<IBoardMemento>
     {
         int Rows { get; }
         int Cols { get; }

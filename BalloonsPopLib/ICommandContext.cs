@@ -13,5 +13,7 @@ namespace BalloonsPop
         int ActiveCol { get; }
 
         int ActiveRow { get; }
+
+        IBoardMemory Memory { get; }
     }
 }
