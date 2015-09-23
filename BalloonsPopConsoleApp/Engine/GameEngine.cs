@@ -94,7 +94,6 @@ namespace BalloonsPopConsoleApp.Engine
 
         private void ExecuteTurn()
         {
-            
             // TODO: HandleCommands(command), increment userMoves, clear screen, redraw
             // Partially implemented
             // Currently not a viable and optimal solution to running the game, should consider using a loop

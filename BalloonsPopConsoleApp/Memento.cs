@@ -2,7 +2,7 @@
 
 namespace BalloonsPopConsoleApp
 {
-    class Memento : IBoardMemento
+    public class Memento : IBoardMemento
     {
         private IBalloon[,] board;
 
@@ -28,36 +28,6 @@ namespace BalloonsPopConsoleApp
             {
                 this.board = value;
             }
-        }
-
-        public IBalloon this[int row, int col]
-        {
-            get
-            {
-                return this.board[row, col];
-            }
-            set { }
-        }
-
-        public void Reset()
-        {
-            return;
-        }
-
-        public bool IsValidPop(int row, int col)
-        {
-            return true;
-        }
-
-        public IBoardMemento SaveMemento()
-        {
-            return default(IBoardMemento);
-        }
-
-
-        public void RestoreMemento(IBoardMemento memento)
-        {
-            return;
         }
     }
 }

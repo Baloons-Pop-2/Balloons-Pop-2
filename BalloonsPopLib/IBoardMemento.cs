@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BalloonsPop
+﻿namespace BalloonsPop
 {
-    public interface IBoardMemento : IBoard
+    public interface IBoardMemento
     {
         IBalloon[,] Board { get; }
     }
