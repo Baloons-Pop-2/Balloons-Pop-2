@@ -1,18 +1,27 @@
 ﻿using System;
-using System.Text;
+using System.Collections.Generic;
+using System.Linq;
 using BalloonsPop.UI.InputHandler;
 
 namespace BalloonsPopConsoleApp.UI.ConsoleUI
 {
     public class ConsoleInputHandler : IInputHandler
     {
+        protected static readonly IList<string> ValidCommands = new List<string>()
+        {
+            "exit",
+            "restart",
+            "top",
+            "undo"
+        };
+
         public string Read()
         {
-            var input = Console.ReadLine();
+            var input = Console.ReadLine().Trim();
 
-            if (!IsValidInput(input))
+            if (String.IsNullOrWhiteSpace(input))
             {
-                return string.Empty;
+                return "invalidInput";
             }
             else
             {
@@ -20,51 +29,36 @@ namespace BalloonsPopConsoleApp.UI.ConsoleUI
             }
         }
 
-
-        // TODO: FIX dem bad codez!!!!!!!!!!
         public string ParseInput(string input)
         {
-            var inputWords = input.Split(' ');
-            var validCommands = new string[]
-            {
-                "exit",
-                "restart",
-                "top",
-                "undo"
-            };
-            int pesho;
-            var sb = new StringBuilder();
+            var inputWords = input.ToLower().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToArray();
 
-            if (inputWords.Length == 1)
+            if (inputWords.Length != 1 && !IsValidPopInput(input))
             {
-                if (Array.IndexOf(validCommands, inputWords[0]) >= 0)
-                {
-                    return inputWords[0];
-                }
-                else
-                {
-                    return "";
-                }
-            }
-            else if (int.TryParse(inputWords[0][0].ToString(), out pesho) &&
-                int.TryParse(inputWords[1][0].ToString(), out pesho))
-            {
-                var row = inputWords[0][0];
-                var col = inputWords[1][0];
-
-                sb.Append("pop");
-                sb.Append(" ");
-                sb.Append(row + " " + col);
-
-                return sb.ToString();
+                return "invalidInput";
             }
 
-            return "";
+            if (inputWords.Length == 1 && ValidCommands.Contains(inputWords[0]))
+            {
+                return inputWords[0];
+            }
+            else if (IsValidPopInput(input))
+            {
+                return String.Format("pop {0} {1}", inputWords[0], inputWords[1]);        
+            }
+            return "invalidInput";
         }
 
-        private bool IsValidInput(string input)
+        private static bool IsValidPopInput(string input)
         {
-            return !string.IsNullOrWhiteSpace(input);
+            var splitInput = input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToArray();
+
+            if (splitInput.Length == 2)
+            {
+                return (splitInput[0] + splitInput[1]).All(Char.IsDigit);
+            }
+
+            return false;
         }
     }
 }

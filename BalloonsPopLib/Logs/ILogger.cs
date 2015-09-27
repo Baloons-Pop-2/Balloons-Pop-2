@@ -1,4 +1,4 @@
-﻿namespace BalloonsPopConsoleApp.Logs
+﻿namespace BalloonsPop.Logs
 {
     public interface ILogger
     {

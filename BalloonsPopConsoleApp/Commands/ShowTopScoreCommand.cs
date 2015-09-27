@@ -7,12 +7,8 @@ namespace BalloonsPopConsoleApp.Commands
     {
         public void Execute(ICommandContext ctx)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public bool CanExecute(ICommandContext ctx)
-        {
-            return false;
+            ctx.Logger.Log("ShowTopScoreCommand.Execute() invoked - Not implemented!");
+            ctx.CurrentMessage = "This command is not yet implemented! Check back later!";
         }
     }
 }

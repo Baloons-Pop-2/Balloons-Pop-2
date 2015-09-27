@@ -11,11 +11,11 @@ namespace BalloonsPopConsoleApp.Commands
             {
                 ctx.Board.RestoreMemento(ctx.Memory.Memento);   
             }
-        }
-
-        public bool CanExecute(ICommandContext ctx)
-        {
-            return false;
+            else
+            {
+                // Inform player that a save point is not available
+                ctx.CurrentMessage = ctx.Messages["invalidsave"];
+            }
         }
     }
 }

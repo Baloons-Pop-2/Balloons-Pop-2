@@ -7,8 +7,10 @@ namespace BalloonsPopConsoleApp
 {
     public class Board : IBoard
     {
-        private const int MaxRowsCount = 20;
-        private const int MaxColsCount = 10;
+        private const int MaxRowsCount = 15;
+        private const int MinRowsCount = 5;
+        private const int MaxColsCount = 15;
+        private const int MinColsCount = 5;
         private int rowsCount;
         private int colsCount;
         private IBalloon[,] board;
@@ -32,7 +34,7 @@ namespace BalloonsPopConsoleApp
 
             set
             {
-                if (value < 1 || value > MaxRowsCount)
+                if (value < MinRowsCount || value > MaxRowsCount)
                 {
                     throw new ArgumentOutOfRangeException("board rows");
                 }
@@ -51,7 +53,7 @@ namespace BalloonsPopConsoleApp
 
             set
             {
-                if (value < 1 || value > MaxColsCount)
+                if (value < MinColsCount || value > MaxColsCount)
                 {
                     throw new ArgumentOutOfRangeException("board cols");
                 }

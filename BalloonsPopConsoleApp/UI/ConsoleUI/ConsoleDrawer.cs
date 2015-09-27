@@ -7,7 +7,7 @@ namespace BalloonsPopConsoleApp.UI.ConsoleUI
     {
         public void Draw(object obj)
         {
-            Console.WriteLine(obj);
+            Console.Write(obj);
         }
 
         public void Clear()

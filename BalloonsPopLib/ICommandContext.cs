@@ -1,13 +1,24 @@
-﻿namespace BalloonsPop
+﻿using System.Collections.Generic;
+using BalloonsPop.Logs;
+
+namespace BalloonsPop
 {
     public interface ICommandContext
     {
-        IBoard Board { get; }
+        ILogger Logger { get; set; }
 
-        int ActiveCol { get; }
+        IBoard Board { get; set; }
 
-        int ActiveRow { get; }
+        IBoardMemory Memory { get; set; }
 
-        IBoardMemory Memory { get; }
+        int ActiveCol { get; set; }
+
+        int ActiveRow { get; set; }
+
+        Dictionary<string, string> Messages { get; }
+
+        IHighscore Score { get; set; }
+
+        string CurrentMessage { get; set; }
     }
 }

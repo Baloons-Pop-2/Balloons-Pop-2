@@ -8,19 +8,20 @@ namespace BalloonsPopConsoleApp.Factories
 {
     public class CommandFactory : ICommandFactory
     {
-        private readonly Dictionary<string, ICommand> commandList = new Dictionary<string, ICommand>();
+        private readonly Dictionary<string, ICommand> commandDictionary = new Dictionary<string, ICommand>();
 
         public ICommand GetCommand(string command)
         {
-            if (this.commandList.ContainsKey(command.ToLower()))
+            command = command.ToLower();
+            if (this.commandDictionary.ContainsKey(command))
             {
-                return this.commandList[command];
+                return this.commandDictionary[command];
             }
             else
             {
                 ICommand newCommand;
 
-                switch (command.ToLower())
+                switch (command)
                 {
                     case "pop":
                         newCommand = new PopBalloonCommand();
@@ -37,11 +38,14 @@ namespace BalloonsPopConsoleApp.Factories
                     case "undo":
                         newCommand = new UndoCommand();
                         break;
+                    case "invalidinput":
+                        newCommand = new InvalidInputCommand();
+                        break;
                     default:
-                        throw new ArgumentException("Invalid command");
+                        throw new ArgumentException("Invalid command " + command.ToLower());
                 }
 
-                this.commandList.Add(command, newCommand);
+                this.commandDictionary.Add(command, newCommand);
 
                 return newCommand;
             }

@@ -1,4 +1,5 @@
-﻿using log4net;
+﻿using BalloonsPop.Logs;
+using log4net;
 
 namespace BalloonsPopConsoleApp.Logs
 {

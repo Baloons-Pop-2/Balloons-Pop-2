@@ -1,13 +1,13 @@
 ﻿using BalloonsPop;
+using BalloonsPop.Logs;
 using BalloonsPop.UI;
-using BalloonsPopConsoleApp.Logs;
 
 namespace BalloonsPopConsoleApp
 {
     public class GameEngineDependencies
     {
         public GameEngineDependencies(IUserInterface ui, IConstraints constraints, ILogger logger, IBoard board,
-            IBoardMemory memory, ICommandFactory commandFactory, ICommandContextFactory ctxFactory)
+            IBoardMemory memory, ICommandFactory commandFactory)
         {
             this.UserInterface = ui;
             this.Constraints = constraints;
@@ -15,7 +15,6 @@ namespace BalloonsPopConsoleApp
             this.Board = board;
             this.BoardMemory = memory;
             this.CommandFactory = commandFactory;
-            this.CommandContextFactory = ctxFactory;
             // TODO:
             // SCORE!!!
         }
@@ -26,6 +25,5 @@ namespace BalloonsPopConsoleApp
         public IBoard Board { get; private set; }
         public IBoardMemory BoardMemory { get; private set; }
         public ICommandFactory CommandFactory { get; private set; }
-        public ICommandContextFactory CommandContextFactory { get; private set; }
     }
 }

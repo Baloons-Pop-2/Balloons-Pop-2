@@ -51,11 +51,12 @@
     <Compile Include="IBoardMemento.cs" />
     <Compile Include="IBoardMemory.cs" />
     <Compile Include="ICommandContext.cs" />
-    <Compile Include="ICommandContextFactory.cs" />
     <Compile Include="ICommandFactory.cs" />
     <Compile Include="IConstraints.cs" />
     <Compile Include="IEffectFactory.cs" />
+    <Compile Include="IHighscore.cs" />
     <Compile Include="IMemorizeable.cs" />
+    <Compile Include="Logs\ILogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Traversals\ITraversalEffect.cs" />
     <Compile Include="UI\Drawer\IPicasso.cs" />
