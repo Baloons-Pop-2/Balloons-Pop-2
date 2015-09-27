@@ -51,6 +51,7 @@
     <Compile Include="IBoardMemento.cs" />
     <Compile Include="IBoardMemory.cs" />
     <Compile Include="ICommandContext.cs" />
+    <Compile Include="ICommandContextFactory.cs" />
     <Compile Include="ICommandFactory.cs" />
     <Compile Include="IConstraints.cs" />
     <Compile Include="IEffectFactory.cs" />

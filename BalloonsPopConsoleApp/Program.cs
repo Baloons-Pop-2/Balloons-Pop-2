@@ -1,4 +1,6 @@
 ﻿using BalloonsPopConsoleApp.Engine;
+using BalloonsPopConsoleApp.Factories;
+using BalloonsPopConsoleApp.Logs;
 using BalloonsPopConsoleApp.UI.ConsoleUI;
 
 namespace BalloonsPopConsoleApp
@@ -7,8 +9,19 @@ namespace BalloonsPopConsoleApp
     {
         static void Main()
         {
-            var consoleUi = new ConsoleUserInterface();
-            var engine = new GameEngine(consoleUi);
+            const int boardSize = 8;
+
+            var engineDependencies = new GameEngineDependencies(
+                new ConsoleUserInterface(),
+                new Constraints(1, 4, boardSize, boardSize),
+                new Logger(),
+                new Board(boardSize, boardSize),
+                new BoardMemory(), 
+                new CommandFactory(), 
+                new CommandContextFactory()
+                );
+
+            var engine = new GameEngine(engineDependencies);
 
             engine.Start();
         }

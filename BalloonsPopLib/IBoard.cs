@@ -7,5 +7,6 @@
         IBalloon this[int row, int col] { get; set; }
         void Reset();
         bool IsValidPop(int row, int col);
+        int UnpoppedBalloonsCount { get; }
     }
 }

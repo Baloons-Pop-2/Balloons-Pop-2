@@ -7,7 +7,7 @@ namespace BalloonsPopConsoleApp.Commands
     {
         public void Execute(ICommandContext ctx)
         {
-            throw new System.NotImplementedException();
+            ctx.Board.Reset();
         }
     }
 }

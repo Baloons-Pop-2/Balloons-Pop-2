@@ -12,7 +12,7 @@ namespace BalloonsPopConsoleApp.Factories
 
         public ICommand GetCommand(string command)
         {
-            if (this.commandList.ContainsKey(command))
+            if (this.commandList.ContainsKey(command.ToLower()))
             {
                 return this.commandList[command];
             }
@@ -20,7 +20,7 @@ namespace BalloonsPopConsoleApp.Factories
             {
                 ICommand newCommand;
 
-                switch (command)
+                switch (command.ToLower())
                 {
                     case "pop":
                         newCommand = new PopBalloonCommand();
@@ -42,7 +42,6 @@ namespace BalloonsPopConsoleApp.Factories
                 }
 
                 this.commandList.Add(command, newCommand);
-
 
                 return newCommand;
             }

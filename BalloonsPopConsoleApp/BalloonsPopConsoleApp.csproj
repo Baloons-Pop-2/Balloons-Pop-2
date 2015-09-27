@@ -60,8 +60,10 @@
     <Compile Include="Effects\TraversalEffect.cs" />
     <Compile Include="Engine\GameEngine.cs" />
     <Compile Include="Engine\IGameEngine.cs" />
+    <Compile Include="Factories\CommandContextFactory.cs" />
     <Compile Include="Factories\CommandFactory.cs" />
     <Compile Include="Factories\EffectFactory.cs" />
+    <Compile Include="GameEngineDependencies.cs" />
     <Compile Include="Logs\ILogger.cs" />
     <Compile Include="Logs\Logger.cs" />
     <Compile Include="Memento.cs" />
