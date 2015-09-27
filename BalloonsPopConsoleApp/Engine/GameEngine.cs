@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using BalloonsPop;
 using BalloonsPop.UI;
@@ -65,47 +66,77 @@ namespace BalloonsPopConsoleApp.Engine
             Play();
         }
 
-        public void Restart()
-        {
-            // TODO: Start()
-            throw new NotImplementedException();
-        }
-
         private void HandleCommands(string input, string[] parsedInput)
         {
             var instruction = parsedInput.Length == 0 ? string.Empty : parsedInput[0];
-            var ctx = this.commandContextFactory.GetNullCommandContext(this.board);
 
-            if (instruction == "")
+            ICommandContext ctx = this.commandContextFactory.GetNullCommandContext();
+
+            var validInstructions = new Dictionary<string, Action<string[]>>()
+            {
+                {
+                    "pop", delegate(string[] s)
+                    {
+                        var row = int.Parse(s[1]);
+                        var col = int.Parse(s[2]);
+
+
+                        ctx = this.commandContextFactory.GetPopCommandContext(this.board, row, col);
+                    }
+                },
+                {
+                    "undo", delegate(string[] s)
+                    {
+                        ctx = this.commandContextFactory.GetMementoCommandContext(this.board, this.memory);
+                    }
+                },
+                {
+                    "exit", delegate(string[] s)
+                    {
+                        ctx = this.commandContextFactory.GetNullCommandContext();
+                    }
+                },
+                {
+                    "restart", delegate(string[] s)
+                    {
+                        this.userMoves = 0;
+
+                        ctx = this.commandContextFactory.GetBoardCommandContext(this.board);
+                    }
+                }
+            };
+
+            if (validInstructions.ContainsKey(instruction))
+            {
+                var command = this.commandFactory.GetCommand(instruction);
+
+                validInstructions[instruction](parsedInput);
+
+                if (command.CanExecute(ctx))
+                {
+                    this.memory.Memento = this.board.SaveMemento();
+                    command.Execute(ctx);
+
+                    this.userMoves++;
+
+                    this.drawer.Clear();
+                    this.drawer.Draw(this.board);
+                }
+                else                   
+                {
+                    command.Execute(ctx);
+
+                    this.drawer.Clear();
+                    this.drawer.Draw(this.board);
+                    this.drawer.Draw(InvalidMove);
+                }
+            }
+            else
             {
                 this.drawer.Clear();
                 this.drawer.Draw(this.board);
                 this.drawer.Draw(InvalidCommand);
                 this.logger.Log(input);
-            }
-            else
-            {
-                if (instruction == "undo")
-                {
-                    ctx = this.commandContextFactory.GetMementoCommandContext(this.board, this.memory);
-                }
-
-                if (instruction == "pop")
-                {
-                    this.memory.Memento = this.board.SaveMemento();
-
-                    var row = int.Parse(parsedInput[1]);
-                    var col = int.Parse(parsedInput[2]);
-
-                    ctx = this.commandContextFactory.GetPopCommandContext(this.board, row, col);
-                }
-
-                var command = this.commandFactory.GetCommand(instruction);
-
-                command.Execute(ctx);
-
-                this.drawer.Clear();
-                this.drawer.Draw(this.board);
             }
         }
 
@@ -128,20 +159,18 @@ namespace BalloonsPopConsoleApp.Engine
             this.drawer.Clear();
             this.drawer.Draw(string.Format(GameCompleteMessagePrompt, this.userMoves));
             this.reader.Read();
+
+            this.Start();
         }
 
         private void ExecuteTurn()
         {
-            // TODO: HandleCommands(command), increment userMoves, clear screen, redraw
-
             this.drawer.Draw(InputPrompt);
 
-            string input = this.reader.Read();
+            string input = this.reader.Read().Trim();
             string[] parsedInput = this.reader.ParseInput(input).Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToArray();
 
             this.HandleCommands(input, parsedInput);
-            this.userMoves++;
-
         }
     }
 }

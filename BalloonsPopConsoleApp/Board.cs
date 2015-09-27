@@ -149,7 +149,7 @@ namespace BalloonsPopConsoleApp
             }
 
             output.AppendLine();
-            string separator = leftPadding + new string('-', 21);
+            string separator = leftPadding + new string('-', this.Cols*2);
             output.AppendLine(separator);
 
             for (int row = 0; row < this.Rows; row++)

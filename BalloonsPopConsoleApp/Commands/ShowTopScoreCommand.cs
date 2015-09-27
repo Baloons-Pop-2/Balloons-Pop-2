@@ -9,5 +9,10 @@ namespace BalloonsPopConsoleApp.Commands
         {
             throw new System.NotImplementedException();
         }
+
+        public bool CanExecute(ICommandContext ctx)
+        {
+            return false;
+        }
     }
 }

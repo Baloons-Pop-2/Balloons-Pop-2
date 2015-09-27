@@ -9,5 +9,10 @@ namespace BalloonsPopConsoleApp.Commands
         {
             ctx.Board.Reset();
         }
+
+        public bool CanExecute(ICommandContext ctx)
+        {
+            return false;
+        }
     }
 }

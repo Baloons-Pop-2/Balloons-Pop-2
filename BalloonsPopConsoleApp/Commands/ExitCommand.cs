@@ -10,5 +10,10 @@ namespace BalloonsPopConsoleApp.Commands
         {
             Environment.Exit(42);
         }
+
+        public bool CanExecute(ICommandContext ctx)
+        {
+            return false;
+        }
     }
 }

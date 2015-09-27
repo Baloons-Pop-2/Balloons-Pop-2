@@ -9,7 +9,7 @@ namespace BalloonsPopConsoleApp
     {
         static void Main()
         {
-            const int boardSize = 8;
+            const int boardSize = 10;
 
             var engineDependencies = new GameEngineDependencies(
                 new ConsoleUserInterface(),

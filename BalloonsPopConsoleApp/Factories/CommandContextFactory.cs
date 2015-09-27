@@ -4,9 +4,9 @@ namespace BalloonsPopConsoleApp.Factories
 {
     public class CommandContextFactory : ICommandContextFactory
     {
-        public ICommandContext GetNullCommandContext(IBoard board)
+        public ICommandContext GetNullCommandContext()
         {
-            return new NullCommandContext(board);
+            return new NullCommandContext();
         }
 
         public ICommandContext GetPopCommandContext(IBoard board, int row, int col)
@@ -17,6 +17,11 @@ namespace BalloonsPopConsoleApp.Factories
         public ICommandContext GetMementoCommandContext(IBoard board, IBoardMemory memory)
         {
             return new CommandContext(board, memory);
+        }
+
+        public ICommandContext GetBoardCommandContext(IBoard board)
+        {
+            return new CommandContext(board);
         }
     }
 }

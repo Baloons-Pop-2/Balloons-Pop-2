@@ -35,5 +35,22 @@ namespace BalloonsPopConsoleApp.Commands
 
             Pop(this.activeRow, this.activeCol);
         }
+
+        public bool CanExecute(ICommandContext ctx)
+        {
+            if (ctx.Board == null)
+            {
+                throw new ArgumentNullException();
+            }
+
+            if (ctx.Board.IsValidPop(ctx.ActiveRow, ctx.ActiveCol))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

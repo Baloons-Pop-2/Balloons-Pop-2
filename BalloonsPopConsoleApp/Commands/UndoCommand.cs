@@ -7,7 +7,15 @@ namespace BalloonsPopConsoleApp.Commands
     {
         public void Execute(ICommandContext ctx)
         {
-            ctx.Board.RestoreMemento(ctx.Memory.Memento);
+            if (ctx.Memory.Memento != null)
+            {
+                ctx.Board.RestoreMemento(ctx.Memory.Memento);   
+            }
+        }
+
+        public bool CanExecute(ICommandContext ctx)
+        {
+            return false;
         }
     }
 }
