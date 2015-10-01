@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalloonsPopLib", "BalloonsP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalloonsPopConsoleApp", "BalloonsPopConsoleApp\BalloonsPopConsoleApp.csproj", "{50293A64-16DA-4F63-9070-3641CC48FA2E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalloonsPopGraphics", "BalloonsPopGraphics\BalloonsPopGraphics.csproj", "{61650476-23A1-4253-AA26-51CD42776A3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{50293A64-16DA-4F63-9070-3641CC48FA2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50293A64-16DA-4F63-9070-3641CC48FA2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50293A64-16DA-4F63-9070-3641CC48FA2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61650476-23A1-4253-AA26-51CD42776A3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61650476-23A1-4253-AA26-51CD42776A3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61650476-23A1-4253-AA26-51CD42776A3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61650476-23A1-4253-AA26-51CD42776A3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
