@@ -1,25 +1,23 @@
-﻿using System;
-using BalloonsPopConsoleApp.Engine;
-using BalloonsPopConsoleApp.Factories;
-using BalloonsPopConsoleApp.Logs;
-using BalloonsPopConsoleApp.UI.ConsoleUI;
-
-namespace BalloonsPopConsoleApp
+﻿namespace BalloonsPopConsoleApp
 {
-    class Program
+    using Engine;
+    using Factories;
+    using Logs;
+    using UI.ConsoleUI;
+
+    public class Program
     {
         private static void Main()
         {
-            const int boardSize = 8;
+            const int BoardSize = 8;
 
             var engineDependencies = new GameEngineDependencies(
                 new ConsoleUserInterface(),
-                new Constraints(boardSize, boardSize),
+                new Constraints(BoardSize, BoardSize),
                 new Logger(),
-                new Board(boardSize, boardSize),
+                new Board(BoardSize, BoardSize),
                 new BoardMemory(),
-                new CommandFactory()
-                );
+                new CommandFactory());
 
             var engine = new GameEngine(engineDependencies);
 

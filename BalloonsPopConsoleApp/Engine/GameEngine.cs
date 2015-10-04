@@ -1,12 +1,12 @@
-﻿using System;
-using BalloonsPop;
-using BalloonsPop.Commands;
-using BalloonsPop.UI;
-using BalloonsPop.UI.Drawer;
-using BalloonsPop.UI.InputHandler;
-
-namespace BalloonsPopConsoleApp.Engine
+﻿namespace BalloonsPopConsoleApp.Engine
 {
+    using System;
+    using BalloonsPop;
+    using BalloonsPop.Commands;
+    using BalloonsPop.UI;
+    using BalloonsPop.UI.Drawer;
+    using BalloonsPop.UI.InputHandler;
+
     public class GameEngine : IGameEngine
     {
         private readonly IUserInterface userInterface;
@@ -24,11 +24,7 @@ namespace BalloonsPopConsoleApp.Engine
 
             this.commandFactory = dependencies.CommandFactory;
 
-            this.ctx = new CommandContext(dependencies.Logger, 
-                new Board(dependencies.Constraints.BoardRows, dependencies.Constraints.BoardColumns), 
-                0, 0, 
-                dependencies.BoardMemory, 
-                new Highscore());
+            this.ctx = new CommandContext(dependencies.Logger, new Board(dependencies.Constraints.BoardRows, dependencies.Constraints.BoardColumns), 0, 0, dependencies.BoardMemory, new Highscore());
         }
 
         public void Run()
@@ -37,7 +33,7 @@ namespace BalloonsPopConsoleApp.Engine
             this.drawer.Draw(this.ctx.Board);
 
             this.drawer.Draw(this.ctx.Messages["sizeprompt"]);
-            RedefineBoardSize();
+            this.RedefineBoardSize();
 
             while (this.ctx.Board.UnpoppedBalloonsCount > 0)
             {
@@ -46,10 +42,10 @@ namespace BalloonsPopConsoleApp.Engine
                 this.drawer.Draw(this.ctx.CurrentMessage);
                 this.drawer.Draw(this.ctx.Messages["inputprompt"]);
 
-                ExecuteTurn();
+                this.ExecuteTurn();
             }
 
-            GameOver();
+            this.GameOver();
         }
 
         private void RedefineBoardSize()
@@ -70,7 +66,6 @@ namespace BalloonsPopConsoleApp.Engine
             {
                 this.ctx.CurrentMessage = "\nDefault size initialized!";
             }
-
         }
 
         private void GameOver()

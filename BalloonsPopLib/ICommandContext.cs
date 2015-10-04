@@ -1,8 +1,8 @@
-﻿using System.Collections.Generic;
-using BalloonsPop.Logs;
-
-namespace BalloonsPop
+﻿namespace BalloonsPop
 {
+    using System.Collections.Generic;
+    using Logs;
+
     public interface ICommandContext
     {
         ILogger Logger { get; set; }

@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using BalloonsPop.UI.InputHandler;
-
-namespace BalloonsPopConsoleApp.UI.ConsoleUI
+﻿namespace BalloonsPopConsoleApp.UI.ConsoleUI
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using BalloonsPop.UI.InputHandler;
+
     public class ConsoleInputHandler : IInputHandler
     {
         protected static readonly IList<string> ValidCommands = new List<string>()
@@ -19,7 +19,7 @@ namespace BalloonsPopConsoleApp.UI.ConsoleUI
         {
             var input = Console.ReadLine().Trim();
 
-            if (String.IsNullOrWhiteSpace(input))
+            if (string.IsNullOrWhiteSpace(input))
             {
                 return "invalidInput";
             }
@@ -44,8 +44,9 @@ namespace BalloonsPopConsoleApp.UI.ConsoleUI
             }
             else if (IsValidPopInput(input))
             {
-                return String.Format("pop {0} {1}", inputWords[0], inputWords[1]);        
+                return string.Format("pop {0} {1}", inputWords[0], inputWords[1]);        
             }
+
             return "invalidInput";
         }
 
@@ -55,7 +56,7 @@ namespace BalloonsPopConsoleApp.UI.ConsoleUI
 
             if (splitInput.Length == 2)
             {
-                return (splitInput[0] + splitInput[1]).All(Char.IsDigit);
+                return (splitInput[0] + splitInput[1]).All(char.IsDigit);
             }
 
             return false;

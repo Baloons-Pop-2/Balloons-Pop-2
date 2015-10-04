@@ -1,7 +1,7 @@
-﻿using BalloonsPop;
-
-namespace BalloonsPopConsoleApp
+﻿namespace BalloonsPopConsoleApp
 {
+    using BalloonsPop;
+
     public class Memento : IBoardMemento
     {
         private IBalloon[,] board;

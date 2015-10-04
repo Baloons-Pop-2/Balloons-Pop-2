@@ -1,9 +1,9 @@
-﻿using BalloonsPop;
-using BalloonsPop.Traversals;
-using BalloonsPopConsoleApp.Effects;
-
-namespace BalloonsPopConsoleApp.Factories
+﻿namespace BalloonsPopConsoleApp.Factories
 {
+    using BalloonsPop;
+    using BalloonsPop.Traversals;
+    using Effects;
+
     public class EffectFactory : IEffectFactory
     {
         public ITraversalEffect GetDefaultEffect()

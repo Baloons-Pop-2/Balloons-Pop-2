@@ -1,20 +1,20 @@
-﻿using System;
-using System.Text;
-using BalloonsPop;
-using BalloonsPopConsoleApp.Factories;
-
-namespace BalloonsPopConsoleApp
+﻿namespace BalloonsPopConsoleApp
 {
+    using System;
+    using System.Text;
+    using BalloonsPop;
+    using Factories;
+
     public class Board : IBoard
     {
         private const int MaxRowsCount = 15;
         private const int MinRowsCount = 5;
         private const int MaxColsCount = 15;
         private const int MinColsCount = 5;
+        private readonly IBalloonFactory balloonFactory;
         private int rowsCount;
         private int colsCount;
         private IBalloon[,] board;
-        private readonly IBalloonFactory balloonFactory;
 
         public Board(int rows, int cols)
         {
@@ -29,7 +29,7 @@ namespace BalloonsPopConsoleApp
         {
             get
             {
-                return rowsCount;
+                return this.rowsCount;
             }
 
             set
@@ -39,16 +39,15 @@ namespace BalloonsPopConsoleApp
                     throw new ArgumentOutOfRangeException("board rows");
                 }
 
-                rowsCount = value;
+                this.rowsCount = value;
             }
         }
-
 
         public int Cols
         {
             get
             {
-                return colsCount;
+                return this.colsCount;
             }
 
             set
@@ -58,20 +57,7 @@ namespace BalloonsPopConsoleApp
                     throw new ArgumentOutOfRangeException("board cols");
                 }
 
-                colsCount = value;
-            }
-        }
-
-        public IBalloon this[int row, int col]
-        {
-            get
-            {
-                return board[row, col];
-            }
-
-            set
-            {
-                board[row, col] = value;
+                this.colsCount = value;
             }
         }
 
@@ -96,6 +82,19 @@ namespace BalloonsPopConsoleApp
             }
         }
 
+        public IBalloon this[int row, int col]
+        {
+            get
+            {
+                return this.board[row, col];
+            }
+
+            set
+            {
+                this.board[row, col] = value;
+            }
+        }
+
         public void Reset()
         {
             this.Fill();
@@ -113,18 +112,6 @@ namespace BalloonsPopConsoleApp
             }
 
             return false;
-        }
-
-        private void Fill()
-        {
-            for (int row = 0; row < this.Rows; row++)
-            {
-                for (int col = 0; col < this.Cols; col++)
-                {
-                    var randomValue = int.Parse(RandomGenerator.GetRandomInt());
-                    this[row, col] = this.balloonFactory.GetBalloon(randomValue);
-                }
-            }
         }
 
         public IBoardMemento SaveMemento()
@@ -151,7 +138,7 @@ namespace BalloonsPopConsoleApp
             }
 
             output.AppendLine();
-            string separator = leftPadding + new string('-', this.Cols*2);
+            string separator = leftPadding + new string('-', this.Cols * 2);
             output.AppendLine(separator);
 
             for (int row = 0; row < this.Rows; row++)
@@ -160,19 +147,33 @@ namespace BalloonsPopConsoleApp
 
                 for (int col = 0; col < this.Cols; col++)
                 {
-                    if (board[row, col] == null)
+                    if (this.board[row, col] == null)
                     {
                         output.Append(". ");
                         continue;
                     }
-                    output.Append(board[row, col].Value + " ");
+
+                    output.Append(this.board[row, col].Value + " ");
                 }
+
                 output.AppendLine("| ");
             }
 
             output.AppendLine(separator);
-            
+
             return output.ToString();
+        }
+
+        private void Fill()
+        {
+            for (int row = 0; row < this.Rows; row++)
+            {
+                for (int col = 0; col < this.Cols; col++)
+                {
+                    var randomValue = int.Parse(RandomGenerator.GetRandomInt());
+                    this[row, col] = this.balloonFactory.GetBalloon(randomValue);
+                }
+            }
         }
     }
 }

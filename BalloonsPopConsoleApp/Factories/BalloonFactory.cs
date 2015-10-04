@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using BalloonsPop;
-using BalloonsPop.Traversals;
-
-namespace BalloonsPopConsoleApp.Factories
+﻿namespace BalloonsPopConsoleApp.Factories
 {
+    using System;
+    using System.Collections.Generic;
+    using BalloonsPop;
+    using BalloonsPop.Traversals;
+
     public class BalloonFactory : IBalloonFactory
     {
         private readonly Dictionary<int, IBalloon> balloonsList;

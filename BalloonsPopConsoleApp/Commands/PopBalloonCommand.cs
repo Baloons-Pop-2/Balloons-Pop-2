@@ -1,19 +1,11 @@
-﻿using System;
-using System.Runtime.InteropServices.ComTypes;
-using BalloonsPop;
-using BalloonsPop.Commands;
-
-namespace BalloonsPopConsoleApp.Commands
+﻿namespace BalloonsPopConsoleApp.Commands
 {
+    using System;
+    using BalloonsPop;
+    using BalloonsPop.Commands;
+
     public class PopBalloonCommand : ICommand
     {
-        private void Pop(IBoard board, int row, int col)
-        {
-            var balloon = board[row, col];
-            var traversal = balloon.TraversalEffect;
-            traversal.Pop(row, col, board);
-        }
-
         public void Execute(ICommandContext ctx)
         {
             if (ctx.Board == null)
@@ -27,8 +19,15 @@ namespace BalloonsPopConsoleApp.Commands
                 return;
             }
 
-            Pop(ctx.Board, ctx.ActiveRow, ctx.ActiveCol);
-            ctx.CurrentMessage = "";
+            this.Pop(ctx.Board, ctx.ActiveRow, ctx.ActiveCol);
+            ctx.CurrentMessage = string.Empty;
+        }
+
+        private void Pop(IBoard board, int row, int col)
+        {
+            var balloon = board[row, col];
+            var traversal = balloon.TraversalEffect;
+            traversal.Pop(row, col, board);
         }
     }
 }

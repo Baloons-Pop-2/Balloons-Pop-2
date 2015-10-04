@@ -1,9 +1,9 @@
-﻿using BalloonsPop.UI;
-using BalloonsPop.UI.Drawer;
-using BalloonsPop.UI.InputHandler;
-
-namespace BalloonsPopConsoleApp.UI.ConsoleUI
+﻿namespace BalloonsPopConsoleApp.UI.ConsoleUI
 {
+    using BalloonsPop.UI;
+    using BalloonsPop.UI.Drawer;
+    using BalloonsPop.UI.InputHandler;
+
     public class ConsoleUserInterface : IUserInterface
     {
         public ConsoleUserInterface()

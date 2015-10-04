@@ -1,9 +1,9 @@
-﻿using System;
-using BalloonsPop.UI.Drawer;
-
-namespace BalloonsPopConsoleApp.UI.ConsoleUI
+﻿namespace BalloonsPopConsoleApp.UI.ConsoleUI
 {
-    class ConsoleDrawer : IPicasso
+    using System;
+    using BalloonsPop.UI.Drawer;
+
+    public class ConsoleDrawer : IPicasso
     {
         public void Draw(object obj)
         {

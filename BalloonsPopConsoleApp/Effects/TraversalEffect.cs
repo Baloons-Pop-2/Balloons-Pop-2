@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using BalloonsPop;
-using BalloonsPop.Traversals;
-
-namespace BalloonsPopConsoleApp.Effects
+﻿namespace BalloonsPopConsoleApp.Effects
 {
+    using System;
+    using System.Collections.Generic;
+    using BalloonsPop;
+    using BalloonsPop.Traversals;
+
     public abstract class TraversalEffect : ITraversalEffect
     {
         public void Pop(int row, int col, IBoard board)
@@ -16,9 +16,9 @@ namespace BalloonsPopConsoleApp.Effects
 
             var balloon = board[row, col];
 
-            PopBalloons(row, col, board, balloon.Value);
+            this.PopBalloons(row, col, board, balloon.Value);
 
-            ClearEmptyCells(board);
+            this.ClearEmptyCells(board);
         }
 
         protected abstract void PopBalloons(int row, int col, IBoard board, int cellValue);

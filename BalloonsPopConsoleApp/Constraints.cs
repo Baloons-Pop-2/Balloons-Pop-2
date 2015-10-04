@@ -1,7 +1,7 @@
-﻿using BalloonsPop;
-
-namespace BalloonsPopConsoleApp
+﻿namespace BalloonsPopConsoleApp
 {
+    using BalloonsPop;
+
     public class Constraints : IConstraints
     {
         public Constraints(int rows, int cols)

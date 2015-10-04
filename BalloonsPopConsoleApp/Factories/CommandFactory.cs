@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using BalloonsPop;
-using BalloonsPop.Commands;
-using BalloonsPopConsoleApp.Commands;
-
-namespace BalloonsPopConsoleApp.Factories
+﻿namespace BalloonsPopConsoleApp.Factories
 {
+    using System;
+    using System.Collections.Generic;
+    using BalloonsPop;
+    using BalloonsPop.Commands;
+    using Commands;
+
     public class CommandFactory : ICommandFactory
     {
         private readonly Dictionary<string, ICommand> commandDictionary = new Dictionary<string, ICommand>();
