@@ -1,9 +1,11 @@
-﻿namespace BalloonsPopConsoleApp
+﻿namespace BalloonsPopConsoleApp.Models
 {
     using System;
     using System.Text;
     using BalloonsPop;
     using Factories;
+    using Memory;
+    using Miscellaneous;
 
     public class Board : IBoard
     {

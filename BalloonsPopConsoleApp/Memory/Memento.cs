@@ -1,4 +1,4 @@
-﻿namespace BalloonsPopConsoleApp
+﻿namespace BalloonsPopConsoleApp.Memory
 {
     using BalloonsPop;
 

@@ -1,5 +1,6 @@
 ﻿namespace BalloonsPopConsoleApp.Effects
 {
+    using Models;
     using BalloonsPop;
 
     public class AreaPopEffect : TraversalEffect

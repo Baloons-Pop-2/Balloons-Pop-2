@@ -1,4 +1,4 @@
-﻿namespace BalloonsPopConsoleApp
+﻿namespace BalloonsPopConsoleApp.Miscellaneous
 {
     using System.Collections.Generic;
     using BalloonsPop;

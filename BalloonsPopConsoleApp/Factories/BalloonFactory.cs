@@ -4,6 +4,7 @@
     using System.Collections.Generic;
     using BalloonsPop;
     using BalloonsPop.Traversals;
+    using Models;
 
     public class BalloonFactory : IBalloonFactory
     {

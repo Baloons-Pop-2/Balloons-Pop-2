@@ -1,4 +1,4 @@
-﻿namespace BalloonsPopConsoleApp
+﻿namespace BalloonsPopConsoleApp.Models
 {
     using System;
     using BalloonsPop;
