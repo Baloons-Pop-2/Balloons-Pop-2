@@ -56,9 +56,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="ClickEventArgs.cs" />
-    <Compile Include="Effect.cs" />
-    <Compile Include="test.cs" />
+    <Compile Include="GraphicsAreaTraversal.cs" />
+    <Compile Include="GraphicsBalloon.cs" />
+    <Compile Include="GraphicsBalloonFactory.cs" />
+    <Compile Include="GraphicsBFSTraversal.cs" />
+    <Compile Include="GraphicsTraversal.cs" />
+    <Compile Include="ImageSourceFactory.cs" />
+    <Compile Include="MainWindow.cs" />
+    <Compile Include="RandomGen.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,10 +72,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Board.cs" />
-    <Compile Include="GameEngine.cs" />
-    <Compile Include="GraphicsBalloon.cs" />
-    <Compile Include="BalloonFactory.cs" />
     <Compile Include="IGraphicsBalloon.cs" />
     <Compile Include="IVisualizeable.cs" />
     <Compile Include="MainWindow.xaml.cs">

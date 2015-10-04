@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 
 namespace BalloonsPopGraphics
 {
     public interface IVisualizeable
     {
-        Image Image { get; }
+        BitmapImage ImageSource { get; }
     }
 }

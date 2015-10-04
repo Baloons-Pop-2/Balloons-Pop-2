@@ -12,71 +12,35 @@ namespace BalloonsPopGraphics
 {
     public class GraphicsBalloon : Image, IGraphicsBalloon
     {
-        private ITraversalEffect effect;
-
-        public GraphicsBalloon(int value, ITraversalEffect traversalEffect)
+        ImageSourceFactory imageSourceProvider;
+        public GraphicsBalloon(int value, GraphicsTraversal traversal, BitmapImage imageSource, ImageSourceFactory imageSourceProvider)
+            :base()
         {
+            this.imageSourceProvider = imageSourceProvider;
+            this.IsPopped = false;
             this.Value = value;
-            this.TraversalEffect = traversalEffect;
+            this.TraversalEffect = traversal;
+            this.ImageSource = imageSource;
         }
 
-        public int Value { get; set; }
+        public int Value { get; private set; }
 
-        public ITraversalEffect TraversalEffect
+        public GraphicsTraversal TraversalEffect { get; private set; }
+
+        public BitmapImage ImageSource { get; private set; }
+
+        public bool IsPopped { get; set; }
+
+        public void Pop()
         {
-            get
-            {
-                return this.effect;
-            }
-
-            private set
-            {
-                if (value == null)
-                {
-                    throw new ArgumentNullException("effect");
-                }
-
-                this.effect = value;
-            }
+            this.IsPopped = true;
+            this.Source = this.imageSourceProvider.GetSource(0);
         }
 
-        private Uri ImageSource
+        public void Unpop()
         {
-            get { return new Uri(@"\Images\" + this.Value + ".png", UriKind.Relative); }
-        }
-
-        public Image Image
-        {
-            get 
-            {
-                var image = new Image();
-                image.Source = new BitmapImage(this.ImageSource);
-                return image;
-            }
-        }
-
-        public int Row
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public int Col
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            this.IsPopped = false;
+            this.Source = this.imageSourceProvider.GetSource(this.Value);
         }
     }
 }
