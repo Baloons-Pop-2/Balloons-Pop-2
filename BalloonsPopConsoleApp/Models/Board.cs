@@ -7,6 +7,9 @@
     using Memory;
     using Miscellaneous;
 
+    /// <summary>
+    /// Board object that comprises balloon matrix.
+    /// </summary>
     public class Board : IBoard
     {
         private const int MaxRowsCount = 15;
@@ -18,6 +21,11 @@
         private int colsCount;
         private IBalloon[,] board;
 
+        /// <summary>
+        /// Board object constructor.
+        /// </summary>
+        /// <param name="rows"></param>
+        /// <param name="cols"></param>
         public Board(int rows, int cols)
         {
             this.Rows = rows;
@@ -27,6 +35,9 @@
             this.Fill();
         }
 
+        /// <summary>
+        /// Board's number of Rows - Must be between 5 and 15
+        /// </summary>
         public int Rows
         {
             get
@@ -34,7 +45,7 @@
                 return this.rowsCount;
             }
 
-            set
+            private set
             {
                 if (value < MinRowsCount || value > MaxRowsCount)
                 {
@@ -44,7 +55,10 @@
                 this.rowsCount = value;
             }
         }
-
+        
+        /// <summary>
+        /// Board's number of Columns - Must be between 5 and 15
+        /// </summary>
         public int Cols
         {
             get
@@ -52,7 +66,7 @@
                 return this.colsCount;
             }
 
-            set
+            private set
             {
                 if (value < MinColsCount || value > MaxColsCount)
                 {
@@ -63,6 +77,9 @@
             }
         }
 
+        /// <summary>
+        /// Returns the amount of not-null values in the matrix
+        /// </summary>
         public int UnpoppedBalloonsCount
         {
             get
@@ -84,6 +101,12 @@
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="row"></param>
+        /// <param name="col"></param>
+        /// <returns>Balloon object</returns>
         public IBalloon this[int row, int col]
         {
             get
@@ -97,11 +120,20 @@
             }
         }
 
+        /// <summary>
+        /// Method resets the matrix and fills it anew
+        /// </summary>
         public void Reset()
         {
             this.Fill();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="row"></param>
+        /// <param name="col"></param>
+        /// <returns>True if the value of the matrix is not-null, False if no Balloon is present</returns>
         public bool IsValidPop(int row, int col)
         {
             bool rowIsInRange = 0 <= row && row < this.Rows;
@@ -116,6 +148,10 @@
             return false;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>Memento object</returns>
         public IBoardMemento SaveMemento()
         {
             var clonedBoard = (IBalloon[,])this.board.Clone();
@@ -123,11 +159,19 @@
             return new Memento(clonedBoard);
         }
 
+        /// <summary>
+        /// Returns the Board to a previous stable state.
+        /// </summary>
+        /// <param name="memento"></param>
         public void RestoreMemento(IBoardMemento memento)
         {
             this.board = memento.Board;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>String representation of the Board object</returns>
         public override string ToString()
         {
             StringBuilder output = new StringBuilder();

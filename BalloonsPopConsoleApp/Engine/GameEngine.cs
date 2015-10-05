@@ -9,8 +9,6 @@
     using Miscellaneous;
     using Models;
 
-
-
     public class GameEngine : IGameEngine
     {
         private readonly IUserInterface userInterface;
@@ -28,7 +26,7 @@
 
             this.commandFactory = dependencies.CommandFactory;
 
-            this.ctx = new CommandContext(dependencies.Logger, new Board(dependencies.Constraints.BoardRows, dependencies.Constraints.BoardColumns), 0, 0, dependencies.BoardMemory, new Highscore());
+            this.ctx = new CommandContext(dependencies.Logger, new Board(dependencies.Board.Rows, dependencies.Board.Cols), 0, 0, dependencies.BoardMemory, new Highscore());
         }
 
         public void Run()
