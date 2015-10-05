@@ -7,7 +7,7 @@
     using NUnit.Framework;
 
     [TestFixture]
-    public class CommandContextTest
+    public class CommandContextTests
     {
         [Test]
         public void CommandContextShouldCreateProperly()

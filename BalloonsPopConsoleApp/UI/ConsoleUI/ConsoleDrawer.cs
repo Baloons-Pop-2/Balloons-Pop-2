@@ -18,7 +18,7 @@
         }
 
         /// <summary>
-        /// Clears the screen of
+        /// Clears the window and refreshes the view
         /// </summary>
         public void Clear()
         {

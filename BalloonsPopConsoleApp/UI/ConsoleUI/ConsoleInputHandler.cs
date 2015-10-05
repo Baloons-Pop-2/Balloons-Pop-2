@@ -5,6 +5,9 @@
     using System.Linq;
     using BalloonsPop.UI.InputHandler;
 
+    /// <summary>
+    /// IInputHandler Object that reads user input and handles any errors.
+    /// </summary>
     public class ConsoleInputHandler : IInputHandler
     {
         protected static readonly IList<string> ValidCommands = new List<string>()
@@ -15,6 +18,10 @@
             "undo"
         };
 
+        /// <summary>
+        /// Reads input from the console and checks for null values.
+        /// </summary>
+        /// <returns>The trimmed string or "invalidInput" when the read string is empty</returns>
         public string Read()
         {
             var input = Console.ReadLine().Trim();
@@ -29,6 +36,11 @@
             }
         }
 
+        /// <summary>
+        /// Parses input.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns>Parsed string that is ready to be passed as a command. "invalidInput" is returned if the parsing fails</returns>
         public string ParseInput(string input)
         {
             var inputWords = input.ToLower().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToArray();
