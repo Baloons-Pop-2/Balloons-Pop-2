@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Effects\AreaPopEffectTests.cs" />
+    <Compile Include="Effects\BfsEffectTests.cs" />
     <Compile Include="Miscellaneous\CommandContextTests.cs" />
     <Compile Include="Miscellaneous\GameEngineDependenciesTests.cs" />
     <Compile Include="Models\BoardTests.cs" />
@@ -58,7 +60,9 @@
     <Compile Include="Models\BalloonTests.cs" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BalloonsPopConsoleApp\BalloonsPopConsoleApp.csproj">
       <Project>{50293a64-16da-4f63-9070-3641cc48fa2e}</Project>

@@ -6,6 +6,7 @@
     using Memory;
     using BalloonsPopConsoleApp.Models;
     using NUnit.Framework;
+    using BalloonsPopConsoleApp.Effects;
 
     [TestFixture]
     public class BoardTests
@@ -192,7 +193,8 @@
                     board[i, j] = new Balloon(1, new AreaPopEffect());
                 }
             }
-            board[0, 0] = null;
+
+            board[0, 0] = Balloon.Default;
         }
     }
 }
