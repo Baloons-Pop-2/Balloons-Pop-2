@@ -5,6 +5,7 @@
     using BalloonsPopConsoleApp.Miscellaneous;
     using BalloonsPopConsoleApp.Models;
     using NUnit.Framework;
+    using BalloonsPopConsoleApp.Logs;
 
     [TestFixture]
     public class CommandContextTests

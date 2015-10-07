@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Effects\AreaPopEffectTests.cs" />
     <Compile Include="Effects\BfsEffectTests.cs" />
+    <Compile Include="Logs\LoggerTests.cs" />
     <Compile Include="Miscellaneous\CommandContextTests.cs" />
     <Compile Include="Miscellaneous\GameEngineDependenciesTests.cs" />
     <Compile Include="Models\BoardTests.cs" />
@@ -73,6 +74,7 @@
       <Name>BalloonsPopLib</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
