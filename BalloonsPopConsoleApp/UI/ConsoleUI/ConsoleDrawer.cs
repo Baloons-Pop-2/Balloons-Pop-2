@@ -11,7 +11,7 @@
         /// <summary>
         /// Draws the string representation of the object passed as a parameter
         /// </summary>
-        /// <param name="obj"></param>
+        /// <param name="obj">The object to be drawn</param>
         public void Draw(object obj)
         {
             Console.Write(obj);

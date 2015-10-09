@@ -7,7 +7,7 @@
     using Models;
 
     /// <summary>
-    /// BalloonFactory pattern that take care of create instances of the Balloon class.
+    /// BalloonFactory pattern that take care of creating flyweight objects of the Balloon class.
     /// </summary>
     public class BalloonFactory : IBalloonFactory
     {
@@ -15,7 +15,7 @@
         private readonly IEffectFactory effectFactory;
 
         /// <summary>
-        /// BalloonFactory object constructor.
+        /// BalloonFactory returns an existing instance of a Balloon class or creates one.
         /// </summary>
         public BalloonFactory()
         {
@@ -26,8 +26,8 @@
         /// <summary>
         /// Method that get the Balloon with a concrete value.
         /// </summary>
-        /// <param name="value"></param>
-        /// <returns>Instance of one certain balloon</returns>
+        /// <param name="value">The balloon value to be set</param>
+        /// <returns>An existing instance of a Balloon class or creates one.</returns>
         public IBalloon GetBalloon(int value)
         {
             if (this.balloonsList.ContainsKey(value))

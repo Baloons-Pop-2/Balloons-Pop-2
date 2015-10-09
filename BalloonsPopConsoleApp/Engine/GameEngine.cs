@@ -1,6 +1,7 @@
 ﻿namespace BalloonsPopConsoleApp.Engine
 {
     using System;
+
     using BalloonsPop;
     using BalloonsPop.Commands;
     using BalloonsPop.UI;
@@ -31,13 +32,11 @@
 
         public void Run()
         {
-            this.commandFactory.GetCommand("restart").Execute(this.ctx);
             this.drawer.Draw(this.ctx.Board);
-
             this.drawer.Draw(this.ctx.Messages["sizeprompt"]);
             this.RedefineBoardSize();
 
-            while (this.ctx.Board.UnpoppedBalloonsCount > 0)
+            while (this.ctx.Board.UnpoppedBalloonsCount > 0 && !this.ctx.IsOver)
             {
                 this.drawer.Clear();
                 this.drawer.Draw(this.ctx.Board);
@@ -47,9 +46,19 @@
                 this.ExecuteTurn();
             }
 
-            this.GameOver();
+            if (this.ctx.Board.UnpoppedBalloonsCount > 0)
+            {
+
+                this.GameOver();
+            }
+            else
+            {
+                // ask for name
+                this.GameOver();
+            }
         }
 
+        
         private void RedefineBoardSize()
         {
             var size = this.reader.Read();
@@ -69,6 +78,7 @@
                 this.ctx.CurrentMessage = "\nDefault size initialized!";
             }
         }
+        
 
         private void GameOver()
         {

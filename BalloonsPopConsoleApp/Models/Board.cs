@@ -22,10 +22,10 @@
         private IBalloon[,] board;
 
         /// <summary>
-        /// Board object constructor.
+        /// Board object containing multiple Balloon objects. The Board serves as the interface through which Balloons are accessed
         /// </summary>
-        /// <param name="rows"></param>
-        /// <param name="cols"></param>
+        /// <param name="rows">The max amount of rows the board will contain</param>
+        /// <param name="cols">The max amount of columns the board will contain</param>
         public Board(int rows, int cols)
         {
             this.Rows = rows;
@@ -104,8 +104,8 @@
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="row"></param>
-        /// <param name="col"></param>
+        /// <param name="row">Ballon matrix row index</param>
+        /// <param name="col">Ballon matrix column index</param>
         /// <returns>Balloon object</returns>
         public IBalloon this[int row, int col]
         {
@@ -131,8 +131,8 @@
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="row"></param>
-        /// <param name="col"></param>
+        /// <param name="row">Ballon matrix row index</param>
+        /// <param name="col">Ballon matrix column index</param>
         /// <returns>True if the value of the matrix is not-null, False if no Balloon is present</returns>
         public bool IsValidPop(int row, int col)
         {
@@ -162,7 +162,7 @@
         /// <summary>
         /// Returns the Board to a previous stable state.
         /// </summary>
-        /// <param name="memento"></param>
+        /// <param name="memento">The caretaker's memento where a previous stable state is stored</param>
         public void RestoreMemento(IBoardMemento memento)
         {
             this.board = memento.Board;

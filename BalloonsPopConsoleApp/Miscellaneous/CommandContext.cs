@@ -12,7 +12,7 @@
         private readonly Dictionary<string, string> messages = new Dictionary<string, string>()
         {
             { "welcome", "\nWelcome to \"Balloons Pops\" game. \r\nTry to pop the balloons in as few moves as possible. \r\nUse 'top' to view the top scoreboard, \r\n'restart' to start a new game and \r\n'exit' to quit the game.\n" },
-            { "goodbye", "\nGoodbye!\n" },
+            { "goodbye", "\nScore from the current session will not be recorded. Hope to see you soon!\nGoodbye! \n\n" },
             { "invalidmove", "\nIllegal move: cannot pop missing ballon!" },
             { "invalidcommand", "\nInvalid move or command!" },
             { "gameover", "\nYou popped all baloons in {0} moves.\r\nPlease enter your name for the top scoreboard: " },
@@ -24,12 +24,12 @@
         /// <summary>
         /// CommandContext constructor
         /// </summary>
-        /// <param name="logger"></param>
-        /// <param name="board"></param>
-        /// <param name="row"></param>
-        /// <param name="col"></param>
-        /// <param name="memory"></param>
-        /// <param name="score"></param>
+        /// <param name="logger">The logger to save messages</param>
+        /// <param name="board">The board object to be used in the game</param>
+        /// <param name="row">The row that needs to be popped</param>
+        /// <param name="col">The column that needs to be popped</param>
+        /// <param name="memory">The memory caretaker where a memento is saved</param>
+        /// <param name="score">The score container</param>
         public CommandContext(ILogger logger, IBoard board, int row, int col, IBoardMemory memory, IHighscore score)
         {
             this.Logger = logger;
@@ -38,6 +38,7 @@
             this.ActiveCol = col;
             this.Memory = memory;
             this.Score = score;
+            this.IsOver = false;
 
             this.CurrentMessage = this.Messages["welcome"];
         }
@@ -69,6 +70,8 @@
         {
             get { return this.messages; }
         }
+
+        public bool IsOver { get; set; }
 
         /// <summary>
         /// Memory object where a memento is stored.

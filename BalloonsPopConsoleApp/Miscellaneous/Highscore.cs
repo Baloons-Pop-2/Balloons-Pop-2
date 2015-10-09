@@ -13,8 +13,20 @@
         public int CurrentScore { get; set; }
 
         /// <summary>
-        /// Player's name. Can be set at any point of the game
+        /// Player's name
         /// </summary>
-        public string Username { get; set; }
+        public string Username { get; private set; }
+
+        /// <summary>
+        /// Set Player's Name on demand
+        /// </summary>
+        /// <param name="name">The current player's identity</param>
+        /// <returns>Instance of type Highscore</returns>
+        public Highscore PlayerName(string name)
+        {
+            this.Username = name;
+
+            return this;
+        }
     }
 }

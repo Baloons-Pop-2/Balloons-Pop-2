@@ -8,7 +8,7 @@
     {
         public void Execute(ICommandContext ctx)
         {
-            Environment.Exit(42);
+            ctx.IsOver = true;
         }
     }
 }

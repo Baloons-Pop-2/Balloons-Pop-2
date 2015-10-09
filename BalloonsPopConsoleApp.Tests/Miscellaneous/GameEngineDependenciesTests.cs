@@ -1,7 +1,6 @@
 ﻿namespace BalloonsPopConsoleApp.Tests.Miscellaneous
 {
     using Factories;
-    using Logs;
     using Memory;
     using BalloonsPopConsoleApp.Miscellaneous;
     using BalloonsPopConsoleApp.Models;

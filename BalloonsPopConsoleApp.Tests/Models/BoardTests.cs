@@ -1,12 +1,13 @@
 ﻿namespace BalloonsPopConsoleApp.Tests.Models
 {
     using System;
-    using BalloonsPop;
-    using Effects;
-    using Memory;
-    using BalloonsPopConsoleApp.Models;
+
     using NUnit.Framework;
+
+    using BalloonsPop;
     using BalloonsPopConsoleApp.Effects;
+    using BalloonsPopConsoleApp.Models;
+    using Memory;
 
     [TestFixture]
     public class BoardTests
@@ -27,14 +28,14 @@
         }
 
         [Test]
-        [ExpectedException(typeof (ArgumentOutOfRangeException))]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void BoardWithValidRowsAndInvalidColumnsParametersShouldThrow()
         {
             var board = new Board(5, 4);
         }
 
         [Test]
-        [ExpectedException(typeof (ArgumentOutOfRangeException))]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void BoardWithInvalidRowsAndValidColumnsParametersShouldThrow()
         {
             var board = new Board(4, 5);
@@ -96,7 +97,7 @@
             board[2, 2] = null;
 
             var balloonsCount = board.UnpoppedBalloonsCount;
-            var expected = (size*size) - 2;
+            var expected = (size * size) - 2;
 
             Assert.AreEqual(expected, balloonsCount);
         }

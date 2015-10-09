@@ -1,35 +1,37 @@
-﻿using System;
-using BalloonsPopConsoleApp.Effects;
-using BalloonsPopConsoleApp.Models;
-using NUnit.Framework;
-
-namespace BalloonsPopConsoleApp.Tests.Models
+﻿namespace BalloonsPopConsoleApp.Tests.Models
 {
-	[TestFixture]
+    using System;
+
+    using NUnit.Framework;
+
+    using BalloonsPopConsoleApp.Effects;
+    using BalloonsPopConsoleApp.Models;
+
+    [TestFixture]
     public class BalloonTests
     {
-	    [Test]
+        [Test]
         public void BalloonWithProperValueAndValidTraversalShouldBeCreated(
             [Values(1, 2, 3, 4, 5)] int validValue)
-	    {
-	        var balloon = new Balloon(validValue, new AreaPopEffect());
-	    }
+        {
+            var balloon = new Balloon(validValue, new AreaPopEffect());
+        }
 
-	    [Test]
+        [Test]
         [ExpectedException(typeof(ArgumentNullException))]
-	    public void BalloonWithProperValueAndInvalidTraversalShouldThrow()
-	    {
-	        var balloon = new Balloon(2, null);
-	    }
+        public void BalloonWithProperValueAndInvalidTraversalShouldThrow()
+        {
+            var balloon = new Balloon(2, null);
+        }
 
-	    [Test]
-	    public void BalloonTraversalEffectReturnsAppropriateEffect()
-	    {
-	        var balloon = new Balloon(2, new BfsEffect());
-	        var effect = balloon.TraversalEffect;
-	        var effType = effect.GetType();
+        [Test]
+        public void BalloonTraversalEffectReturnsAppropriateEffect()
+        {
+            var balloon = new Balloon(2, new BfsEffect());
+            var effect = balloon.TraversalEffect;
+            var effType = effect.GetType();
 
             Assert.IsTrue(typeof(BfsEffect) == effType);
-	    }
+        }
     }
 }

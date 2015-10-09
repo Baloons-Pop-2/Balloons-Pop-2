@@ -21,11 +21,11 @@
         /// <summary>
         /// IPicasso Object that takes care of displaying objects on the console.
         /// </summary>
-        public IPicasso Drawer { get; private set; }
+        public IPicasso Drawer { get; set; }
 
         /// <summary>
         /// IInputHandler Object that reads user input and handles any errors.
         /// </summary>
-        public IInputHandler Reader { get; private set; }
+        public IInputHandler Reader { get; set; }
     }
 }

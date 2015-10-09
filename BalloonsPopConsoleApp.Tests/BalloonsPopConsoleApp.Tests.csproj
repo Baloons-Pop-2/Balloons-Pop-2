@@ -48,12 +48,12 @@
   <ItemGroup>
     <Compile Include="Effects\AreaPopEffectTests.cs" />
     <Compile Include="Effects\BfsEffectTests.cs" />
+    <Compile Include="Engine\GameEngineTests.cs" />
     <Compile Include="Logs\LoggerTests.cs" />
     <Compile Include="Miscellaneous\CommandContextTests.cs" />
     <Compile Include="Miscellaneous\GameEngineDependenciesTests.cs" />
     <Compile Include="Models\BoardTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\ConsoleDrawerTests.cs" />
     <Compile Include="UI\ConsoleInputHandlerTests.cs" />
     <Compile Include="UI\ConsoleUserInterfaceTests.cs" />
   </ItemGroup>

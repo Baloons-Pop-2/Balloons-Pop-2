@@ -17,6 +17,8 @@
 
         Dictionary<string, string> Messages { get; }
 
+        bool IsOver { get; set; }
+
         IHighscore Score { get; set; }
 
         string CurrentMessage { get; set; }

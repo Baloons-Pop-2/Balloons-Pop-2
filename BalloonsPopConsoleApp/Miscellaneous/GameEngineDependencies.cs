@@ -5,18 +5,18 @@
     using BalloonsPop.UI;
 
     /// <summary>
-    /// Dependancies injected into the operating class's constructor (Game Engine)
+    /// Dependencies injected into the operating class's constructor (Game Engine)
     /// </summary>
     public class GameEngineDependencies
     {
         /// <summary>
-        /// GameEngineDependencies constructor
+        /// GameEngineDependencies object injects objects through dependency inversion in an object
         /// </summary>
-        /// <param name="ui"></param>
-        /// <param name="logger"></param>
-        /// <param name="board"></param>
-        /// <param name="memory"></param>
-        /// <param name="commandFactory"></param>
+        /// <param name="ui">The user interface to be used</param>
+        /// <param name="logger">The logger to save messages</param>
+        /// <param name="board">The board object to be used in the game</param>
+        /// <param name="memory">The memory caretaker where a memento is saved</param>
+        /// <param name="commandFactory">The factory through which flyweight commands are acquired</param>
         public GameEngineDependencies(IUserInterface ui, ILogger logger, IBoard board, IBoardMemory memory, ICommandFactory commandFactory)
         {
             this.UserInterface = ui;
