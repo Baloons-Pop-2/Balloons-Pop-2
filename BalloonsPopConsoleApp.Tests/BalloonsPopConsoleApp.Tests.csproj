@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\InvalidInputCommandTests.cs" />
+    <Compile Include="Commands\RestartCommandTests.cs" />
     <Compile Include="Effects\AreaPopEffectTests.cs" />
     <Compile Include="Effects\BfsEffectTests.cs" />
     <Compile Include="Engine\GameEngineTests.cs" />
