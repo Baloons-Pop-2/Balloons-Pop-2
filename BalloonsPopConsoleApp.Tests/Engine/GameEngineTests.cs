@@ -17,6 +17,7 @@
 
     using Moq;
     using NUnit.Framework;
+    using BalloonsPopConsoleApp.Factories;
 
     [TestFixture]
     public class GameEngineTests

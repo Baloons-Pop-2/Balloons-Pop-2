@@ -20,7 +20,7 @@
         public void CommandContextPropertiesAreAccessible()
         {
             var ctx = new CommandContext(new Logger(), new Board(5, 5), 4, 4, new BoardMemory(), new Highscore());
-            Assert.IsTrue(ctx.Logger != null && ctx.Board != null && ctx.ActiveCol != null && ctx.ActiveRow != null && ctx.Memory != null && ctx.Score != null);
+            Assert.IsTrue(ctx.Logger != null && ctx.Board != null && ctx.Memory != null && ctx.Score != null);
         }
 
         [Test]

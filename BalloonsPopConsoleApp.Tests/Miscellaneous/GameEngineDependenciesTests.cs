@@ -7,6 +7,7 @@
     using BalloonsPopConsoleApp.UI.ConsoleUI;
     using NUnit.Framework;
     using BalloonsPopConsoleApp.Logs;
+    using BalloonsPopConsoleApp.Factories;
 
     [TestFixture]
     public class GameEngineDependenciesTests

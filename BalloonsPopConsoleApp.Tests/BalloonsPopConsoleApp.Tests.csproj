@@ -46,9 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\InvalidInputCommandTests.cs" />
     <Compile Include="Effects\AreaPopEffectTests.cs" />
     <Compile Include="Effects\BfsEffectTests.cs" />
     <Compile Include="Engine\GameEngineTests.cs" />
+    <Compile Include="Factories\BalloonFactoryTests.cs" />
+    <Compile Include="Factories\CommandFactoryTests.cs" />
     <Compile Include="Logs\LoggerTests.cs" />
     <Compile Include="Miscellaneous\CommandContextTests.cs" />
     <Compile Include="Miscellaneous\GameEngineDependenciesTests.cs" />
