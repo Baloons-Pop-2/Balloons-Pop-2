@@ -9,7 +9,6 @@
     {
         private static IHighscore instance;
         public const int TheAnswerToEverything = 42;
-        private int boardSize;
         
         private Highscore()
         {
