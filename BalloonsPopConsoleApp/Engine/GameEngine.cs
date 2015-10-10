@@ -1,7 +1,11 @@
-﻿namespace BalloonsPopConsoleApp.Engine
+﻿// <copyright  file="GameEngine.cs" company="dentia.Pip3r4o">
+// All rights reserved.
+// </copyright>
+// <author>dentia, Pip3r4o</author>
+
+namespace BalloonsPopConsoleApp.Engine
 {
     using System;
-
     using BalloonsPop;
     using BalloonsPop.Commands;
     using BalloonsPop.UI;
@@ -26,7 +30,7 @@
 
             this.commandFactory = dependencies.CommandFactory;
 
-            this.ctx = new CommandContext(dependencies.Logger, new Board(dependencies.Board.Rows, dependencies.Board.Cols, new BalloonsPopConsoleApp.RandomGenerator()), 0, 0, dependencies.BoardMemory, Highscore.GetInstance(), new HighscoreProcessor());
+            this.ctx = new CommandContext(dependencies.Logger, new Board(dependencies.Board.Rows, dependencies.Board.Cols, new RandomGenerator()), 0, 0, dependencies.BoardMemory, Highscore.GetInstance(), new HighscoreProcessor());
         }
 
         public void Run()
@@ -55,11 +59,11 @@
 
         private void HandleHighcores()
         {
-            this.drawer.Draw(ctx.Messages["usernameprompt"]);
+            this.drawer.Draw(this.ctx.Messages["usernameprompt"]);
             var username = this.reader.Read();
 
-            ctx.Score.SetMoves(ctx.Score.CurrentMoves).SetUsername(username).SetScore(ctx.Board.Rows);
-            ctx.HighscoreProcessor.SaveHighscore(ctx.Score);
+            this.ctx.Score.SetMoves(this.ctx.Score.CurrentMoves).SetUsername(username).SetScore(this.ctx.Board.Rows);
+            this.ctx.HighscoreProcessor.SaveHighscore(this.ctx.Score);
         }
 
         private void RedefineBoardSize()
@@ -74,14 +78,13 @@
             try
             {
                 var intSize = int.Parse(size);
-                this.ctx.Board = new Board(intSize, intSize, new BalloonsPopConsoleApp.RandomGenerator());
+                this.ctx.Board = new Board(intSize, intSize, new RandomGenerator());
             }
             catch (Exception)
             {
                 this.ctx.CurrentMessage = "\nDefault size initialized!";
             }
         }
-
 
         private void GameOver()
         {
@@ -106,7 +109,7 @@
                     this.ctx.Memory.Memento = this.ctx.Board.SaveMemento();
                 }
 
-                this.ctx.Score.SetMoves(ctx.Score.CurrentMoves + 1);
+                this.ctx.Score.SetMoves(this.ctx.Score.CurrentMoves + 1);
             }
 
             command.Execute(this.ctx);

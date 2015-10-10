@@ -1,4 +1,9 @@
-﻿namespace BalloonsPopConsoleApp.Logs
+﻿// <copyright  file="Logger.cs" company="dentia.Pip3r4o">
+// All rights reserved.
+// </copyright>
+// <author>dentia, Pip3r4o</author>
+
+namespace BalloonsPopConsoleApp.Logs
 {
     using BalloonsPop.Logs;
     using log4net;

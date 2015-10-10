@@ -1,21 +1,24 @@
-﻿using BalloonsPop;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
+﻿// <copyright  file="HighscoreProcessor.cs" company="dentia.Pip3r4o">
+// All rights reserved.
+// </copyright>
+// <author>dentia, Pip3r4o</author>
 
 namespace BalloonsPopConsoleApp.Miscellaneous
 {
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+    using System.Xml.Linq;
+    using BalloonsPop;
+
     public class HighscoreProcessor : IHighscoreProcessor
     {
         private const string Path = @"..\..\..\score.xml";
 
         public void SaveHighscore(IHighscore highscore)
         {
-            const string rootElementString = "highscores";
+            const string RootElementString = "highscores";
 
             XDocument score;
 
@@ -25,7 +28,7 @@ namespace BalloonsPopConsoleApp.Miscellaneous
             }
             else
             {
-                score = new XDocument(new XElement(rootElementString));
+                score = new XDocument(new XElement(RootElementString));
             }
 
             var root = score.Root;

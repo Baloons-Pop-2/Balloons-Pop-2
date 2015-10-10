@@ -1,11 +1,16 @@
-﻿using System.Reflection;
-using System.Runtime.CompilerServices;
+﻿// <copyright  file="ICommandFactory.cs" company="dentia.Pip3r4o">
+// All rights reserved.
+// </copyright>
+// <author>dentia, Pip3r4o</author>
+
+using System.Reflection;
 using System.Runtime.InteropServices;
+using log4net.Config;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: log4net.Config.XmlConfigurator(Watch = true)]
+[assembly: XmlConfigurator(Watch = true)]
 [assembly: AssemblyTitle("BalloonsPopConsoleApp")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]

@@ -1,7 +1,12 @@
-﻿namespace BalloonsPopConsoleApp.Effects
+﻿// <copyright  file="BfsEffect.cs" company="dentia.Pip3r4o">
+// All rights reserved.
+// </copyright>
+// <author>dentia, Pip3r4o</author>
+
+namespace BalloonsPopConsoleApp.Effects
 {
-    using Models;
     using BalloonsPop;
+    using Models;
 
     public class BfsEffect : TraversalEffect
     {

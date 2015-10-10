@@ -1,4 +1,9 @@
-﻿namespace BalloonsPopConsoleApp.Models
+﻿// <copyright  file="Board.cs" company="dentia.Pip3r4o">
+// All rights reserved.
+// </copyright>
+// <author>dentia, Pip3r4o</author>
+
+namespace BalloonsPopConsoleApp.Models
 {
     using System;
     using System.Text;
@@ -102,6 +107,8 @@
             }
         }
 
+        private IRandomGenerator RandomGenerator { get; set; }
+
         /// <summary>
         /// 
         /// </summary>
@@ -120,8 +127,6 @@
                 this.board[row, col] = value;
             }
         }
-
-        private IRandomGenerator RandomGenerator { get; set; }
 
         /// <summary>
         /// Method resets the matrix and fills it anew

@@ -10,7 +10,7 @@
     [TestFixture]
     public class CommandContextTests
     {
-        private  readonly IRandomGenerator randomGenerator = new BalloonsPopConsoleApp.RandomGenerator();
+        private  readonly IRandomGenerator randomGenerator = new RandomGenerator();
 
         [Test]
         public void CommandContextShouldCreateProperly()

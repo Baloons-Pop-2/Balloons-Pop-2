@@ -1,10 +1,14 @@
-﻿namespace BalloonsPopConsoleApp.Commands
-{
-    using System.Linq;
+﻿// <copyright  file="ShowTopScoreCommand.cs" company="dentia.Pip3r4o">
+// All rights reserved.
+// </copyright>
+// <author>dentia, Pip3r4o</author>
 
+namespace BalloonsPopConsoleApp.Commands
+{
+    using System;
+    using System.Linq;
     using BalloonsPop;
     using BalloonsPop.Commands;
-    using System;
 
     public class ShowTopScoreCommand : ICommand
     {
@@ -21,14 +25,17 @@
             }
             else
             {
-                ctx.CurrentMessage = header + string.Join(Environment.NewLine, highscores.Select(x => {
-                    if (x.Item1.Length > 18)
+                ctx.CurrentMessage = header + string.Join(
+                    Environment.NewLine, 
+                    highscores.Select(x =>
                     {
-                        return new Tuple<string, int>(x.Item1.Substring(0, 15) + "...", x.Item2);
-                    }
+                        if (x.Item1.Length > 18)
+                        {
+                            return new Tuple<string, int>(x.Item1.Substring(0, 15) + "...", x.Item2);
+                        }
 
-                    return x;
-                }).Select(x => string.Format("{0,-20} {1}", x.Item1, x.Item2))) + footer;
+                        return x;
+                    }).Select(x => string.Format("{0,-20} {1}", x.Item1, x.Item2))) + footer;
             }
         }
     }

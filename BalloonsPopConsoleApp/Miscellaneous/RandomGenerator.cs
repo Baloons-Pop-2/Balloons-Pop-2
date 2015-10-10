@@ -1,17 +1,19 @@
-﻿namespace BalloonsPopConsoleApp.Miscellaneous
+﻿// <copyright  file="ICommandFactory.cs" company="dentia.Pip3r4o">
+// All rights reserved.
+// </copyright>
+// <author>dentia, Pip3r4o</author>
+
+namespace BalloonsPopConsoleApp.Miscellaneous
 {
     using System;
 
-    public static class RandomGenerator
+    public class RandomGenerator : IRandomGenerator
     {
-        private static readonly Random RandomNumber = new Random();
+        private readonly Random r = new Random();
 
-        public static string GetRandomInt()
+        public int GetInt(int min, int max)
         {
-            string legalChars = "11122233344411122253334454111222333444";
-            string builder = null;
-            builder = legalChars[RandomNumber.Next(0, legalChars.Length)].ToString();
-            return builder;
+            return this.r.Next(min, max + 1);
         }
     }
 }

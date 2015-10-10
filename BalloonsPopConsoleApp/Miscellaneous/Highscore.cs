@@ -1,4 +1,9 @@
-﻿namespace BalloonsPopConsoleApp.Miscellaneous
+﻿// <copyright  file="Highscore.cs" company="dentia.Pip3r4o">
+// All rights reserved.
+// </copyright>
+// <author>dentia, Pip3r4o</author>
+
+namespace BalloonsPopConsoleApp.Miscellaneous
 {
     using BalloonsPop;
 
@@ -7,8 +12,8 @@
     /// </summary>
     public class Highscore : IHighscore
     {
-        private static IHighscore instance;
         public const int TheAnswerToEverything = 42;
+        private static IHighscore instance;
         
         private Highscore()
         {
@@ -25,6 +30,16 @@
         /// Player's name
         /// </summary>
         public string Username { get; private set; }
+
+        public static IHighscore GetInstance()
+        {
+            if (instance == null)
+            {
+                instance = new Highscore();
+            }
+
+            return instance;
+        }
 
         /// <summary>
         /// Set Player's Name on demand
@@ -48,20 +63,9 @@
         public void SetScore(int boardSize)
         {
             int normalizer = 150;
-            int score = ((boardSize * Highscore.TheAnswerToEverything / this.CurrentMoves) * normalizer);
+            int score = (boardSize * TheAnswerToEverything / this.CurrentMoves) * normalizer;
 
             this.CurrentScore = score;
-        }
-
-
-        public static IHighscore GetInstance()
-        {
-            if (instance == null)
-            {
-                instance = new Highscore();
-            }
-
-            return instance;
         }
     }
 }

@@ -1,4 +1,9 @@
-﻿namespace BalloonsPopConsoleApp.Factories
+﻿// <copyright  file="BalloonFactory.cs" company="dentia.Pip3r4o">
+// All rights reserved.
+// </copyright>
+// <author>dentia, Pip3r4o</author>
+
+namespace BalloonsPopConsoleApp.Factories
 {
     using System;
     using System.Collections.Generic;

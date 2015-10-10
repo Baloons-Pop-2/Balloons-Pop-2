@@ -1,4 +1,9 @@
-﻿namespace BalloonsPopConsoleApp.Miscellaneous
+﻿// <copyright  file="GameEngineDependencies.cs" company="dentia.Pip3r4o">
+// All rights reserved.
+// </copyright>
+// <author>dentia, Pip3r4o</author>
+
+namespace BalloonsPopConsoleApp.Miscellaneous
 {
     using BalloonsPop;
     using BalloonsPop.Logs;

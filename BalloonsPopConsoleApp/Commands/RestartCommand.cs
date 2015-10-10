@@ -1,4 +1,9 @@
-﻿namespace BalloonsPopConsoleApp.Commands
+﻿// <copyright  file="RestartCommand.cs" company="dentia.Pip3r4o">
+// All rights reserved.
+// </copyright>
+// <author>dentia, Pip3r4o</author>
+
+namespace BalloonsPopConsoleApp.Commands
 {
     using System;
     using BalloonsPop;
@@ -7,6 +12,7 @@
     public class RestartCommand : ICommand
     {
         public const string WelcomeMessageKey = "welcome";
+
         public void Execute(ICommandContext ctx)
         {
             ctx.Board.Reset();

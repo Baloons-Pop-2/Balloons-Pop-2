@@ -71,7 +71,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Miscellaneous\RandomGenerator.cs" />
-    <Compile Include="RandomGenerator.cs" />
     <Compile Include="UI\ConsoleUI\ConsoleDrawer.cs" />
     <Compile Include="UI\ConsoleUI\ConsoleInputHandler.cs" />
     <Compile Include="UI\ConsoleUI\ConsoleUserInterface.cs" />

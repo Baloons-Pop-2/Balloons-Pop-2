@@ -1,4 +1,9 @@
-﻿namespace BalloonsPopConsoleApp.UI.ConsoleUI
+﻿// <copyright  file="ConsoleDrawer.cs" company="dentia.Pip3r4o">
+// All rights reserved.
+// </copyright>
+// <author>dentia, Pip3r4o</author>
+
+namespace BalloonsPopConsoleApp.UI.ConsoleUI
 {
     using System;
     using BalloonsPop.UI.Drawer;

@@ -1,12 +1,17 @@
-﻿namespace BalloonsPopConsoleApp
+﻿// <copyright  file="Program.cs" company="dentia.Pip3r4o">
+// All rights reserved.
+// </copyright>
+// <author>dentia, Pip3r4o</author>
+
+namespace BalloonsPopConsoleApp
 {
     using Engine;
     using Factories;
     using Logs;
-    using UI.ConsoleUI;
     using Memory;
     using Miscellaneous;
     using Models;
+    using UI.ConsoleUI;
 
     public class Program
     {
