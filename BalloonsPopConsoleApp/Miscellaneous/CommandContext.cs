@@ -14,6 +14,9 @@ namespace BalloonsPopConsoleApp.Miscellaneous
     /// </summary>
     public class CommandContext : ICommandContext
     {
+        /// <summary>
+        /// All messages used in the game.
+        /// </summary>
         private readonly Dictionary<string, string> messages = new Dictionary<string, string>()
         {
             { "welcome",  "\nWelcome to \"Balloons Pops\" game. \r\nTry to pop the balloons in as few moves as possible. \r\nUse 'top' to view the top scoreboard, \r\n'restart' to start a new game and \r\n'exit' to quit the game.\n" },
@@ -31,12 +34,13 @@ namespace BalloonsPopConsoleApp.Miscellaneous
         /// <summary>
         /// Initializes a new instance of the CommandContext class.
         /// </summary>
-        /// <param name="logger">The logger to save messages</param>
-        /// <param name="board">The board object to be used in the game</param>
-        /// <param name="row">The row that needs to be popped</param>
-        /// <param name="col">The column that needs to be popped</param>
-        /// <param name="memory">The memory caretaker where a memento is saved</param>
-        /// <param name="score">The score container</param>
+        /// <param name="logger">The logger to save messages.</param>
+        /// <param name="board">The board object to be used in the game.</param>
+        /// <param name="row">The row that needs to be popped.</param>
+        /// <param name="col">The column that needs to be popped.</param>
+        /// <param name="memory">The memory caretaker where a memento is saved.</param>
+        /// <param name="score">The score container.</param>
+        /// <param name="highscoreProcessor">The high score processor.</param>
         public CommandContext(ILogger logger, IBoard board, int row, int col, IBoardMemory memory, IHighscore score, IHighscoreProcessor highscoreProcessor)
         {
             this.Logger = logger;

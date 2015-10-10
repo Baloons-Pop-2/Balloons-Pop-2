@@ -14,13 +14,16 @@ namespace BalloonsPopConsoleApp.Models
     /// </summary>
     public class Balloon : IBalloon
     {
+        /// <summary>
+        /// The field that holds the balloon's traversal effect.
+        /// </summary>
         private ITraversalEffect effect;
 
         /// <summary>
         /// Initializes a new instance of the Balloon class.
         /// </summary>
-        /// <param name="value">The value of the balloon</param>
-        /// <param name="traversalEffect">The traversal strategy to interact with adjascent balloons</param>
+        /// <param name="value">The value of the balloon.</param>
+        /// <param name="traversalEffect">The traversal strategy to interact with adjacent balloons.</param>
         public Balloon(int value, ITraversalEffect traversalEffect)
         {
             this.Value = value;

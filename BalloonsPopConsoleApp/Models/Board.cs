@@ -17,20 +17,53 @@ namespace BalloonsPopConsoleApp.Models
     /// </summary>
     public class Board : IBoard
     {
+        /// <summary>
+        /// The maximum count of rows allowed for the board.
+        /// </summary>
         private const int MaxRowsCount = 15;
+
+        /// <summary>
+        /// The minimal count of rows allowed for the board.
+        /// </summary>
         private const int MinRowsCount = 5;
+
+        /// <summary>
+        /// The maximum count of columns allowed for the board.
+        /// </summary>
         private const int MaxColsCount = 15;
+
+        /// <summary>
+        /// The minimal count of columns allowed for the board.
+        /// </summary>
         private const int MinColsCount = 5;
+
+        /// <summary>
+        /// The field that holds the balloon factory instance.
+        /// </summary>
         private readonly IBalloonFactory balloonFactory;
+
+        /// <summary>
+        /// The field that holds the board's row's count.
+        /// </summary>
         private int rowsCount;
+
+        /// <summary>
+        /// The field that holds the board's columns' count.
+        /// </summary>
         private int colsCount;
+
+        /// <summary>
+        /// The field that holds the board's array representation.
+        /// </summary>
         private IBalloon[,] board;
 
         /// <summary>
-        /// Board object containing multiple Balloon objects. The Board serves as the interface through which Balloons are accessed
+        /// Initializes a new instance of the <see cref="Board" /> class.
+        /// Board object containing multiple Balloon objects. The Board serves as the interface through which Balloons are accessed.
         /// </summary>
-        /// <param name="rows">The max amount of rows the board will contain</param>
-        /// <param name="cols">The max amount of columns the board will contain</param>
+        /// <param name="rows">The max amount of rows the board will contain.</param>
+        /// <param name="cols">The max amount of columns the board will contain.</param>
+        /// <param name="randomGenerator">The random generator on which depends the balloons' randomness.</param>
         public Board(int rows, int cols, IRandomGenerator randomGenerator)
         {
             this.Rows = rows;
@@ -107,6 +140,9 @@ namespace BalloonsPopConsoleApp.Models
             }
         }
 
+        /// <summary>
+        /// Gets or sets the random generator that provides the balloons values.
+        /// </summary>
         private IRandomGenerator RandomGenerator { get; set; }
 
         /// <summary>
@@ -218,6 +254,9 @@ namespace BalloonsPopConsoleApp.Models
             return output.ToString();
         }
 
+        /// <summary>
+        /// Fills the board's array with random balloons.
+        /// </summary>
         private void Fill()
         {
             for (int row = 0; row < this.Rows; row++)

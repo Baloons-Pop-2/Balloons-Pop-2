@@ -14,14 +14,40 @@ namespace BalloonsPopConsoleApp.Engine
     using Miscellaneous;
     using Models;
 
+    /// <summary>
+    /// The game engine - the entire game logic.
+    /// </summary>
     public class GameEngine : IGameEngine
     {
+        /// <summary>
+        /// The field that holds the IUserInterface instance.
+        /// </summary>
         private readonly IUserInterface userInterface;
+
+        /// <summary>
+        /// The field that holds the IPicasso instance which draws the game.
+        /// </summary>
         private readonly IPicasso drawer;
+
+        /// <summary>
+        /// The field that holds the IInputHandler instance which reads user input.
+        /// </summary>
         private readonly IInputHandler reader;
+
+        /// <summary>
+        /// The field that holds the ICommandFactory instance which creates commands.
+        /// </summary>
         private readonly ICommandFactory commandFactory;
+
+        /// <summary>
+        /// The field that holds the ICommandContext instance that is passed to the commands.
+        /// </summary>
         private readonly ICommandContext ctx;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GameEngine" /> class.
+        /// </summary>
+        /// <param name="dependencies">An object which holds the dependencies for the game engine.</param>
         public GameEngine(GameEngineDependencies dependencies)
         {
             this.userInterface = dependencies.UserInterface;
@@ -33,6 +59,9 @@ namespace BalloonsPopConsoleApp.Engine
             this.ctx = new CommandContext(dependencies.Logger, new Board(dependencies.Board.Rows, dependencies.Board.Cols, new RandomGenerator()), 0, 0, dependencies.BoardMemory, Highscore.GetInstance(), new HighscoreProcessor());
         }
 
+        /// <summary>
+        /// The method that starts the game.
+        /// </summary>
         public void Run()
         {
             this.drawer.Draw(this.ctx.Board);
@@ -57,6 +86,9 @@ namespace BalloonsPopConsoleApp.Engine
             this.GameOver();
         }
 
+        /// <summary>
+        /// A method for handling high score's parsing and saving after the game has ended.
+        /// </summary>
         private void HandleHighcores()
         {
             this.drawer.Draw(this.ctx.Messages["usernameprompt"]);
@@ -71,6 +103,9 @@ namespace BalloonsPopConsoleApp.Engine
             this.ctx.HighscoreProcessor.SaveHighscore(this.ctx.Score);
         }
 
+        /// <summary>
+        /// Defines a new board/restart.
+        /// </summary>
         private void RedefineBoardSize()
         {
             var size = this.reader.Read();
@@ -86,11 +121,17 @@ namespace BalloonsPopConsoleApp.Engine
             }
         }
 
+        /// <summary>
+        /// Draws the goodbye message.
+        /// </summary>
         private void GameOver()
         {
             this.drawer.Draw(this.ctx.Messages["goodbye"]);
         }
 
+        /// <summary>
+        /// The method that is responsible for the turn logic - parses and dispatches commands.
+        /// </summary>
         private void ExecuteTurn()
         {
             var input = this.reader.Read();

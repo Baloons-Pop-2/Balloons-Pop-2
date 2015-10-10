@@ -11,10 +11,21 @@ namespace BalloonsPopConsoleApp.Factories
     using BalloonsPop.Commands;
     using Commands;
 
+    /// <summary>
+    /// The factory for the game commands.
+    /// </summary>
     public class CommandFactory : ICommandFactory
     {
+        /// <summary>
+        /// The dictionary that holds the already created commands.
+        /// </summary>
         private readonly Dictionary<string, ICommand> commandDictionary = new Dictionary<string, ICommand>();
 
+        /// <summary>
+        /// Gets the wanted command based on the input.
+        /// </summary>
+        /// <param name="command">The concrete command name.</param>
+        /// <returns>An object which implements the ICommand interface.</returns>
         public ICommand GetCommand(string command)
         {
             command = command.ToLower();

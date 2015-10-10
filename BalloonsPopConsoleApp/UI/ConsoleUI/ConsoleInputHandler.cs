@@ -15,6 +15,9 @@ namespace BalloonsPopConsoleApp.UI.ConsoleUI
     /// </summary>
     public class ConsoleInputHandler : IInputHandler
     {
+        /// <summary>
+        /// List of the allowed game commands.
+        /// </summary>
         protected static readonly IList<string> ValidCommands = new List<string>()
         {
             "exit",
@@ -44,7 +47,7 @@ namespace BalloonsPopConsoleApp.UI.ConsoleUI
         /// <summary>
         /// Parses input.
         /// </summary>
-        /// <param name="input"></param>
+        /// <param name="input">The string to be parsed.</param>
         /// <returns>Parsed string that is ready to be passed as a command. "invalidInput" is returned if the parsing fails</returns>
         public string ParseInput(string input)
         {
@@ -72,6 +75,11 @@ namespace BalloonsPopConsoleApp.UI.ConsoleUI
             return "invalidInput";
         }
 
+        /// <summary>
+        /// checks if the input is valid.
+        /// </summary>
+        /// <param name="input">The input to be checked.</param>
+        /// <returns>True if the input is valid, false - otherwise.</returns>
         private static bool IsValidPopInput(string input)
         {
             var splitInput = input.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToArray();

@@ -16,10 +16,18 @@ namespace BalloonsPopConsoleApp.Factories
     /// </summary>
     public class BalloonFactory : IBalloonFactory
     {
+        /// <summary>
+        /// The field that holds the already created balloons.
+        /// </summary>
         private readonly Dictionary<int, IBalloon> balloonsList;
+
+        /// <summary>
+        /// The field that holds the balloon's effect's factory.
+        /// </summary>
         private readonly IEffectFactory effectFactory;
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="BalloonFactory" /> class.
         /// BalloonFactory returns an existing instance of a Balloon class or creates one.
         /// </summary>
         public BalloonFactory()

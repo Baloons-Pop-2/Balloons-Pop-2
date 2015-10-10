@@ -8,8 +8,18 @@ namespace BalloonsPopConsoleApp.Effects
     using BalloonsPop;
     using Models;
 
+    /// <summary>
+    /// Traversal effect that pops the balloons via BFS.
+    /// </summary>
     public class BfsEffect : TraversalEffect
     {
+        /// <summary>
+        /// Overrides the abstract method for popping.
+        /// </summary>
+        /// <param name="row">The currently active row.</param>
+        /// <param name="col">The currently active column.</param>
+        /// <param name="board">The game board.</param>
+        /// <param name="cellValue">The initial balloon value.</param>
         protected override void PopBalloons(int row, int col, IBoard board, int cellValue)
         {
             if (board.IsValidPop(row, col) &&
