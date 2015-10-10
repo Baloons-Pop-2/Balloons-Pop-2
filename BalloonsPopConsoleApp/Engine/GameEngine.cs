@@ -106,7 +106,7 @@
                     this.ctx.Memory.Memento = this.ctx.Board.SaveMemento();
                 }
 
-                this.ctx.Score.CurrentMoves++;
+                this.ctx.Score.SetMoves(ctx.Score.CurrentMoves + 1);
             }
 
             command.Execute(this.ctx);

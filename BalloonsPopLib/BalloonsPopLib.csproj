@@ -52,7 +52,6 @@
     <Compile Include="IBoardMemory.cs" />
     <Compile Include="ICommandContext.cs" />
     <Compile Include="ICommandFactory.cs" />
-    <Compile Include="IConstraints.cs" />
     <Compile Include="IEffectFactory.cs" />
     <Compile Include="IHighscore.cs" />
     <Compile Include="IHighscoreProcessor.cs" />

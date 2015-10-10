@@ -10,7 +10,7 @@
         public void Execute(ICommandContext ctx)
         {
             ctx.Board.Reset();
-            ctx.Score.CurrentMoves = 0;
+            ctx.Score.SetMoves(0);
             ctx.CurrentMessage = ctx.Messages[WelcomeMessageKey];
 
             ctx.Logger.Log(string.Format("Started new game at: {0}", DateTime.Now));
