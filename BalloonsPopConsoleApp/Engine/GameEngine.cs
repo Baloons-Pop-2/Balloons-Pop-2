@@ -16,7 +16,6 @@
         private readonly IPicasso drawer;
         private readonly IInputHandler reader;
         private readonly ICommandFactory commandFactory;
-
         private readonly ICommandContext ctx;
 
         public GameEngine(GameEngineDependencies dependencies)
@@ -27,7 +26,7 @@
 
             this.commandFactory = dependencies.CommandFactory;
 
-            this.ctx = new CommandContext(dependencies.Logger, new Board(dependencies.Board.Rows, dependencies.Board.Cols), 0, 0, dependencies.BoardMemory, new Highscore());
+            this.ctx = new CommandContext(dependencies.Logger, new Board(dependencies.Board.Rows, dependencies.Board.Cols), 0, 0, dependencies.BoardMemory, Highscore.GetInstance(), new HighscoreProcessor());
         }
 
         public void Run()
@@ -46,19 +45,23 @@
                 this.ExecuteTurn();
             }
 
-            if (this.ctx.Board.UnpoppedBalloonsCount > 0)
+            if (this.ctx.Board.UnpoppedBalloonsCount == 0)
             {
+                this.HandleHighcores();
+            }
 
-                this.GameOver();
-            }
-            else
-            {
-                // ask for name
-                this.GameOver();
-            }
+            this.GameOver();
         }
 
-        
+        private void HandleHighcores()
+        {
+            this.drawer.Draw(ctx.Messages["usernameprompt"]);
+            var username = this.reader.Read();
+
+            ctx.Score.SetMoves(ctx.Score.CurrentMoves).SetUsername(username).SetScore(ctx.Board.Rows);
+            ctx.HighscoreProcessor.SaveHighscore(ctx.Score);
+        }
+
         private void RedefineBoardSize()
         {
             var size = this.reader.Read();
@@ -78,7 +81,7 @@
                 this.ctx.CurrentMessage = "\nDefault size initialized!";
             }
         }
-        
+
 
         private void GameOver()
         {
@@ -103,7 +106,7 @@
                     this.ctx.Memory.Memento = this.ctx.Board.SaveMemento();
                 }
 
-                this.ctx.Score.CurrentScore++;
+                this.ctx.Score.CurrentMoves++;
             }
 
             command.Execute(this.ctx);

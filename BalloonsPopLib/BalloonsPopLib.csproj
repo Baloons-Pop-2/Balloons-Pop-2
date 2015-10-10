@@ -55,6 +55,7 @@
     <Compile Include="IConstraints.cs" />
     <Compile Include="IEffectFactory.cs" />
     <Compile Include="IHighscore.cs" />
+    <Compile Include="IHighscoreProcessor.cs" />
     <Compile Include="IMemorizeable.cs" />
     <Compile Include="Logs\ILogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

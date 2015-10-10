@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Miscellaneous\HighscoreProcessor.cs" />
     <Compile Include="Models\Balloon.cs" />
     <Compile Include="Memory\BoardMemory.cs" />
     <Compile Include="Commands\InvalidInputCommand.cs" />

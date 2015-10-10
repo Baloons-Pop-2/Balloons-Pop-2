@@ -5,6 +5,8 @@
 
     public interface ICommandContext
     {
+        IHighscoreProcessor HighscoreProcessor { get; }
+
         ILogger Logger { get; set; }
 
         IBoard Board { get; set; }
