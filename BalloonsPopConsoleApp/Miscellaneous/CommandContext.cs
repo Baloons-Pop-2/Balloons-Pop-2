@@ -18,7 +18,9 @@
             { "gameover", "\nYou popped all baloons in {0} moves.\r\nPlease enter your name for the top scoreboard: " },
             { "invalidsave", "\nYou cannot restore the game to a previous state as one does not exist yet!" },
             { "sizeprompt", "\nEnter a number between 5 and 15 for the board size \r\nor leave empty if you wish to play with the default size! : " },
-            { "inputprompt", "\nEnter a command or valid move in the format \"row column\": " }
+            { "inputprompt", "\nEnter a command or valid move in the format \"row column\": " },
+            {"usernameprompt", "\nEnter username:"},
+            {"noscores", "\nNo highscores yet!"}
         };
 
         /// <summary>
@@ -30,7 +32,7 @@
         /// <param name="col">The column that needs to be popped</param>
         /// <param name="memory">The memory caretaker where a memento is saved</param>
         /// <param name="score">The score container</param>
-        public CommandContext(ILogger logger, IBoard board, int row, int col, IBoardMemory memory, IHighscore score)
+        public CommandContext(ILogger logger, IBoard board, int row, int col, IBoardMemory memory, IHighscore score, IHighscoreProcessor highscoreProcessor)
         {
             this.Logger = logger;
             this.Board = board;
@@ -38,6 +40,7 @@
             this.ActiveCol = col;
             this.Memory = memory;
             this.Score = score;
+            this.HighscoreProcessor = highscoreProcessor;
             this.IsOver = false;
 
             this.CurrentMessage = this.Messages["welcome"];
@@ -87,5 +90,8 @@
         /// A message that will be displayed on every invocation of the CommandContext object.
         /// </summary>
         public string CurrentMessage { get; set; }
+
+
+        public IHighscoreProcessor HighscoreProcessor { get; private set; }
     }
 }
