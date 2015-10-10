@@ -1,15 +1,55 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <highscores>
   <score>
-    <username>lqlqlql</username>
+    <username>aaaa</username>
+    <points>1675</points>
+  </score>
+  <score>
+    <username>dasd123</username>
+    <points>3450</points>
+  </score>
+  <score>
+    <username>pesho</username>
+    <points>4500</points>
+  </score>
+  <score>
+    <username>meesho</username>
     <points>2100</points>
   </score>
   <score>
+    <username>4 2 4</username>
+    <points>2800</points>
+  </score>
+  <score>
+    <username>anonymous</username>
+    <points>7280</points>
+  </score>
+  <score>
+    <username>4 1</username>
+    <points>2850</points>
+  </score>
+  <score>
+    <username>4 1</username>
+    <points>1500</points>
+  </score>
+  <score>
     <username>4 4</username>
-    <points>2250</points>
+    <points>2100</points>
+  </score>
+  <score>
+    <username>invalidInput</username>
+    <points>900</points>
+  </score>
+  <score>
+    <username>anonymous</username>
+    <points>3150</points>
   </score>
   <score>
     <username>4 0</username>
-    <points>3150</points>
+    <points>1950</points>
+  </score>
+  <score>
+    <username>4 2</username>
+    <points>2400</points>
   </score>
 </highscores>

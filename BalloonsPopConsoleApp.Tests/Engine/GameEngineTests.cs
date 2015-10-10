@@ -12,7 +12,6 @@
     using BalloonsPopConsoleApp.Miscellaneous;
     using BalloonsPopConsoleApp.Models;
 
-    using Factories;
     using Memory;
 
     using Moq;
@@ -82,7 +81,6 @@
             engine.Run();
         }
 
-        // TODO: Not entirely tested as there should be a Highscore name prompt!
         [Test]
         public void GameEnginePoppingAllBalloonsShouldWinTheGame()
         {
@@ -97,7 +95,7 @@
             mockedUi.Setup(x => x.Drawer).Returns(mockedDrawer.Object);
             mockedUi.Setup(x => x.Reader).Returns(this.GetReader(new List<string>
             {
-                "5", "4 0", "4 1", "4 2", "4 3", "4 4", "4 0", "4 1", "4 2", "4 3", "4 4", "4 0", "4 1", "4 2", "4 3", "4 4", "4 0", "4 1", "4 2", "4 3", "4 4", "4 0", "4 1", "4 2", "4 3", "4 4"
+                "5", "4 0", "4 1", "4 2", "4 3", "4 4", "4 0", "4 1", "4 2", "undo", "4 2", "4 3", "4 4", "4 0", "4 1", "4 2", "4 3", "4 4", "4 0", "4 1", "4 2", "4 3", "4 4", "4 0", "4 1", "4 2", "4 3", "4 4", "4 0", "4 1", "4 2", "4 3", "4 4"
             }));
 
             var dependencies = new GameEngineDependencies(mockedUi.Object, new Logger(), new Board(5, 5, new RandomGenerator()), new BoardMemory(), new CommandFactory());
@@ -130,7 +128,7 @@
                 }
                 else
                 {
-                    //parsedInput = "exit";
+                    Assert.Fail("Game wasnt terminated with an exit command neither it was finished! - terminating mock test");
                 }
 
                 i++;

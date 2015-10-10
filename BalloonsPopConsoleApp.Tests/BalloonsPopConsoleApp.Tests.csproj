@@ -47,7 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\InvalidInputCommandTests.cs" />
+    <Compile Include="Commands\PopBalloonCommandTests.cs" />
     <Compile Include="Commands\RestartCommandTests.cs" />
+    <Compile Include="Commands\ShowTopScoreCommandTests.cs" />
+    <Compile Include="Commands\UndoCommandTests.cs" />
     <Compile Include="Effects\AreaPopEffectTests.cs" />
     <Compile Include="Effects\BfsEffectTests.cs" />
     <Compile Include="Engine\GameEngineTests.cs" />

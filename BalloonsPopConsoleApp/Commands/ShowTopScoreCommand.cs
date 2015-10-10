@@ -26,7 +26,7 @@ namespace BalloonsPopConsoleApp.Commands
 
             string header = new string(separator, sepCount) + " Top 5 players: " + new string(separator, sepCount) + Environment.NewLine;
 
-            string footer = Environment.NewLine + new string(separator, 2) + " " + new string(separator, 41) + " " + new string(separator, 2) + Environment.NewLine;
+            string footer = Environment.NewLine + new string(separator, 2) + " " + new string(separator, 40) + " " + new string(separator, 2) + Environment.NewLine;
 
             var highscores = ctx.HighscoreProcessor.GetTopHighscores();
 
