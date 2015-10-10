@@ -34,27 +34,27 @@ namespace BalloonsPopConsoleApp.Miscellaneous
         }
 
         /// <summary>
-        /// Provides the public interface used by the operating class. Contains IPicasso and IReader.
+        /// Gets the public interface used by the operating class. Contains IPicasso and IReader.
         /// </summary>
         public IUserInterface UserInterface { get; private set; }
 
         /// <summary>
-        /// Logger logs messages runtime.
+        /// Gets the logger.
         /// </summary>
         public ILogger Logger { get; private set; }
 
         /// <summary>
-        /// Board object containing Balloon objects.
+        /// Gets the Board object containing Balloon objects.
         /// </summary>
         public IBoard Board { get; private set; }
 
         /// <summary>
-        /// Memory object where a memento is stored.
+        /// Gets the Memory object where a memento is stored.
         /// </summary>
         public IBoardMemory BoardMemory { get; private set; }
 
         /// <summary>
-        /// Factory object that returns ICommand objects used by the operating class.
+        /// Gets the Factory object that returns ICommand objects used by the operating class.
         /// </summary>
         public ICommandFactory CommandFactory { get; private set; }
     }

@@ -52,50 +52,56 @@ namespace BalloonsPopConsoleApp.Miscellaneous
         }
 
         /// <summary>
-        /// Logger logs messages runtime.
+        /// Gets or sets the logger;
         /// </summary>
         public ILogger Logger { get; set; }
 
         /// <summary>
-        /// Board object containing Balloon objects.
+        /// Gets or sets the board holding the balloon objects.
         /// </summary>
         public IBoard Board { get; set; }
 
         /// <summary>
-        /// Target column on which a command will be executed.
+        /// Gets or sets the currently active column.
         /// </summary>
         public int ActiveCol { get; set; }
 
         /// <summary>
-        /// Target row on which a command will be executed.
+        /// Gets or sets the currently active row.
         /// </summary>
         public int ActiveRow { get; set; }
 
         /// <summary>
-        /// Dictionary containing all messages that can be displayed alongside the game board.
+        /// Gets the dictionary containing all messages that can be displayed alongside the game board.
         /// </summary>
         public Dictionary<string, string> Messages
         {
             get { return this.messages; }
         }
 
+        /// <summary>
+        /// Gets or sets a value indicating whether the game is over.
+        /// </summary>
         public bool IsOver { get; set; }
 
         /// <summary>
-        /// Memory object where a memento is stored.
+        /// Gets or sets the memento object for the board.
         /// </summary>
         public IBoardMemory Memory { get; set; }
 
         /// <summary>
-        /// Score object where the player's score is updated.
+        /// Gets or sets the player's high score.
         /// </summary>
         public IHighscore Score { get; set; }
 
         /// <summary>
-        /// A message that will be displayed on every invocation of the CommandContext object.
+        /// Gets or sets the last command output message.
         /// </summary>
         public string CurrentMessage { get; set; }
 
+        /// <summary>
+        /// Gets the high score processor.
+        /// </summary>
         public IHighscoreProcessor HighscoreProcessor { get; private set; }
     }
 }

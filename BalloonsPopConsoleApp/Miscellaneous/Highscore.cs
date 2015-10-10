@@ -20,14 +20,18 @@ namespace BalloonsPopConsoleApp.Miscellaneous
         }
 
         /// <summary>
-        /// Increased each time a player makes a move
+        /// Gets or sets the player's current moves. Increments on every player's move.
         /// </summary>
         public int CurrentMoves { get; set; }
 
+
+        /// <summary>
+        /// Gets the player's current score.
+        /// </summary>
         public int CurrentScore { get; private set; }
 
         /// <summary>
-        /// Player's name
+        /// Gets the player's username.
         /// </summary>
         public string Username { get; private set; }
 
@@ -42,10 +46,10 @@ namespace BalloonsPopConsoleApp.Miscellaneous
         }
 
         /// <summary>
-        /// Set Player's Name on demand
+        /// Set Player's Name on demand.
         /// </summary>
-        /// <param name="name">The current player's identity</param>
-        /// <returns>Instance of type Highscore</returns>
+        /// <param name="name">The current player's identity.</param>
+        /// <returns>Instance of type High score.</returns>
         public IHighscore SetUsername(string name)
         {
             this.Username = name;

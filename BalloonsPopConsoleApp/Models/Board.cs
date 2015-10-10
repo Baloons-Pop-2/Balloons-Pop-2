@@ -42,7 +42,7 @@ namespace BalloonsPopConsoleApp.Models
         }
 
         /// <summary>
-        /// Board's number of Rows - Must be between 5 and 15
+        /// Gets the board's row count.
         /// </summary>
         public int Rows
         {
@@ -63,7 +63,7 @@ namespace BalloonsPopConsoleApp.Models
         }
         
         /// <summary>
-        /// Board's number of Columns - Must be between 5 and 15
+        /// Gets the board's column count.
         /// </summary>
         public int Cols
         {
@@ -84,7 +84,7 @@ namespace BalloonsPopConsoleApp.Models
         }
 
         /// <summary>
-        /// Returns the amount of not-null values in the matrix
+        /// Gets the count of balloons that are not yet popped.
         /// </summary>
         public int UnpoppedBalloonsCount
         {
@@ -110,10 +110,10 @@ namespace BalloonsPopConsoleApp.Models
         private IRandomGenerator RandomGenerator { get; set; }
 
         /// <summary>
-        /// 
+        /// The board's indexer.
         /// </summary>
-        /// <param name="row">Ballon matrix row index</param>
-        /// <param name="col">Ballon matrix column index</param>
+        /// <param name="row">Balloon matrix row index.</param>
+        /// <param name="col">Balloon matrix column index.</param>
         /// <returns>Balloon object</returns>
         public IBalloon this[int row, int col]
         {
@@ -137,11 +137,11 @@ namespace BalloonsPopConsoleApp.Models
         }
 
         /// <summary>
-        /// 
+        /// Checks if the pop on the concrete row and column is valid.
         /// </summary>
-        /// <param name="row">Ballon matrix row index</param>
-        /// <param name="col">Ballon matrix column index</param>
-        /// <returns>True if the value of the matrix is not-null, False if no Balloon is present</returns>
+        /// <param name="row">Balloon matrix row index.</param>
+        /// <param name="col">Balloon matrix column index.</param>
+        /// <returns>True if the value of the matrix is not-null, False if no Balloon is present.</returns>
         public bool IsValidPop(int row, int col)
         {
             bool rowIsInRange = 0 <= row && row < this.Rows;
@@ -157,9 +157,9 @@ namespace BalloonsPopConsoleApp.Models
         }
 
         /// <summary>
-        /// 
+        /// Saves the current state of the board.
         /// </summary>
-        /// <returns>Memento object</returns>
+        /// <returns>Memento object.</returns>
         public IBoardMemento SaveMemento()
         {
             var clonedBoard = (IBalloon[,])this.board.Clone();
@@ -177,9 +177,9 @@ namespace BalloonsPopConsoleApp.Models
         }
 
         /// <summary>
-        /// 
+        /// Overrides the ToString of the object.
         /// </summary>
-        /// <returns>String representation of the Board object</returns>
+        /// <returns>String representation of the Board object.</returns>
         public override string ToString()
         {
             StringBuilder output = new StringBuilder();

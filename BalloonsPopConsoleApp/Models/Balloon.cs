@@ -10,7 +10,7 @@ namespace BalloonsPopConsoleApp.Models
     using BalloonsPop.Traversals;
 
     /// <summary>
-    /// Balloon object that contains Value of type int and TraversalEffect.
+    /// Balloon object that contains integer value and TraversalEffect.
     /// </summary>
     public class Balloon : IBalloon
     {
@@ -19,8 +19,8 @@ namespace BalloonsPopConsoleApp.Models
         /// <summary>
         /// Balloon object constructor.
         /// </summary>
-        /// <param name="value">The value of the balloon</param>
-        /// <param name="traversalEffect">The traversal strategy to interact with adjascent balloons</param>
+        /// <param name="value">The value of the balloon.</param>
+        /// <param name="traversalEffect">The traversal strategy to interact with adjacent balloons.</param>
         public Balloon(int value, ITraversalEffect traversalEffect)
         {
             this.Value = value;
@@ -28,7 +28,7 @@ namespace BalloonsPopConsoleApp.Models
         }
 
         /// <summary>
-        /// Default value for the Balloon object - null.
+        /// Gets the Default value for the Balloon object - null.
         /// </summary>
         public static Balloon Default
         {
@@ -36,12 +36,12 @@ namespace BalloonsPopConsoleApp.Models
         }
 
         /// <summary>
-        /// Balloon's value - used in finding the adjacent balloons of the same value
+        /// Gets the integer value of the balloon.
         /// </summary>
         public int Value { get; private set; }
 
         /// <summary>
-        /// Balloon's TraversalEffect - contains information about the pattern in which the balloon will pop when selected
+        /// Gets the traversal popping effect.
         /// </summary>
         public ITraversalEffect TraversalEffect
         {
