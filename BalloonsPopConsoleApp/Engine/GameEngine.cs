@@ -62,6 +62,11 @@ namespace BalloonsPopConsoleApp.Engine
             this.drawer.Draw(this.ctx.Messages["usernameprompt"]);
             var username = this.reader.Read();
 
+            if (string.IsNullOrWhiteSpace(username))
+            {
+                username = "anonymous";
+            }
+
             this.ctx.Score.SetMoves(this.ctx.Score.CurrentMoves).SetUsername(username).SetScore(this.ctx.Board.Rows);
             this.ctx.HighscoreProcessor.SaveHighscore(this.ctx.Score);
         }
@@ -70,11 +75,6 @@ namespace BalloonsPopConsoleApp.Engine
         {
             var size = this.reader.Read();
 
-            if (size == "invalidInput")
-            {
-                return;
-            }
-
             try
             {
                 var intSize = int.Parse(size);
@@ -82,7 +82,7 @@ namespace BalloonsPopConsoleApp.Engine
             }
             catch (Exception)
             {
-                this.ctx.CurrentMessage = "\nDefault size initialized!";
+                this.ctx.CurrentMessage = "\nDefault size initialized!\n";
             }
         }
 

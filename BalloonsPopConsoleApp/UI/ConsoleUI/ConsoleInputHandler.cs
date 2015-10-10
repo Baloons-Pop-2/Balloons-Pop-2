@@ -26,14 +26,14 @@ namespace BalloonsPopConsoleApp.UI.ConsoleUI
         /// <summary>
         /// Reads input from the console and checks for null values.
         /// </summary>
-        /// <returns>The trimmed string or "invalidInput" when the read string is empty</returns>
+        /// <returns>The trimmed string or null when the read string is empty</returns>
         public string Read()
         {
             var input = Console.ReadLine().Trim();
 
             if (string.IsNullOrWhiteSpace(input))
             {
-                return "invalidInput";
+                return null;
             }
             else
             {
@@ -48,6 +48,11 @@ namespace BalloonsPopConsoleApp.UI.ConsoleUI
         /// <returns>Parsed string that is ready to be passed as a command. "invalidInput" is returned if the parsing fails</returns>
         public string ParseInput(string input)
         {
+            if (input == null)
+            {
+                return "invalidInput";
+            }
+
             var inputWords = input.ToLower().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).ToArray();
 
             if (inputWords.Length != 1 && !IsValidPopInput(input))
@@ -61,7 +66,7 @@ namespace BalloonsPopConsoleApp.UI.ConsoleUI
             }
             else if (IsValidPopInput(input))
             {
-                return string.Format("pop {0} {1}", inputWords[0], inputWords[1]);        
+                return string.Format("pop {0} {1}", inputWords[0], inputWords[1]);
             }
 
             return "invalidInput";

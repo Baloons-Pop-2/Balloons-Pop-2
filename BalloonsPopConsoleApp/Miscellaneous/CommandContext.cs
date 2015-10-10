@@ -17,19 +17,19 @@ namespace BalloonsPopConsoleApp.Miscellaneous
         private readonly Dictionary<string, string> messages = new Dictionary<string, string>()
         {
             { "welcome",  "\nWelcome to \"Balloons Pops\" game. \r\nTry to pop the balloons in as few moves as possible. \r\nUse 'top' to view the top scoreboard, \r\n'restart' to start a new game and \r\n'exit' to quit the game.\n" },
-            { "goodbye", "\nScore from the current session will not be recorded. Hope to see you soon!\nGoodbye! \n\n" },
-            { "invalidmove", "\nIllegal move: cannot pop missing ballon!" },
-            { "invalidcommand", "\nInvalid move or command!" },
+            { "goodbye", "\nHope to see you soon!\nGoodbye! \n\n" },
+            { "invalidmove", "\nIllegal move: cannot pop missing ballon!\n" },
+            { "invalidcommand", "\nInvalid move or command!\n" },
             { "gameover", "\nYou popped all baloons in {0} moves.\r\nPlease enter your name for the top scoreboard: " },
-            { "invalidsave", "\nYou cannot restore the game to a previous state as one does not exist yet!" },
+            { "invalidsave", "\nYou cannot restore the game to a previous state as one does not exist yet!\n" },
             { "sizeprompt", "\nEnter a number between 5 and 15 for the board size \r\nor leave empty if you wish to play with the default size! : " },
             { "inputprompt", "\nEnter a command or valid move in the format \"row column\": " },
             { "usernameprompt", "\nEnter username:" },
-            { "noscores", "\nNo highscores yet!" }
+            { "noscores", "\nNo highscores yet!\n" }
         };
 
         /// <summary>
-        /// CommandContext constructor
+        /// Initializes a new instance of the CommandContext class.
         /// </summary>
         /// <param name="logger">The logger to save messages</param>
         /// <param name="board">The board object to be used in the game</param>
