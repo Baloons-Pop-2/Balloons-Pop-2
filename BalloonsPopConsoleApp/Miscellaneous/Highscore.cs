@@ -35,6 +35,10 @@ namespace BalloonsPopConsoleApp.Miscellaneous
         /// </summary>
         public string Username { get; private set; }
 
+        /// <summary>
+        /// Creates an instance of the Highscore class, otherwise - returns the existing instance.
+        /// </summary>
+        /// <returns>The Highscore instance</returns>
         public static IHighscore GetInstance()
         {
             if (instance == null)
@@ -56,7 +60,12 @@ namespace BalloonsPopConsoleApp.Miscellaneous
 
             return this;
         }
-        
+
+        /// <summary>
+        /// Set Player's Moves
+        /// </summary>
+        /// <param name="moves">The current player's moves</param>
+        /// <returns>The current instance of Highscore</returns>
         public IHighscore SetMoves(int moves)
         {
             this.CurrentMoves = moves;
@@ -64,6 +73,10 @@ namespace BalloonsPopConsoleApp.Miscellaneous
             return this;
         }
 
+        /// <summary>
+        /// Calculates the player's score based on the size of the board and the player's number of moves
+        /// </summary>
+        /// <param name="boardSize">the size of the board - used in calculating player's final score</param>
         public void SetScore(int boardSize)
         {
             int normalizer = 150;

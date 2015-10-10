@@ -15,7 +15,7 @@ namespace BalloonsPopConsoleApp.UI.ConsoleUI
     public class ConsoleUserInterface : IUserInterface
     {
         /// <summary>
-        /// ConsoleUserInterface constructor.
+        /// Initializes a new instance of the ConsoleUserInterface class.
         /// </summary>
         public ConsoleUserInterface()
         {
@@ -24,12 +24,12 @@ namespace BalloonsPopConsoleApp.UI.ConsoleUI
         }
 
         /// <summary>
-        /// Gets or sets the UI drawer.
+        /// Gets or sets the UI drawer object.
         /// </summary>
         public IPicasso Drawer { get; set; }
 
         /// <summary>
-        /// Gets or sets the Game input handler.
+        /// Gets or sets the Game input handler object.
         /// </summary>
         public IInputHandler Reader { get; set; }
     }

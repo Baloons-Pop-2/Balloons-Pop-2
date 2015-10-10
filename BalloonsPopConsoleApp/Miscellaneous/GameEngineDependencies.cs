@@ -15,7 +15,7 @@ namespace BalloonsPopConsoleApp.Miscellaneous
     public class GameEngineDependencies
     {
         /// <summary>
-        /// GameEngineDependencies object injects objects through dependency inversion in an object
+        /// Initializes a new instance of the GameEngineDependencies class. 
         /// </summary>
         /// <param name="ui">The user interface to be used</param>
         /// <param name="logger">The logger to save messages</param>
