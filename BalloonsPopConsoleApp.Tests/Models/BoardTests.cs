@@ -1,4 +1,6 @@
-﻿namespace BalloonsPopConsoleApp.Tests.Models
+﻿using BalloonsPopConsoleApp.Miscellaneous;
+
+namespace BalloonsPopConsoleApp.Tests.Models
 {
     using System;
 
@@ -12,11 +14,13 @@
     [TestFixture]
     public class BoardTests
     {
+        private readonly IRandomGenerator randomGenerator = new RandomGenerator();
+
         [Test]
         public void BoardWithValidRowsAndColumnsParametersShouldBeCreated(
             [Values(5, 7, 10, 13, 15)] int validSize)
         {
-            var board = new Board(validSize, validSize);
+            var board = new Board(validSize, validSize,this.randomGenerator);
         }
 
         [Test]
@@ -24,28 +28,28 @@
         public void BoardWithInvalidRowsAndColumnsParametersShouldThrow(
             [Values(1, 3, 16, 17)] int invalidSize)
         {
-            var board = new Board(invalidSize, invalidSize);
+            var board = new Board(invalidSize, invalidSize, this.randomGenerator);
         }
 
         [Test]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void BoardWithValidRowsAndInvalidColumnsParametersShouldThrow()
         {
-            var board = new Board(5, 4);
+            var board = new Board(5, 4, this.randomGenerator);
         }
 
         [Test]
         [ExpectedException(typeof(ArgumentOutOfRangeException))]
         public void BoardWithInvalidRowsAndValidColumnsParametersShouldThrow()
         {
-            var board = new Board(4, 5);
+            var board = new Board(4, 5, this.randomGenerator);
         }
 
         [Test]
         public void BoardContainsDifferentValuesAfterResetIsExecuted()
         {
             var size = 5;
-            var board = new Board(size, size);
+            var board = new Board(size, size, this.randomGenerator);
 
             var oldBoard = new int[size, size];
 
@@ -79,7 +83,7 @@
         public void BoardUnpoppedBalloonsCountShouldReturnInitialAmountOfBalloons()
         {
             var size = 5;
-            var board = new Board(size, size);
+            var board = new Board(size, size, this.randomGenerator);
 
             var initialBalloonsCount = board.UnpoppedBalloonsCount;
             var expected = size * size;
@@ -91,7 +95,7 @@
         public void BoardUnpoppedBalloonsCountShouldReturnValidAmountWhenThereArePoppedBalloons()
         {
             var size = 5;
-            var board = new Board(size, size);
+            var board = new Board(size, size, this.randomGenerator);
 
             board[3, 3] = null;
             board[2, 2] = null;
@@ -105,7 +109,7 @@
         [Test]
         public void BoardSaveMementoShouldReturnAMemento()
         {
-            var board = new Board(5, 5);
+            var board = new Board(5, 5, this.randomGenerator);
             var memento = board.SaveMemento().Board;
 
             var boardAsMatrix = new IBalloon[5, 5];
@@ -126,7 +130,7 @@
         [Test]
         public void BoardRestoreMementoShouldRestoreBoardToPreviousState()
         {
-            var board = new Board(5, 5);
+            var board = new Board(5, 5, this.randomGenerator);
             var memento = board.SaveMemento();
 
             board[0, 0] = null;
@@ -148,7 +152,7 @@
         [Test]
         public void BoardIsValidPopShouldReturnFalseWhenNullBalloonPositionsArePassed()
         {
-            var board = new Board(5, 5);
+            var board = new Board(5, 5, this.randomGenerator);
 
             board[1, 1] = null;
 
@@ -158,7 +162,7 @@
         [Test]
         public void BoardIsValidPopShouldReturnFalseWhenInvalidArgumentsAreProvided()
         {
-            var board = new Board(5, 5);
+            var board = new Board(5, 5, this.randomGenerator);
 
             Assert.IsFalse(board.IsValidPop(6, 6));
         }
@@ -166,7 +170,7 @@
         [Test]
         public void BoardIsValidPopShouldReturnTrueWhenExistingValuesAreProvided()
         {
-            var board = new Board(5, 5);
+            var board = new Board(5, 5, this.randomGenerator);
 
             Assert.IsTrue(board.IsValidPop(3, 3));
         }
@@ -174,7 +178,7 @@
         [Test]
         public void BoardToStringShouldReturnValidStringRepresentation()
         {
-            var board = new Board(5, 5);
+            var board = new Board(5, 5, this.randomGenerator);
             var expectedString =
                 "    0 1 2 3 4 \r\n    ----------\r\n0 | . 1 1 1 1 | \r\n1 | 1 1 1 1 1 | \r\n2 | 1 1 1 1 1 | \r\n3 | 1 1 1 1 1 | \r\n4 | 1 1 1 1 1 | \r\n    ----------\r\n";
 

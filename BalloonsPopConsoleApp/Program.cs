@@ -17,7 +17,7 @@
             var engineDependencies = new GameEngineDependencies(
                 new ConsoleUserInterface(),
                 new Logger(),
-                new Board(BoardSize, BoardSize),
+                new Board(BoardSize, BoardSize, new RandomGenerator()),
                 new BoardMemory(),
                 new CommandFactory());
 

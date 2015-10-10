@@ -17,7 +17,7 @@
         [TestFixtureSetUp]
         public void SetUpObject()
         {
-            this.dependencies = new GameEngineDependencies(new ConsoleUserInterface(), new Logger(), new Board(5, 5), new BoardMemory(), new CommandFactory());
+            this.dependencies = new GameEngineDependencies(new ConsoleUserInterface(), new Logger(), new Board(5, 5, new BalloonsPopConsoleApp.RandomGenerator()), new BoardMemory(), new CommandFactory());
         }
 
         [TestFixtureTearDown]

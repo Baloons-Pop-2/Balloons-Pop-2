@@ -26,11 +26,12 @@
         /// </summary>
         /// <param name="rows">The max amount of rows the board will contain</param>
         /// <param name="cols">The max amount of columns the board will contain</param>
-        public Board(int rows, int cols)
+        public Board(int rows, int cols, IRandomGenerator randomGenerator)
         {
             this.Rows = rows;
             this.Cols = cols;
             this.board = new IBalloon[this.Rows, this.Cols];
+            this.RandomGenerator = randomGenerator;
             this.balloonFactory = new BalloonFactory();
             this.Fill();
         }
@@ -119,6 +120,8 @@
                 this.board[row, col] = value;
             }
         }
+
+        private IRandomGenerator RandomGenerator { get; set; }
 
         /// <summary>
         /// Method resets the matrix and fills it anew
@@ -216,7 +219,7 @@
             {
                 for (int col = 0; col < this.Cols; col++)
                 {
-                    var randomValue = int.Parse(RandomGenerator.GetRandomInt());
+                    var randomValue = this.RandomGenerator.GetInt(1, 5);
                     this[row, col] = this.balloonFactory.GetBalloon(randomValue);
                 }
             }

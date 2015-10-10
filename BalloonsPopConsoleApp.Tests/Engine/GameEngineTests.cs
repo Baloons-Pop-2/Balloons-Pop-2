@@ -36,7 +36,7 @@
             mockedUi.Setup(x => x.Drawer).Returns(mockedDrawer.Object);
             mockedUi.Setup(x => x.Reader).Returns(this.GetReader(new List<string> {"", "exit"}));
 
-            var dependencies = new GameEngineDependencies(mockedUi.Object, new Logger(), new Board(5, 5), new BoardMemory(), new CommandFactory());
+            var dependencies = new GameEngineDependencies(mockedUi.Object, new Logger(), new Board(5, 5, new BalloonsPopConsoleApp.RandomGenerator()), new BoardMemory(), new CommandFactory());
 
             var engine = new GameEngine(dependencies);
             engine.Run();
@@ -56,7 +56,7 @@
             mockedUi.Setup(x => x.Drawer).Returns(mockedDrawer.Object);
             mockedUi.Setup(x => x.Reader).Returns(this.GetReader(new List<string> {"", "4 4", "exit"}));
 
-            var dependencies = new GameEngineDependencies(mockedUi.Object, new Logger(), new Board(5, 5), new BoardMemory(), new CommandFactory());
+            var dependencies = new GameEngineDependencies(mockedUi.Object, new Logger(), new Board(5, 5, new BalloonsPopConsoleApp.RandomGenerator()), new BoardMemory(), new CommandFactory());
 
             var engine = new GameEngine(dependencies);
             engine.Run();
@@ -76,7 +76,7 @@
             mockedUi.Setup(x => x.Drawer).Returns(mockedDrawer.Object);
             mockedUi.Setup(x => x.Reader).Returns(this.GetReader(new List<string> { "5", "4 4", "exit" }));
 
-            var dependencies = new GameEngineDependencies(mockedUi.Object, new Logger(), new Board(5, 5), new BoardMemory(), new CommandFactory());
+            var dependencies = new GameEngineDependencies(mockedUi.Object, new Logger(), new Board(5, 5, new BalloonsPopConsoleApp.RandomGenerator()), new BoardMemory(), new CommandFactory());
 
             var engine = new GameEngine(dependencies);
             engine.Run();
@@ -100,7 +100,7 @@
                 "5", "4 0", "4 1", "4 2", "4 3", "4 4", "4 0", "4 1", "4 2", "4 3", "4 4", "4 0", "4 1", "4 2", "4 3", "4 4", "4 0", "4 1", "4 2", "4 3", "4 4", "4 0", "4 1", "4 2", "4 3", "4 4"
             }));
 
-            var dependencies = new GameEngineDependencies(mockedUi.Object, new Logger(), new Board(5, 5), new BoardMemory(), new CommandFactory());
+            var dependencies = new GameEngineDependencies(mockedUi.Object, new Logger(), new Board(5, 5, new BalloonsPopConsoleApp.RandomGenerator()), new BoardMemory(), new CommandFactory());
 
             var engine = new GameEngine(dependencies);
             engine.Run();

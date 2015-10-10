@@ -26,7 +26,7 @@
 
             this.commandFactory = dependencies.CommandFactory;
 
-            this.ctx = new CommandContext(dependencies.Logger, new Board(dependencies.Board.Rows, dependencies.Board.Cols), 0, 0, dependencies.BoardMemory, Highscore.GetInstance(), new HighscoreProcessor());
+            this.ctx = new CommandContext(dependencies.Logger, new Board(dependencies.Board.Rows, dependencies.Board.Cols, new BalloonsPopConsoleApp.RandomGenerator()), 0, 0, dependencies.BoardMemory, Highscore.GetInstance(), new HighscoreProcessor());
         }
 
         public void Run()
@@ -74,7 +74,7 @@
             try
             {
                 var intSize = int.Parse(size);
-                this.ctx.Board = new Board(intSize, intSize);
+                this.ctx.Board = new Board(intSize, intSize, new BalloonsPopConsoleApp.RandomGenerator());
             }
             catch (Exception)
             {

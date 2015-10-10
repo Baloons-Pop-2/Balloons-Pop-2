@@ -16,7 +16,7 @@ namespace BalloonsPopConsoleApp.Tests.Effects
         public void BfsEffectShouldPopAtLeastOneBalloon()
         {
             var effect = new BfsEffect();
-            var board = new Board(8, 8);
+            var board = new Board(8, 8, new RandomGenerator());
             effect.Pop(4, 4, board);
 
             var hasPoppedBalloon = false;

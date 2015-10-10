@@ -16,7 +16,7 @@ namespace BalloonsPopConsoleApp.Tests.Effects
          public void AreaPopShouldPopCorrectlyOnCorner()
          {
              var effect = new AreaPopEffect();
-             var board = new Board(8, 8);
+             var board = new Board(8, 8, new RandomGenerator());
              effect.Pop(0, 0, board);
 
              for (int row = 0; row < 8; row++)
@@ -45,7 +45,7 @@ namespace BalloonsPopConsoleApp.Tests.Effects
          public void AreaPopShouldPopCorrectlyOnCenter()
          {
              var effect = new AreaPopEffect();
-             var board = new Board(8, 8);
+             var board = new Board(8, 8, new RandomGenerator());
              effect.Pop(4, 4, board);
 
              for (int row = 0; row < 8; row++)
