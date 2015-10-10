@@ -13,8 +13,14 @@ namespace BalloonsPopConsoleApp
     using Models;
     using UI.ConsoleUI;
 
+    /// <summary>
+    /// Balloons Pop-2 Program - A game is initialized with its components, ran in a loop and then terminated.
+    /// </summary>
     public class Program
     {
+        /// <summary>
+        /// Entry point for the Balloons Pop-2 game.
+        /// </summary>
         private static void Main()
         {
             const int BoardSize = 10;

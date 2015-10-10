@@ -5,8 +5,14 @@
 
 namespace BalloonsPopConsoleApp.Engine
 {
+    /// <summary>
+    /// The interface of the engine.
+    /// </summary>
     public interface IGameEngine
     {
+        /// <summary>
+        /// Starts processing input.
+        /// </summary>
         void Run();
     }
 }

@@ -12,9 +12,19 @@ namespace BalloonsPopConsoleApp.Miscellaneous
     /// </summary>
     public class Highscore : IHighscore
     {
-        public const int TheAnswerToEverything = 42;
+        /// <summary>
+        /// A constant used in calculating the final score.
+        /// </summary>
+        private const int TheAnswerToEverything = 42;
+
+        /// <summary>
+        /// The one and only instance of the class.
+        /// </summary>
         private static IHighscore instance;
-        
+
+        /// <summary>
+        /// Prevents a default instance of the <see cref="Highscore" /> class from being created.
+        /// </summary>
         private Highscore()
         {
         }
@@ -23,7 +33,6 @@ namespace BalloonsPopConsoleApp.Miscellaneous
         /// Gets or sets the player's current moves. Increments on every player's move.
         /// </summary>
         public int CurrentMoves { get; set; }
-
 
         /// <summary>
         /// Gets the player's current score.
@@ -36,9 +45,9 @@ namespace BalloonsPopConsoleApp.Miscellaneous
         public string Username { get; private set; }
 
         /// <summary>
-        /// Creates an instance of the Highscore class, otherwise - returns the existing instance.
+        /// Creates an instance of the <see cref="Highscore"/> class, otherwise - returns the existing instance.
         /// </summary>
-        /// <returns>The Highscore instance</returns>
+        /// <returns>The <see cref="Highscore"/> instance</returns>
         public static IHighscore GetInstance()
         {
             if (instance == null)
@@ -65,7 +74,7 @@ namespace BalloonsPopConsoleApp.Miscellaneous
         /// Set Player's Moves
         /// </summary>
         /// <param name="moves">The current player's moves</param>
-        /// <returns>The current instance of Highscore</returns>
+        /// <returns>The current instance of <see cref="Highscore"/></returns>
         public IHighscore SetMoves(int moves)
         {
             this.CurrentMoves = moves;

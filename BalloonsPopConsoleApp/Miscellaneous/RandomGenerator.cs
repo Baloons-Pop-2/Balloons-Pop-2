@@ -12,6 +12,9 @@ namespace BalloonsPopConsoleApp.Miscellaneous
     /// </summary>
     public class RandomGenerator : IRandomGenerator
     {
+        /// <summary>
+        /// The instance of the Random class which returns semi-random values
+        /// </summary>
         private readonly Random r = new Random();
 
         /// <summary>

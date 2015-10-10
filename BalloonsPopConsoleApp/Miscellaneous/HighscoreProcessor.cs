@@ -13,14 +13,17 @@ namespace BalloonsPopConsoleApp.Miscellaneous
     using BalloonsPop;
 
     /// <summary>
-    /// The class is responsible for saving and reading highscore from xml files.
+    /// The class is responsible for saving and reading high score from xml files.
     /// </summary>
     public class HighscoreProcessor : IHighscoreProcessor
     {
+        /// <summary>
+        /// The path where the file containing information about scores is stored.
+        /// </summary>
         private const string Path = @"..\..\..\score.xml";
 
         /// <summary>
-        /// Saves highscore to an existing file, otherwise one is created and highscore is written.
+        /// Saves high score to an existing file, otherwise one is created and high score is written.
         /// </summary>
         /// <param name="highscore">the score object</param>
         public void SaveHighscore(IHighscore highscore)
@@ -46,9 +49,9 @@ namespace BalloonsPopConsoleApp.Miscellaneous
         }
 
         /// <summary>
-        /// Retrieves all highscores from a file.
+        /// Retrieves all high scores from a file.
         /// </summary>
-        /// <returns>IEnumerable of Tuple&lt;string, int&gt;, otherwise - empty list</returns>
+        /// <returns>IEnumerable of Tuple&lt;string, integer&gt;, otherwise - empty list</returns>
         public IEnumerable<Tuple<string, int>> GetTopHighscores()
         {
             var topHighscores = new List<Tuple<string, int>>();
@@ -62,7 +65,6 @@ namespace BalloonsPopConsoleApp.Miscellaneous
                     .OrderByDescending(x => x.Item2)
                     .Take(5)
                     .ToList();
-
             }
             catch (FileNotFoundException)
             {
