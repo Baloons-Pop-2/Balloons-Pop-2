@@ -11,7 +11,7 @@ namespace BalloonsPopConsoleApp.Miscellaneous
 {
     public class HighscoreProcessor : IHighscoreProcessor
     {
-        private const string Path = "score.xml";
+        private const string Path = @"..\..\..\score.xml";
 
         public void SaveHighscore(IHighscore highscore)
         {
