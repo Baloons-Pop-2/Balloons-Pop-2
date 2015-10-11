@@ -1,0 +1,681 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpKI>
+  <HelpKINode Title="ActiveCol property">
+    <HelpKINode Title="CommandContext.ActiveCol Property " Url="html/2238f9bd-157c-8a10-a9e9-cfa352211ef3.htm" />
+    <HelpKINode Title="ICommandContext.ActiveCol Property " Url="html/366384c0-8d16-4e57-15f6-1a3b640d37ba.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ActiveRow property">
+    <HelpKINode Title="CommandContext.ActiveRow Property " Url="html/eb22a21f-1ba4-6c3d-a8ff-0cefb616e171.htm" />
+    <HelpKINode Title="ICommandContext.ActiveRow Property " Url="html/0abfd835-6f39-9624-e3d2-c8b94abd134f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AreaPopEffect class">
+    <HelpKINode Title="AreaPopEffect Class" Url="html/5abc34d1-1b17-71fa-9c1f-2f9da6f27c95.htm" />
+    <HelpKINode Title="about AreaPopEffect class" Url="html/5abc34d1-1b17-71fa-9c1f-2f9da6f27c95.htm" />
+    <HelpKINode Title="constructor" Url="html/95b8765c-5122-c045-acb7-e9e783f043b6.htm" />
+    <HelpKINode Title="methods" Url="html/f3e4d921-62de-f04e-5308-3147b5c36529.htm" />
+  </HelpKINode>
+  <HelpKINode Title="AreaPopEffect.AreaPopEffect constructor" Url="html/95b8765c-5122-c045-acb7-e9e783f043b6.htm" />
+  <HelpKINode Title="AreaPopEffect.PopBalloons method" Url="html/0c2123cd-409b-37f9-280f-6a9852e1a7d4.htm" />
+  <HelpKINode Title="Balloon class">
+    <HelpKINode Title="Balloon Class" Url="html/99961206-ff81-cb01-62b5-67cc62f5f3cc.htm" />
+    <HelpKINode Title="about Balloon class" Url="html/99961206-ff81-cb01-62b5-67cc62f5f3cc.htm" />
+    <HelpKINode Title="constructor" Url="html/e7bb5fb8-adb2-fd88-4169-de74b3501a06.htm" />
+    <HelpKINode Title="methods" Url="html/774afbc7-b6b2-c536-f317-94e6959ae6eb.htm" />
+    <HelpKINode Title="properties" Url="html/58111e56-a503-4e56-f347-101463ff5e64.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Balloon.Balloon constructor" Url="html/e7bb5fb8-adb2-fd88-4169-de74b3501a06.htm" />
+  <HelpKINode Title="Balloon.Default property" Url="html/6c6cba6a-7c6f-cd60-4860-92517fcdd095.htm" />
+  <HelpKINode Title="Balloon.TraversalEffect property" Url="html/00805716-04d0-fce4-9285-493fa850d232.htm" />
+  <HelpKINode Title="Balloon.Value property" Url="html/5497bf55-dd44-07be-ece0-73cf2c889b20.htm" />
+  <HelpKINode Title="BalloonFactory class">
+    <HelpKINode Title="BalloonFactory Class" Url="html/ea128521-f1ec-d2d0-959d-9bad60b8bf7c.htm" />
+    <HelpKINode Title="about BalloonFactory class" Url="html/ea128521-f1ec-d2d0-959d-9bad60b8bf7c.htm" />
+    <HelpKINode Title="constructor" Url="html/2a095f3a-7626-2645-d908-05f8f80fecc2.htm" />
+    <HelpKINode Title="methods" Url="html/55b639c1-4f2b-e1ab-acc3-7bbff59641fe.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BalloonFactory.BalloonFactory constructor" Url="html/2a095f3a-7626-2645-d908-05f8f80fecc2.htm" />
+  <HelpKINode Title="BalloonFactory.GetBalloon method" Url="html/98333938-f1b9-5ce2-1693-a6e1688acd55.htm" />
+  <HelpKINode Title="BalloonsPop namespace" Url="html/f1d06e80-9cd2-281d-a28d-e8c97b2337fc.htm" />
+  <HelpKINode Title="BalloonsPop.Commands namespace" Url="html/7c25de1e-78bb-c055-9a0a-9fe23afd1e6d.htm" />
+  <HelpKINode Title="BalloonsPop.Commands.ICommand interface" Url="html/fc56ca32-25c7-d51a-7817-5e8e0a00cbab.htm" />
+  <HelpKINode Title="BalloonsPop.IBalloon interface" Url="html/2c3ec701-ebe6-9506-8b4c-daf2b0b10873.htm" />
+  <HelpKINode Title="BalloonsPop.IBalloonFactory interface" Url="html/6b32a9d3-5a5b-c709-7cb7-8f3d6b58fd82.htm" />
+  <HelpKINode Title="BalloonsPop.IBoard interface" Url="html/d0c1eec5-3b45-9874-4f3e-77edec58274d.htm" />
+  <HelpKINode Title="BalloonsPop.IBoardMemento interface" Url="html/b3cf7289-14b9-b16d-96c6-5531afb133fa.htm" />
+  <HelpKINode Title="BalloonsPop.IBoardMemory interface" Url="html/75839c1b-1fd4-2592-8909-ffa9eb0787c2.htm" />
+  <HelpKINode Title="BalloonsPop.ICommandContext interface" Url="html/2b6dc93f-c33f-6c2d-d026-5728182bc3ac.htm" />
+  <HelpKINode Title="BalloonsPop.ICommandFactory interface" Url="html/62ca360b-7867-1f5a-453f-e870c9925522.htm" />
+  <HelpKINode Title="BalloonsPop.IEffectFactory interface" Url="html/84fa5bbb-6cdf-ec85-e486-0305ceabc32e.htm" />
+  <HelpKINode Title="BalloonsPop.IHighscore interface" Url="html/74bcf093-c863-668d-4b34-3c4041a60232.htm" />
+  <HelpKINode Title="BalloonsPop.IHighscoreProcessor interface" Url="html/7c0466fb-bb98-d338-337d-e8d09b4e6d97.htm" />
+  <HelpKINode Title="BalloonsPop.IMemorizeable(Of T) interface" Url="html/f6f26d89-1dca-b409-bcda-10994cc6fd61.htm" />
+  <HelpKINode Title="BalloonsPop.IMemorizeable&lt;T&gt; interface" Url="html/f6f26d89-1dca-b409-bcda-10994cc6fd61.htm" />
+  <HelpKINode Title="BalloonsPop.Logs namespace" Url="html/67f60c24-cfb2-4cb2-f300-a0bda667d9a1.htm" />
+  <HelpKINode Title="BalloonsPop.Logs.ILogger interface" Url="html/0cc8aca9-2824-ca7d-586b-f6c467399cc2.htm" />
+  <HelpKINode Title="BalloonsPop.Traversals namespace" Url="html/6bea577c-b1ef-6583-64a8-25d4585cffe0.htm" />
+  <HelpKINode Title="BalloonsPop.Traversals.ITraversalEffect interface" Url="html/e2f0a7e4-c895-714b-80c7-23ab5d8088f3.htm" />
+  <HelpKINode Title="BalloonsPop.UI namespace" Url="html/75bcc4d2-3f74-2030-c46e-11f146d13d4b.htm" />
+  <HelpKINode Title="BalloonsPop.UI.Drawer namespace" Url="html/d6d6de75-9a93-3b95-a3fb-06280d587414.htm" />
+  <HelpKINode Title="BalloonsPop.UI.Drawer.IPicasso interface" Url="html/17f1ef17-777b-c67f-5756-3595311a0d56.htm" />
+  <HelpKINode Title="BalloonsPop.UI.InputHandler namespace" Url="html/ff47ea8e-720c-3785-2d4a-26d5bc2d63ab.htm" />
+  <HelpKINode Title="BalloonsPop.UI.InputHandler.IInputHandler interface" Url="html/9792d2b9-5660-7213-18aa-b0dca1b7ab31.htm" />
+  <HelpKINode Title="BalloonsPop.UI.IUserInterface interface" Url="html/e3340a71-d456-c577-49f5-fc0a7bb47948.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp namespace" Url="html/c5dec319-dc3f-4486-7692-2010da4377e5.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Commands namespace" Url="html/f0d6e58a-9df3-9323-a80f-96e8ff99afef.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Commands.ExitCommand class" Url="html/4aa3f441-583f-8552-c1ec-f435a898c679.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Commands.InvalidInputCommand class" Url="html/fce78d5b-78d7-ae71-bd7d-25692615a5b0.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Commands.PopBalloonCommand class" Url="html/0b76811e-a137-4bcd-1c12-2251043d7bf3.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Commands.RestartCommand class" Url="html/78a018e2-3e2d-aeb8-c045-2db66b80b4bf.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Commands.ShowTopScoreCommand class" Url="html/ba3360df-dcf0-3300-db74-9ed8999e568d.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Commands.UndoCommand class" Url="html/97954ccf-6c2d-7902-c5aa-6855bba45bc4.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Effects namespace" Url="html/038889b6-eb5d-17d4-31f3-69a60af68f55.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Effects.AreaPopEffect class" Url="html/5abc34d1-1b17-71fa-9c1f-2f9da6f27c95.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Effects.BfsEffect class" Url="html/04cc4f45-1cd7-2ae8-4526-a2859ed49591.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Effects.TraversalEffect class" Url="html/1eb8cfb6-b383-a17d-5322-c7a896954557.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Engine namespace" Url="html/1bcae4a2-704f-9c49-2641-e47f9a78875b.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Engine.GameEngine class" Url="html/41b3545e-37cc-85f4-9975-412e48f38dd0.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Engine.IGameEngine interface" Url="html/2ececb37-2ab0-d8bf-8224-9517d9b54f09.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Factories namespace" Url="html/53c4d5c8-a976-ca90-7611-4d4839151921.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Factories.BalloonFactory class" Url="html/ea128521-f1ec-d2d0-959d-9bad60b8bf7c.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Factories.CommandFactory class" Url="html/d5ec8c2c-ace6-4bcd-38ab-ef742c4d7c3e.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Factories.EffectFactory class" Url="html/cdc670e8-de12-e9d7-7ba9-f3bdec3e04d7.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Logs namespace" Url="html/616ce84e-4e47-e5cc-a03b-467bfd5d5465.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Logs.Logger class" Url="html/a4b09fd6-1ac4-728e-699d-a2f0b5f96e4a.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Memory namespace" Url="html/9825c1c3-22c1-b173-a56a-86abcb3affa4.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Memory.BoardMemory class" Url="html/fdb2142c-0acf-0814-4b47-6dceca9bb52f.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Memory.Memento class" Url="html/19163854-0935-9569-3919-5ade82b7e077.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Miscellaneous namespace" Url="html/7c705d4c-e161-3337-b69e-f8a3e710b7e1.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Miscellaneous.CommandContext class" Url="html/6c211547-b180-2b02-2c56-96e9094d6512.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Miscellaneous.GameEngineDependencies class" Url="html/6477fc64-ce15-fb93-7549-09d1667f3120.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Miscellaneous.Highscore class" Url="html/a5440f0a-2886-13b5-fc06-503cb0dc71c5.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Miscellaneous.HighscoreProcessor class" Url="html/325e70e5-fba2-ce98-884e-1a9fcd1246ca.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Miscellaneous.IRandomGenerator interface" Url="html/2837aee6-e4a1-e45d-7ba1-226ac8db8035.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Miscellaneous.RandomGenerator class" Url="html/dc77b870-75da-bec7-7fc0-b9bb50c8d47f.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Models namespace" Url="html/7380fb5b-04d4-69c0-ccdc-09ecbbcfbb48.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Models.Balloon class" Url="html/99961206-ff81-cb01-62b5-67cc62f5f3cc.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Models.Board class" Url="html/aba3f8b7-9000-1210-85dd-405e0701c04b.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.Program class" Url="html/664ac07f-26f4-e2ec-2fa9-53a359074630.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.UI.ConsoleUI namespace" Url="html/20a01d8c-8f9a-75cd-5532-49d216f0a062.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.UI.ConsoleUI.ConsoleDrawer class" Url="html/5a720563-7652-ab33-945f-1f20abcc461f.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.UI.ConsoleUI.ConsoleInputHandler class" Url="html/7a06cec1-3c61-9f31-966c-e6a95904d30e.htm" />
+  <HelpKINode Title="BalloonsPopConsoleApp.UI.ConsoleUI.ConsoleUserInterface class" Url="html/7ab42c72-5867-e205-906a-ffa4176d49af.htm" />
+  <HelpKINode Title="BfsEffect class">
+    <HelpKINode Title="BfsEffect Class" Url="html/04cc4f45-1cd7-2ae8-4526-a2859ed49591.htm" />
+    <HelpKINode Title="about BfsEffect class" Url="html/04cc4f45-1cd7-2ae8-4526-a2859ed49591.htm" />
+    <HelpKINode Title="constructor" Url="html/2315e9db-e504-3bea-decd-c98fc8f1d5c9.htm" />
+    <HelpKINode Title="methods" Url="html/ae36f48d-2744-1df4-8955-8c82bd3385a9.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BfsEffect.BfsEffect constructor" Url="html/2315e9db-e504-3bea-decd-c98fc8f1d5c9.htm" />
+  <HelpKINode Title="BfsEffect.PopBalloons method" Url="html/3496ff58-e616-ebe1-b4da-6802350d9e61.htm" />
+  <HelpKINode Title="Board class">
+    <HelpKINode Title="Board Class" Url="html/aba3f8b7-9000-1210-85dd-405e0701c04b.htm" />
+    <HelpKINode Title="about Board class" Url="html/aba3f8b7-9000-1210-85dd-405e0701c04b.htm" />
+    <HelpKINode Title="constructor" Url="html/7c5fcbd4-02df-dfb1-7fe2-e6c327e6374e.htm" />
+    <HelpKINode Title="methods" Url="html/a15e8f2d-0b4a-1305-ff06-cfef2eaa9505.htm" />
+    <HelpKINode Title="properties" Url="html/61969bc9-094e-a58d-261a-b7a53b7ccd3b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Board property">
+    <HelpKINode Title="CommandContext.Board Property " Url="html/893ee730-0ca4-7117-9f35-8a1332fc5aa0.htm" />
+    <HelpKINode Title="GameEngineDependencies.Board Property " Url="html/86124a15-0fef-caef-24fb-d809d11913ff.htm" />
+    <HelpKINode Title="IBoardMemento.Board Property " Url="html/97cc6051-3946-cc9f-2048-c6c7f99afbf5.htm" />
+    <HelpKINode Title="ICommandContext.Board Property " Url="html/78e968c9-0a21-942a-21c4-5aeaae929ab7.htm" />
+    <HelpKINode Title="Memento.Board Property " Url="html/0a7d1731-660d-e304-d1c7-de0b28ae105f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Board.Board constructor" Url="html/7c5fcbd4-02df-dfb1-7fe2-e6c327e6374e.htm" />
+  <HelpKINode Title="Board.Cols property" Url="html/8a2c46ce-1853-d9f3-637c-09ddb76ca23b.htm" />
+  <HelpKINode Title="Board.IsValidPop method" Url="html/fbcf4fee-b133-eeea-c81b-8e8c0a59a139.htm" />
+  <HelpKINode Title="Board.Item property" Url="html/d9834e36-f9b2-d304-fd52-afb7455f3de6.htm" />
+  <HelpKINode Title="Board.Reset method" Url="html/0e930024-f59b-de69-2641-eca18f870fd8.htm" />
+  <HelpKINode Title="Board.RestoreMemento method" Url="html/ee5a5064-0b8a-7dd3-6ac3-2939ac5bd1e1.htm" />
+  <HelpKINode Title="Board.Rows property" Url="html/7a7145f2-6f4e-8bed-4f79-fbe057b20400.htm" />
+  <HelpKINode Title="Board.SaveMemento method" Url="html/c083a179-4458-25ac-ae01-8fc9f4dcaa8e.htm" />
+  <HelpKINode Title="Board.ToString method" Url="html/75452937-27cc-8438-2878-864394d2c5a6.htm" />
+  <HelpKINode Title="Board.UnpoppedBalloonsCount property" Url="html/b58f1d5f-e2af-9c82-67fe-5c269c694464.htm" />
+  <HelpKINode Title="BoardMemory class">
+    <HelpKINode Title="BoardMemory Class" Url="html/fdb2142c-0acf-0814-4b47-6dceca9bb52f.htm" />
+    <HelpKINode Title="about BoardMemory class" Url="html/fdb2142c-0acf-0814-4b47-6dceca9bb52f.htm" />
+    <HelpKINode Title="constructor" Url="html/6dee41b6-4852-bdf3-ea87-6abfdf467858.htm" />
+    <HelpKINode Title="methods" Url="html/e011a4b7-ee4f-e351-fd07-24479b1f972e.htm" />
+    <HelpKINode Title="properties" Url="html/7b93e0ea-d370-f3cd-ea20-264319ce89f2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="BoardMemory property" Url="html/295a550a-07dd-58a4-e8a7-0447e09d80b0.htm" />
+  <HelpKINode Title="BoardMemory.BoardMemory constructor" Url="html/6dee41b6-4852-bdf3-ea87-6abfdf467858.htm" />
+  <HelpKINode Title="BoardMemory.Memento property" Url="html/5582a1ca-c312-7e53-234b-fe9a270967a4.htm" />
+  <HelpKINode Title="Clear method">
+    <HelpKINode Title="ConsoleDrawer.Clear Method " Url="html/f9b01d3c-1229-eb4f-03bc-bd3a6d1c73de.htm" />
+    <HelpKINode Title="IPicasso.Clear Method " Url="html/778cd558-f4ca-f52b-2414-ee0fa84b3319.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Cols property">
+    <HelpKINode Title="Board.Cols Property " Url="html/8a2c46ce-1853-d9f3-637c-09ddb76ca23b.htm" />
+    <HelpKINode Title="IBoard.Cols Property " Url="html/1cce248c-b424-e007-59ce-6547606ae9c8.htm" />
+    <HelpKINode Title="Memento.Cols Property " Url="html/050a6c38-35aa-e2e5-94ab-0dbde71da65e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CommandContext class">
+    <HelpKINode Title="CommandContext Class" Url="html/6c211547-b180-2b02-2c56-96e9094d6512.htm" />
+    <HelpKINode Title="about CommandContext class" Url="html/6c211547-b180-2b02-2c56-96e9094d6512.htm" />
+    <HelpKINode Title="constructor" Url="html/a9d86121-1f7b-7b73-b2e2-2b363f132c17.htm" />
+    <HelpKINode Title="methods" Url="html/354e1442-59ab-745c-85c2-2d897eb44687.htm" />
+    <HelpKINode Title="properties" Url="html/11e00a6b-aec6-9620-4d93-02a177668c39.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CommandContext.ActiveCol property" Url="html/2238f9bd-157c-8a10-a9e9-cfa352211ef3.htm" />
+  <HelpKINode Title="CommandContext.ActiveRow property" Url="html/eb22a21f-1ba4-6c3d-a8ff-0cefb616e171.htm" />
+  <HelpKINode Title="CommandContext.Board property" Url="html/893ee730-0ca4-7117-9f35-8a1332fc5aa0.htm" />
+  <HelpKINode Title="CommandContext.CommandContext constructor" Url="html/a9d86121-1f7b-7b73-b2e2-2b363f132c17.htm" />
+  <HelpKINode Title="CommandContext.CurrentMessage property" Url="html/257f9e02-5120-6a80-3107-fc6c9a47c502.htm" />
+  <HelpKINode Title="CommandContext.HighscoreProcessor property" Url="html/612a7848-0af8-4776-f3b2-aff5689c8b8d.htm" />
+  <HelpKINode Title="CommandContext.IsOver property" Url="html/2e440700-ad93-0b4c-419e-333d01f804e1.htm" />
+  <HelpKINode Title="CommandContext.Logger property" Url="html/9dd9dde3-daf2-3181-09a8-531f8f2e2962.htm" />
+  <HelpKINode Title="CommandContext.Memory property" Url="html/ac78abbb-a2b5-4a43-5dc3-91660dd6fbb9.htm" />
+  <HelpKINode Title="CommandContext.Messages property" Url="html/33457899-b855-fedc-5387-83c62ff381d6.htm" />
+  <HelpKINode Title="CommandContext.Score property" Url="html/e8c2e0b3-ae49-5bec-fac6-ccaefdca8c6a.htm" />
+  <HelpKINode Title="CommandFactory class">
+    <HelpKINode Title="CommandFactory Class" Url="html/d5ec8c2c-ace6-4bcd-38ab-ef742c4d7c3e.htm" />
+    <HelpKINode Title="about CommandFactory class" Url="html/d5ec8c2c-ace6-4bcd-38ab-ef742c4d7c3e.htm" />
+    <HelpKINode Title="constructor" Url="html/cec91d24-8ec9-9146-fa16-d92ae0775b2e.htm" />
+    <HelpKINode Title="methods" Url="html/55a8df87-ac65-b4c2-3998-408bfa6aff8b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CommandFactory property" Url="html/188feab7-0108-3738-1f16-a325c029fb7f.htm" />
+  <HelpKINode Title="CommandFactory.CommandFactory constructor" Url="html/cec91d24-8ec9-9146-fa16-d92ae0775b2e.htm" />
+  <HelpKINode Title="CommandFactory.GetCommand method" Url="html/af4028a7-4f83-a9f1-2d0b-c0dd140d471a.htm" />
+  <HelpKINode Title="ConsoleDrawer class">
+    <HelpKINode Title="ConsoleDrawer Class" Url="html/5a720563-7652-ab33-945f-1f20abcc461f.htm" />
+    <HelpKINode Title="about ConsoleDrawer class" Url="html/5a720563-7652-ab33-945f-1f20abcc461f.htm" />
+    <HelpKINode Title="constructor" Url="html/d65dbe71-de64-f189-1766-926ea40d39f9.htm" />
+    <HelpKINode Title="methods" Url="html/13bbfa62-c276-ba03-ed5a-7ba396e4b1b0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ConsoleDrawer.Clear method" Url="html/f9b01d3c-1229-eb4f-03bc-bd3a6d1c73de.htm" />
+  <HelpKINode Title="ConsoleDrawer.ConsoleDrawer constructor" Url="html/d65dbe71-de64-f189-1766-926ea40d39f9.htm" />
+  <HelpKINode Title="ConsoleDrawer.Draw method" Url="html/e22592ec-e77b-f844-a0bd-4e3a574ce088.htm" />
+  <HelpKINode Title="ConsoleInputHandler class">
+    <HelpKINode Title="ConsoleInputHandler Class" Url="html/7a06cec1-3c61-9f31-966c-e6a95904d30e.htm" />
+    <HelpKINode Title="about ConsoleInputHandler class" Url="html/7a06cec1-3c61-9f31-966c-e6a95904d30e.htm" />
+    <HelpKINode Title="constructor" Url="html/34b74805-f60c-765d-5630-e87948bf44d9.htm" />
+    <HelpKINode Title="fields" Url="html/c0e2cff5-2472-358d-2b87-4f6cf6df37f3.htm" />
+    <HelpKINode Title="methods" Url="html/fe74cd76-8045-cb4f-f63b-46d24b8fd0b4.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ConsoleInputHandler.ConsoleInputHandler constructor" Url="html/34b74805-f60c-765d-5630-e87948bf44d9.htm" />
+  <HelpKINode Title="ConsoleInputHandler.ParseInput method" Url="html/d3e6eb34-4e70-8cf6-d3f4-228531c27387.htm" />
+  <HelpKINode Title="ConsoleInputHandler.Read method" Url="html/6252fd4f-cdc2-c3ce-4ae6-1e3b1bc668a2.htm" />
+  <HelpKINode Title="ConsoleInputHandler.ValidCommands field" Url="html/3f943248-5ccf-699e-8305-6ffdbd089506.htm" />
+  <HelpKINode Title="ConsoleUserInterface class">
+    <HelpKINode Title="ConsoleUserInterface Class" Url="html/7ab42c72-5867-e205-906a-ffa4176d49af.htm" />
+    <HelpKINode Title="about ConsoleUserInterface class" Url="html/7ab42c72-5867-e205-906a-ffa4176d49af.htm" />
+    <HelpKINode Title="constructor" Url="html/46932bf7-aaf3-f926-0804-c0e5593eafdc.htm" />
+    <HelpKINode Title="methods" Url="html/66257f99-ef0c-51c4-f779-8e47e07c0c59.htm" />
+    <HelpKINode Title="properties" Url="html/753d6f77-ce28-a730-0f52-98d90b7bb429.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ConsoleUserInterface.ConsoleUserInterface constructor" Url="html/46932bf7-aaf3-f926-0804-c0e5593eafdc.htm" />
+  <HelpKINode Title="ConsoleUserInterface.Drawer property" Url="html/8de27069-9575-6406-2a2e-d08592974098.htm" />
+  <HelpKINode Title="ConsoleUserInterface.Reader property" Url="html/7ea28f75-6874-2fd1-78bc-3b6cb8c2e0a0.htm" />
+  <HelpKINode Title="CurrentMessage property">
+    <HelpKINode Title="CommandContext.CurrentMessage Property " Url="html/257f9e02-5120-6a80-3107-fc6c9a47c502.htm" />
+    <HelpKINode Title="ICommandContext.CurrentMessage Property " Url="html/fe9a57c0-e67f-16d7-3d85-ec77ad89f300.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CurrentMoves property">
+    <HelpKINode Title="Highscore.CurrentMoves Property " Url="html/47c0c57e-36c0-d765-7815-5a7a7128b2b5.htm" />
+    <HelpKINode Title="IHighscore.CurrentMoves Property " Url="html/b060703e-d67e-48ad-69b7-716a2c4cd03a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="CurrentScore property">
+    <HelpKINode Title="Highscore.CurrentScore Property " Url="html/5ce716bd-8bdf-c5cc-207c-2be38e318d82.htm" />
+    <HelpKINode Title="IHighscore.CurrentScore Property " Url="html/3e6d792d-d6e0-0f39-01ad-f249ca2ba496.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Default property" Url="html/6c6cba6a-7c6f-cd60-4860-92517fcdd095.htm" />
+  <HelpKINode Title="Draw method">
+    <HelpKINode Title="ConsoleDrawer.Draw Method " Url="html/e22592ec-e77b-f844-a0bd-4e3a574ce088.htm" />
+    <HelpKINode Title="IPicasso.Draw Method " Url="html/47b5522b-6688-5190-7951-f6fed5d2c037.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Drawer property">
+    <HelpKINode Title="ConsoleUserInterface.Drawer Property " Url="html/8de27069-9575-6406-2a2e-d08592974098.htm" />
+    <HelpKINode Title="IUserInterface.Drawer Property " Url="html/3c4b106b-9f2a-5b50-6cce-860f646d2f9e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EffectFactory class">
+    <HelpKINode Title="EffectFactory Class" Url="html/cdc670e8-de12-e9d7-7ba9-f3bdec3e04d7.htm" />
+    <HelpKINode Title="about EffectFactory class" Url="html/cdc670e8-de12-e9d7-7ba9-f3bdec3e04d7.htm" />
+    <HelpKINode Title="constructor" Url="html/f7e4e848-7e80-3222-4599-d18a80478d0c.htm" />
+    <HelpKINode Title="methods" Url="html/95a538a6-5bfc-761a-9817-723e6067bb9f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="EffectFactory.EffectFactory constructor" Url="html/f7e4e848-7e80-3222-4599-d18a80478d0c.htm" />
+  <HelpKINode Title="EffectFactory.GetAreaPopEffect method" Url="html/5372c38f-023d-7e7f-0ce7-7e2f784510f0.htm" />
+  <HelpKINode Title="EffectFactory.GetDefaultEffect method" Url="html/655a02a3-7809-290b-d136-abff085fadfe.htm" />
+  <HelpKINode Title="Execute method">
+    <HelpKINode Title="ExitCommand.Execute Method " Url="html/517acbf3-072d-a890-451a-b11ea7c5c7ad.htm" />
+    <HelpKINode Title="ICommand.Execute Method " Url="html/4f99e817-3007-770b-5dcd-588cba8da984.htm" />
+    <HelpKINode Title="InvalidInputCommand.Execute Method " Url="html/7a77eb28-3d69-eb4b-2ffc-768a11afde8b.htm" />
+    <HelpKINode Title="PopBalloonCommand.Execute Method " Url="html/07915bb2-e2de-cc0d-7cf5-3d0cab68c98f.htm" />
+    <HelpKINode Title="RestartCommand.Execute Method " Url="html/952f5f61-ab88-5ee8-2839-0eb54cbdf45e.htm" />
+    <HelpKINode Title="ShowTopScoreCommand.Execute Method " Url="html/b38d3835-cfbf-342d-802a-6546ff98e1b1.htm" />
+    <HelpKINode Title="UndoCommand.Execute Method " Url="html/80b92010-3221-a4e8-8933-bda485842e9c.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ExitCommand class">
+    <HelpKINode Title="ExitCommand Class" Url="html/4aa3f441-583f-8552-c1ec-f435a898c679.htm" />
+    <HelpKINode Title="about ExitCommand class" Url="html/4aa3f441-583f-8552-c1ec-f435a898c679.htm" />
+    <HelpKINode Title="constructor" Url="html/677b95be-6592-91bc-59e1-d67fb84b83c3.htm" />
+    <HelpKINode Title="methods" Url="html/ec4a1172-78ff-6fc5-487e-ea93eef57627.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ExitCommand.Execute method" Url="html/517acbf3-072d-a890-451a-b11ea7c5c7ad.htm" />
+  <HelpKINode Title="ExitCommand.ExitCommand constructor" Url="html/677b95be-6592-91bc-59e1-d67fb84b83c3.htm" />
+  <HelpKINode Title="GameEngine class">
+    <HelpKINode Title="GameEngine Class" Url="html/41b3545e-37cc-85f4-9975-412e48f38dd0.htm" />
+    <HelpKINode Title="about GameEngine class" Url="html/41b3545e-37cc-85f4-9975-412e48f38dd0.htm" />
+    <HelpKINode Title="constructor" Url="html/f4c6c590-7ac1-09ec-fab5-80f73622502e.htm" />
+    <HelpKINode Title="methods" Url="html/04450d24-17ad-22a2-a1d2-e839d13717eb.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GameEngine.GameEngine constructor" Url="html/f4c6c590-7ac1-09ec-fab5-80f73622502e.htm" />
+  <HelpKINode Title="GameEngine.Run method" Url="html/27406a7c-bf68-c033-05fd-559cf8c0c422.htm" />
+  <HelpKINode Title="GameEngineDependencies class">
+    <HelpKINode Title="GameEngineDependencies Class" Url="html/6477fc64-ce15-fb93-7549-09d1667f3120.htm" />
+    <HelpKINode Title="about GameEngineDependencies class" Url="html/6477fc64-ce15-fb93-7549-09d1667f3120.htm" />
+    <HelpKINode Title="constructor" Url="html/2bd56196-2134-ae1a-906b-5b03835115ea.htm" />
+    <HelpKINode Title="methods" Url="html/8624c005-dc93-8250-29f0-c88d9fddc6ed.htm" />
+    <HelpKINode Title="properties" Url="html/060efdaa-e516-9adb-728a-de195f1c08ee.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GameEngineDependencies.Board property" Url="html/86124a15-0fef-caef-24fb-d809d11913ff.htm" />
+  <HelpKINode Title="GameEngineDependencies.BoardMemory property" Url="html/295a550a-07dd-58a4-e8a7-0447e09d80b0.htm" />
+  <HelpKINode Title="GameEngineDependencies.CommandFactory property" Url="html/188feab7-0108-3738-1f16-a325c029fb7f.htm" />
+  <HelpKINode Title="GameEngineDependencies.GameEngineDependencies constructor" Url="html/2bd56196-2134-ae1a-906b-5b03835115ea.htm" />
+  <HelpKINode Title="GameEngineDependencies.Logger property" Url="html/8e50736c-33c7-1f7d-26dd-7192205c4cee.htm" />
+  <HelpKINode Title="GameEngineDependencies.UserInterface property" Url="html/bd59402c-681e-518d-ee63-b645c8accdb7.htm" />
+  <HelpKINode Title="GetAreaPopEffect method">
+    <HelpKINode Title="EffectFactory.GetAreaPopEffect Method " Url="html/5372c38f-023d-7e7f-0ce7-7e2f784510f0.htm" />
+    <HelpKINode Title="IEffectFactory.GetAreaPopEffect Method " Url="html/f277fa8a-dfff-949e-b4e0-60d73a3400cf.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetBalloon method">
+    <HelpKINode Title="BalloonFactory.GetBalloon Method " Url="html/98333938-f1b9-5ce2-1693-a6e1688acd55.htm" />
+    <HelpKINode Title="IBalloonFactory.GetBalloon Method " Url="html/aafa04b7-0e38-f4c8-82eb-26f670c9c19f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetCommand method">
+    <HelpKINode Title="CommandFactory.GetCommand Method " Url="html/af4028a7-4f83-a9f1-2d0b-c0dd140d471a.htm" />
+    <HelpKINode Title="ICommandFactory.GetCommand Method " Url="html/c7516966-9a09-fdc4-eef4-3ae3e37629b9.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetDefaultEffect method">
+    <HelpKINode Title="EffectFactory.GetDefaultEffect Method " Url="html/655a02a3-7809-290b-d136-abff085fadfe.htm" />
+    <HelpKINode Title="IEffectFactory.GetDefaultEffect Method " Url="html/ca982918-2e67-8345-481f-7a1fcd82cee1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetInstance method" Url="html/e2d8c169-ff67-54b2-a4da-b0df20c5d14f.htm" />
+  <HelpKINode Title="GetInt method">
+    <HelpKINode Title="IRandomGenerator.GetInt Method " Url="html/602b241e-a891-457a-e2f6-8fbf3594af46.htm" />
+    <HelpKINode Title="RandomGenerator.GetInt Method " Url="html/b30ee5f8-2f75-140f-339f-01b1fe346939.htm" />
+  </HelpKINode>
+  <HelpKINode Title="GetTopHighscores method">
+    <HelpKINode Title="HighscoreProcessor.GetTopHighscores Method " Url="html/1c8e788c-3878-5cd1-89ba-1a58d6f8d796.htm" />
+    <HelpKINode Title="IHighscoreProcessor.GetTopHighscores Method " Url="html/77a7f058-54d2-e110-51e3-d1bd84cbbc44.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Highscore class">
+    <HelpKINode Title="Highscore Class" Url="html/a5440f0a-2886-13b5-fc06-503cb0dc71c5.htm" />
+    <HelpKINode Title="about Highscore class" Url="html/a5440f0a-2886-13b5-fc06-503cb0dc71c5.htm" />
+    <HelpKINode Title="methods" Url="html/58ad3667-9ff1-0f9b-3607-3d708f738944.htm" />
+    <HelpKINode Title="properties" Url="html/b5a4398c-6451-d5cd-a44e-ffe8a2e71134.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Highscore.CurrentMoves property" Url="html/47c0c57e-36c0-d765-7815-5a7a7128b2b5.htm" />
+  <HelpKINode Title="Highscore.CurrentScore property" Url="html/5ce716bd-8bdf-c5cc-207c-2be38e318d82.htm" />
+  <HelpKINode Title="Highscore.GetInstance method" Url="html/e2d8c169-ff67-54b2-a4da-b0df20c5d14f.htm" />
+  <HelpKINode Title="Highscore.SetMoves method" Url="html/b2478aee-150d-88cd-3c79-4f1c9be9331e.htm" />
+  <HelpKINode Title="Highscore.SetScore method" Url="html/622464e3-3dfa-9061-8a24-247cdb8828d5.htm" />
+  <HelpKINode Title="Highscore.SetUsername method" Url="html/d030a880-6d0a-b84c-0200-b5e53e033d7d.htm" />
+  <HelpKINode Title="Highscore.Username property" Url="html/f762c959-9583-42cc-afae-1046487aff84.htm" />
+  <HelpKINode Title="HighscoreProcessor class">
+    <HelpKINode Title="HighscoreProcessor Class" Url="html/325e70e5-fba2-ce98-884e-1a9fcd1246ca.htm" />
+    <HelpKINode Title="about HighscoreProcessor class" Url="html/325e70e5-fba2-ce98-884e-1a9fcd1246ca.htm" />
+    <HelpKINode Title="constructor" Url="html/4eee1d55-0f47-959d-a834-eca3018ae3df.htm" />
+    <HelpKINode Title="methods" Url="html/b1dd5237-bc7e-8f92-aeff-9c3f05406dbe.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HighscoreProcessor property">
+    <HelpKINode Title="CommandContext.HighscoreProcessor Property " Url="html/612a7848-0af8-4776-f3b2-aff5689c8b8d.htm" />
+    <HelpKINode Title="ICommandContext.HighscoreProcessor Property " Url="html/11f5590d-675a-161f-7015-0660c3c199b2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="HighscoreProcessor.GetTopHighscores method" Url="html/1c8e788c-3878-5cd1-89ba-1a58d6f8d796.htm" />
+  <HelpKINode Title="HighscoreProcessor.HighscoreProcessor constructor" Url="html/4eee1d55-0f47-959d-a834-eca3018ae3df.htm" />
+  <HelpKINode Title="HighscoreProcessor.SaveHighscore method" Url="html/07bb7520-cfaa-c855-5ccc-445ecb37423b.htm" />
+  <HelpKINode Title="IBalloon interface">
+    <HelpKINode Title="IBalloon Interface" Url="html/2c3ec701-ebe6-9506-8b4c-daf2b0b10873.htm" />
+    <HelpKINode Title="about IBalloon interface" Url="html/2c3ec701-ebe6-9506-8b4c-daf2b0b10873.htm" />
+    <HelpKINode Title="properties" Url="html/09f8ea2b-1522-72d5-bdeb-00fdc6cc8c41.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IBalloon.TraversalEffect property" Url="html/d67813a8-0bc1-1aa4-e84c-e98c127da1c0.htm" />
+  <HelpKINode Title="IBalloon.Value property" Url="html/684e7dba-d250-1efa-0453-060151422e79.htm" />
+  <HelpKINode Title="IBalloonFactory interface">
+    <HelpKINode Title="IBalloonFactory Interface" Url="html/6b32a9d3-5a5b-c709-7cb7-8f3d6b58fd82.htm" />
+    <HelpKINode Title="about IBalloonFactory interface" Url="html/6b32a9d3-5a5b-c709-7cb7-8f3d6b58fd82.htm" />
+    <HelpKINode Title="methods" Url="html/41b3b181-a329-58d9-73bc-e53593d4af1d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IBalloonFactory.GetBalloon method" Url="html/aafa04b7-0e38-f4c8-82eb-26f670c9c19f.htm" />
+  <HelpKINode Title="IBoard interface">
+    <HelpKINode Title="IBoard Interface" Url="html/d0c1eec5-3b45-9874-4f3e-77edec58274d.htm" />
+    <HelpKINode Title="about IBoard interface" Url="html/d0c1eec5-3b45-9874-4f3e-77edec58274d.htm" />
+    <HelpKINode Title="methods" Url="html/09ff722f-e53f-06f9-d3c4-83be011dcf2c.htm" />
+    <HelpKINode Title="properties" Url="html/c825f060-3de5-3a02-16c8-c3fcd3484186.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IBoard.Cols property" Url="html/1cce248c-b424-e007-59ce-6547606ae9c8.htm" />
+  <HelpKINode Title="IBoard.IsValidPop method" Url="html/5ae4245e-7859-f94f-4095-ee5f0a949448.htm" />
+  <HelpKINode Title="IBoard.Item property" Url="html/1b4cd609-3bd9-6217-1c41-82639d40f21d.htm" />
+  <HelpKINode Title="IBoard.Reset method" Url="html/1bfc53dd-d4e5-bc7a-df2e-80390adb5174.htm" />
+  <HelpKINode Title="IBoard.Rows property" Url="html/9120321f-c91f-6344-1257-a96c29b0c939.htm" />
+  <HelpKINode Title="IBoard.UnpoppedBalloonsCount property" Url="html/a6f21c7b-3e8d-606d-7264-d0516df877fd.htm" />
+  <HelpKINode Title="IBoardMemento interface">
+    <HelpKINode Title="IBoardMemento Interface" Url="html/b3cf7289-14b9-b16d-96c6-5531afb133fa.htm" />
+    <HelpKINode Title="about IBoardMemento interface" Url="html/b3cf7289-14b9-b16d-96c6-5531afb133fa.htm" />
+    <HelpKINode Title="properties" Url="html/89296fc9-2fb4-549e-7566-6346e41e85b2.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IBoardMemento.Board property" Url="html/97cc6051-3946-cc9f-2048-c6c7f99afbf5.htm" />
+  <HelpKINode Title="IBoardMemory interface">
+    <HelpKINode Title="IBoardMemory Interface" Url="html/75839c1b-1fd4-2592-8909-ffa9eb0787c2.htm" />
+    <HelpKINode Title="about IBoardMemory interface" Url="html/75839c1b-1fd4-2592-8909-ffa9eb0787c2.htm" />
+    <HelpKINode Title="properties" Url="html/abccb833-7caf-280b-0a2c-cc85bbff2d8a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IBoardMemory.Memento property" Url="html/4ee17729-e3be-985c-9a00-ff4ba2869549.htm" />
+  <HelpKINode Title="ICommand interface">
+    <HelpKINode Title="ICommand Interface" Url="html/fc56ca32-25c7-d51a-7817-5e8e0a00cbab.htm" />
+    <HelpKINode Title="about ICommand interface" Url="html/fc56ca32-25c7-d51a-7817-5e8e0a00cbab.htm" />
+    <HelpKINode Title="methods" Url="html/81155dbd-8957-52cf-8f20-e3bf2adb05ec.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ICommand.Execute method" Url="html/4f99e817-3007-770b-5dcd-588cba8da984.htm" />
+  <HelpKINode Title="ICommandContext interface">
+    <HelpKINode Title="ICommandContext Interface" Url="html/2b6dc93f-c33f-6c2d-d026-5728182bc3ac.htm" />
+    <HelpKINode Title="about ICommandContext interface" Url="html/2b6dc93f-c33f-6c2d-d026-5728182bc3ac.htm" />
+    <HelpKINode Title="properties" Url="html/b16d27e7-e188-5824-46ad-d73bf94a9fef.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ICommandContext.ActiveCol property" Url="html/366384c0-8d16-4e57-15f6-1a3b640d37ba.htm" />
+  <HelpKINode Title="ICommandContext.ActiveRow property" Url="html/0abfd835-6f39-9624-e3d2-c8b94abd134f.htm" />
+  <HelpKINode Title="ICommandContext.Board property" Url="html/78e968c9-0a21-942a-21c4-5aeaae929ab7.htm" />
+  <HelpKINode Title="ICommandContext.CurrentMessage property" Url="html/fe9a57c0-e67f-16d7-3d85-ec77ad89f300.htm" />
+  <HelpKINode Title="ICommandContext.HighscoreProcessor property" Url="html/11f5590d-675a-161f-7015-0660c3c199b2.htm" />
+  <HelpKINode Title="ICommandContext.IsOver property" Url="html/09b7aa97-cee0-e343-463a-93dae0d9c156.htm" />
+  <HelpKINode Title="ICommandContext.Logger property" Url="html/ef7ed3a6-d9b2-a2b4-2d4c-1b4dc5ded745.htm" />
+  <HelpKINode Title="ICommandContext.Memory property" Url="html/fa759115-7009-a6a9-3912-e72151817923.htm" />
+  <HelpKINode Title="ICommandContext.Messages property" Url="html/8605b2d2-bdff-b8e4-b5ce-1347ad4d9411.htm" />
+  <HelpKINode Title="ICommandContext.Score property" Url="html/049fbe77-a568-ae02-9f06-dd3b8b6996ce.htm" />
+  <HelpKINode Title="ICommandFactory interface">
+    <HelpKINode Title="ICommandFactory Interface" Url="html/62ca360b-7867-1f5a-453f-e870c9925522.htm" />
+    <HelpKINode Title="about ICommandFactory interface" Url="html/62ca360b-7867-1f5a-453f-e870c9925522.htm" />
+    <HelpKINode Title="methods" Url="html/6d826e77-82b1-e8c3-2a19-56dc4ac17925.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ICommandFactory.GetCommand method" Url="html/c7516966-9a09-fdc4-eef4-3ae3e37629b9.htm" />
+  <HelpKINode Title="IEffectFactory interface">
+    <HelpKINode Title="IEffectFactory Interface" Url="html/84fa5bbb-6cdf-ec85-e486-0305ceabc32e.htm" />
+    <HelpKINode Title="about IEffectFactory interface" Url="html/84fa5bbb-6cdf-ec85-e486-0305ceabc32e.htm" />
+    <HelpKINode Title="methods" Url="html/be10a0b3-307b-f81c-1138-069f5040365a.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IEffectFactory.GetAreaPopEffect method" Url="html/f277fa8a-dfff-949e-b4e0-60d73a3400cf.htm" />
+  <HelpKINode Title="IEffectFactory.GetDefaultEffect method" Url="html/ca982918-2e67-8345-481f-7a1fcd82cee1.htm" />
+  <HelpKINode Title="IGameEngine interface">
+    <HelpKINode Title="IGameEngine Interface" Url="html/2ececb37-2ab0-d8bf-8224-9517d9b54f09.htm" />
+    <HelpKINode Title="about IGameEngine interface" Url="html/2ececb37-2ab0-d8bf-8224-9517d9b54f09.htm" />
+    <HelpKINode Title="methods" Url="html/67544218-4c38-2ff7-454f-798a94b63ced.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IGameEngine.Run method" Url="html/d8c515cc-3ac1-12d6-c58a-b668b35091b5.htm" />
+  <HelpKINode Title="IHighscore interface">
+    <HelpKINode Title="IHighscore Interface" Url="html/74bcf093-c863-668d-4b34-3c4041a60232.htm" />
+    <HelpKINode Title="about IHighscore interface" Url="html/74bcf093-c863-668d-4b34-3c4041a60232.htm" />
+    <HelpKINode Title="methods" Url="html/6131d332-888e-1532-f312-59400e826103.htm" />
+    <HelpKINode Title="properties" Url="html/a1e33eaa-2354-7c27-44d6-68a7eae40894.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IHighscore.CurrentMoves property" Url="html/b060703e-d67e-48ad-69b7-716a2c4cd03a.htm" />
+  <HelpKINode Title="IHighscore.CurrentScore property" Url="html/3e6d792d-d6e0-0f39-01ad-f249ca2ba496.htm" />
+  <HelpKINode Title="IHighscore.SetMoves method" Url="html/0cf0d382-4201-7890-e969-3ae199336c37.htm" />
+  <HelpKINode Title="IHighscore.SetScore method" Url="html/14b72dfc-95f9-005b-e5e6-946df4421cba.htm" />
+  <HelpKINode Title="IHighscore.SetUsername method" Url="html/632d2a00-f94e-2243-f8e1-a3fc96a8c0f9.htm" />
+  <HelpKINode Title="IHighscore.Username property" Url="html/67fe2ca6-45b5-409a-d46b-90d9cf8d6cae.htm" />
+  <HelpKINode Title="IHighscoreProcessor interface">
+    <HelpKINode Title="IHighscoreProcessor Interface" Url="html/7c0466fb-bb98-d338-337d-e8d09b4e6d97.htm" />
+    <HelpKINode Title="about IHighscoreProcessor interface" Url="html/7c0466fb-bb98-d338-337d-e8d09b4e6d97.htm" />
+    <HelpKINode Title="methods" Url="html/f400a292-81c9-1e0d-3b25-e3e385d62b50.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IHighscoreProcessor.GetTopHighscores method" Url="html/77a7f058-54d2-e110-51e3-d1bd84cbbc44.htm" />
+  <HelpKINode Title="IHighscoreProcessor.SaveHighscore method" Url="html/d7fb5c7d-1a4b-ac5c-cb70-4bb3cd07c0f4.htm" />
+  <HelpKINode Title="IInputHandler interface">
+    <HelpKINode Title="IInputHandler Interface" Url="html/9792d2b9-5660-7213-18aa-b0dca1b7ab31.htm" />
+    <HelpKINode Title="about IInputHandler interface" Url="html/9792d2b9-5660-7213-18aa-b0dca1b7ab31.htm" />
+    <HelpKINode Title="methods" Url="html/4904cf24-88b5-8559-dcb3-d6e4c5ca473b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IInputHandler.ParseInput method" Url="html/59eb182a-7b97-0e35-0c11-c058e800eeff.htm" />
+  <HelpKINode Title="IInputHandler.Read method" Url="html/7795fae5-c7ea-a7ba-ee32-7af2f3a73438.htm" />
+  <HelpKINode Title="ILogger interface">
+    <HelpKINode Title="ILogger Interface" Url="html/0cc8aca9-2824-ca7d-586b-f6c467399cc2.htm" />
+    <HelpKINode Title="about ILogger interface" Url="html/0cc8aca9-2824-ca7d-586b-f6c467399cc2.htm" />
+    <HelpKINode Title="methods" Url="html/3f6a04a0-ae1a-59af-57f7-28d6b444982d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ILogger.Log method" Url="html/7356f81a-b728-9b1b-25b0-0ca1422d3f31.htm" />
+  <HelpKINode Title="IMemorizeable(Of T) interface">
+    <HelpKINode Title="IMemorizeable(T) Interface" Url="html/f6f26d89-1dca-b409-bcda-10994cc6fd61.htm" />
+    <HelpKINode Title="about IMemorizeable(Of T) interface" Url="html/f6f26d89-1dca-b409-bcda-10994cc6fd61.htm" />
+    <HelpKINode Title="methods" Url="html/689f1f53-8833-1243-5193-c83b244f6dfc.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IMemorizeable(Of T).RestoreMemento method" Url="html/8c6266b3-536a-a92b-cb27-9f087ee3a4ca.htm" />
+  <HelpKINode Title="IMemorizeable(Of T).SaveMemento method" Url="html/d0716828-0242-bb8a-cc03-317bfe4f518f.htm" />
+  <HelpKINode Title="IMemorizeable&lt;T&gt; interface">
+    <HelpKINode Title="IMemorizeable(T) Interface" Url="html/f6f26d89-1dca-b409-bcda-10994cc6fd61.htm" />
+    <HelpKINode Title="about IMemorizeable&lt;T&gt; interface" Url="html/f6f26d89-1dca-b409-bcda-10994cc6fd61.htm" />
+    <HelpKINode Title="methods" Url="html/689f1f53-8833-1243-5193-c83b244f6dfc.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IMemorizeable&lt;T&gt;.RestoreMemento method" Url="html/8c6266b3-536a-a92b-cb27-9f087ee3a4ca.htm" />
+  <HelpKINode Title="IMemorizeable&lt;T&gt;.SaveMemento method" Url="html/d0716828-0242-bb8a-cc03-317bfe4f518f.htm" />
+  <HelpKINode Title="InvalidInputCommand class">
+    <HelpKINode Title="InvalidInputCommand Class" Url="html/fce78d5b-78d7-ae71-bd7d-25692615a5b0.htm" />
+    <HelpKINode Title="about InvalidInputCommand class" Url="html/fce78d5b-78d7-ae71-bd7d-25692615a5b0.htm" />
+    <HelpKINode Title="constructor" Url="html/a7dedfa7-54f0-2202-126d-0a3a8244ea03.htm" />
+    <HelpKINode Title="fields" Url="html/154750d1-7e05-42cb-b8ae-acdbf96408af.htm" />
+    <HelpKINode Title="methods" Url="html/984ed922-6c75-b50e-05f1-16fe47e32549.htm" />
+  </HelpKINode>
+  <HelpKINode Title="InvalidInputCommand.Execute method" Url="html/7a77eb28-3d69-eb4b-2ffc-768a11afde8b.htm" />
+  <HelpKINode Title="InvalidInputCommand.InvalidInputCommand constructor" Url="html/a7dedfa7-54f0-2202-126d-0a3a8244ea03.htm" />
+  <HelpKINode Title="InvalidInputCommand.InvalidInputMessageKey field" Url="html/ba7f4b0d-d9a5-fa89-45bf-01c4fdf3da3c.htm" />
+  <HelpKINode Title="InvalidInputMessageKey field" Url="html/ba7f4b0d-d9a5-fa89-45bf-01c4fdf3da3c.htm" />
+  <HelpKINode Title="IPicasso interface">
+    <HelpKINode Title="IPicasso Interface" Url="html/17f1ef17-777b-c67f-5756-3595311a0d56.htm" />
+    <HelpKINode Title="about IPicasso interface" Url="html/17f1ef17-777b-c67f-5756-3595311a0d56.htm" />
+    <HelpKINode Title="methods" Url="html/36c42402-cfce-c983-0f28-e4aefc1f4520.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IPicasso.Clear method" Url="html/778cd558-f4ca-f52b-2414-ee0fa84b3319.htm" />
+  <HelpKINode Title="IPicasso.Draw method" Url="html/47b5522b-6688-5190-7951-f6fed5d2c037.htm" />
+  <HelpKINode Title="IRandomGenerator interface">
+    <HelpKINode Title="IRandomGenerator Interface" Url="html/2837aee6-e4a1-e45d-7ba1-226ac8db8035.htm" />
+    <HelpKINode Title="about IRandomGenerator interface" Url="html/2837aee6-e4a1-e45d-7ba1-226ac8db8035.htm" />
+    <HelpKINode Title="methods" Url="html/69d87280-0404-2b5b-0075-b93d8a94a40b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IRandomGenerator.GetInt method" Url="html/602b241e-a891-457a-e2f6-8fbf3594af46.htm" />
+  <HelpKINode Title="IsOver property">
+    <HelpKINode Title="CommandContext.IsOver Property " Url="html/2e440700-ad93-0b4c-419e-333d01f804e1.htm" />
+    <HelpKINode Title="ICommandContext.IsOver Property " Url="html/09b7aa97-cee0-e343-463a-93dae0d9c156.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IsValidPop method">
+    <HelpKINode Title="Board.IsValidPop Method " Url="html/fbcf4fee-b133-eeea-c81b-8e8c0a59a139.htm" />
+    <HelpKINode Title="IBoard.IsValidPop Method " Url="html/5ae4245e-7859-f94f-4095-ee5f0a949448.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Item property">
+    <HelpKINode Title="Board.Item Property " Url="html/d9834e36-f9b2-d304-fd52-afb7455f3de6.htm" />
+    <HelpKINode Title="IBoard.Item Property " Url="html/1b4cd609-3bd9-6217-1c41-82639d40f21d.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ITraversalEffect interface">
+    <HelpKINode Title="ITraversalEffect Interface" Url="html/e2f0a7e4-c895-714b-80c7-23ab5d8088f3.htm" />
+    <HelpKINode Title="about ITraversalEffect interface" Url="html/e2f0a7e4-c895-714b-80c7-23ab5d8088f3.htm" />
+    <HelpKINode Title="methods" Url="html/79c9791a-64d0-6865-0674-a92288e074a3.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ITraversalEffect.Pop method" Url="html/77a24a55-7469-0573-4e6b-2bcf6ebe60a6.htm" />
+  <HelpKINode Title="IUserInterface interface">
+    <HelpKINode Title="IUserInterface Interface" Url="html/e3340a71-d456-c577-49f5-fc0a7bb47948.htm" />
+    <HelpKINode Title="about IUserInterface interface" Url="html/e3340a71-d456-c577-49f5-fc0a7bb47948.htm" />
+    <HelpKINode Title="properties" Url="html/56b9e277-c3b5-f6a2-125b-edeb302fa96b.htm" />
+  </HelpKINode>
+  <HelpKINode Title="IUserInterface.Drawer property" Url="html/3c4b106b-9f2a-5b50-6cce-860f646d2f9e.htm" />
+  <HelpKINode Title="IUserInterface.Reader property" Url="html/cf8637df-bd49-0243-d48f-b0ea64d68412.htm" />
+  <HelpKINode Title="Log method">
+    <HelpKINode Title="ILogger.Log Method " Url="html/7356f81a-b728-9b1b-25b0-0ca1422d3f31.htm" />
+    <HelpKINode Title="Logger.Log Method " Url="html/708297bc-574d-17d5-94d0-03d90d6af088.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Logger class">
+    <HelpKINode Title="Logger Class" Url="html/a4b09fd6-1ac4-728e-699d-a2f0b5f96e4a.htm" />
+    <HelpKINode Title="about Logger class" Url="html/a4b09fd6-1ac4-728e-699d-a2f0b5f96e4a.htm" />
+    <HelpKINode Title="constructor" Url="html/88b2fee5-443b-92d4-df54-5cb543de88f1.htm" />
+    <HelpKINode Title="methods" Url="html/c80fd4ea-134e-22d1-7dbb-62c391bd49fe.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Logger property">
+    <HelpKINode Title="CommandContext.Logger Property " Url="html/9dd9dde3-daf2-3181-09a8-531f8f2e2962.htm" />
+    <HelpKINode Title="GameEngineDependencies.Logger Property " Url="html/8e50736c-33c7-1f7d-26dd-7192205c4cee.htm" />
+    <HelpKINode Title="ICommandContext.Logger Property " Url="html/ef7ed3a6-d9b2-a2b4-2d4c-1b4dc5ded745.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Logger.Log method" Url="html/708297bc-574d-17d5-94d0-03d90d6af088.htm" />
+  <HelpKINode Title="Logger.Logger constructor" Url="html/88b2fee5-443b-92d4-df54-5cb543de88f1.htm" />
+  <HelpKINode Title="Memento class">
+    <HelpKINode Title="Memento Class" Url="html/19163854-0935-9569-3919-5ade82b7e077.htm" />
+    <HelpKINode Title="about Memento class" Url="html/19163854-0935-9569-3919-5ade82b7e077.htm" />
+    <HelpKINode Title="constructor" Url="html/4cddcffa-4b66-6543-a42c-47cf52cb4e7a.htm" />
+    <HelpKINode Title="methods" Url="html/41eec93b-bade-7739-449f-9bd3dda4eb57.htm" />
+    <HelpKINode Title="properties" Url="html/855949fa-d9f6-e6ed-859e-b18a3e56adf6.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Memento property">
+    <HelpKINode Title="BoardMemory.Memento Property " Url="html/5582a1ca-c312-7e53-234b-fe9a270967a4.htm" />
+    <HelpKINode Title="IBoardMemory.Memento Property " Url="html/4ee17729-e3be-985c-9a00-ff4ba2869549.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Memento.Board property" Url="html/0a7d1731-660d-e304-d1c7-de0b28ae105f.htm" />
+  <HelpKINode Title="Memento.Cols property" Url="html/050a6c38-35aa-e2e5-94ab-0dbde71da65e.htm" />
+  <HelpKINode Title="Memento.Memento constructor" Url="html/4cddcffa-4b66-6543-a42c-47cf52cb4e7a.htm" />
+  <HelpKINode Title="Memento.Rows property" Url="html/0c4f7a95-0b47-e913-7395-4034c0573a55.htm" />
+  <HelpKINode Title="Memory property">
+    <HelpKINode Title="CommandContext.Memory Property " Url="html/ac78abbb-a2b5-4a43-5dc3-91660dd6fbb9.htm" />
+    <HelpKINode Title="ICommandContext.Memory Property " Url="html/fa759115-7009-a6a9-3912-e72151817923.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Messages property">
+    <HelpKINode Title="CommandContext.Messages Property " Url="html/33457899-b855-fedc-5387-83c62ff381d6.htm" />
+    <HelpKINode Title="ICommandContext.Messages Property " Url="html/8605b2d2-bdff-b8e4-b5ce-1347ad4d9411.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ParseInput method">
+    <HelpKINode Title="ConsoleInputHandler.ParseInput Method " Url="html/d3e6eb34-4e70-8cf6-d3f4-228531c27387.htm" />
+    <HelpKINode Title="IInputHandler.ParseInput Method " Url="html/59eb182a-7b97-0e35-0c11-c058e800eeff.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Pop method">
+    <HelpKINode Title="ITraversalEffect.Pop Method " Url="html/77a24a55-7469-0573-4e6b-2bcf6ebe60a6.htm" />
+    <HelpKINode Title="TraversalEffect.Pop Method " Url="html/83ff8a1e-73ad-92fb-3dc0-565f89147cf1.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PopBalloonCommand class">
+    <HelpKINode Title="PopBalloonCommand Class" Url="html/0b76811e-a137-4bcd-1c12-2251043d7bf3.htm" />
+    <HelpKINode Title="about PopBalloonCommand class" Url="html/0b76811e-a137-4bcd-1c12-2251043d7bf3.htm" />
+    <HelpKINode Title="constructor" Url="html/b02173b6-22e1-d24f-cbe6-0dea674d2d27.htm" />
+    <HelpKINode Title="methods" Url="html/d3030973-32f4-49a3-661d-75956beee877.htm" />
+  </HelpKINode>
+  <HelpKINode Title="PopBalloonCommand.Execute method" Url="html/07915bb2-e2de-cc0d-7cf5-3d0cab68c98f.htm" />
+  <HelpKINode Title="PopBalloonCommand.PopBalloonCommand constructor" Url="html/b02173b6-22e1-d24f-cbe6-0dea674d2d27.htm" />
+  <HelpKINode Title="PopBalloons method">
+    <HelpKINode Title="AreaPopEffect.PopBalloons Method " Url="html/0c2123cd-409b-37f9-280f-6a9852e1a7d4.htm" />
+    <HelpKINode Title="BfsEffect.PopBalloons Method " Url="html/3496ff58-e616-ebe1-b4da-6802350d9e61.htm" />
+    <HelpKINode Title="TraversalEffect.PopBalloons Method " Url="html/09f4962b-c90b-3ec1-3bcc-44d1d25ad929.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Program class">
+    <HelpKINode Title="Program Class" Url="html/664ac07f-26f4-e2ec-2fa9-53a359074630.htm" />
+    <HelpKINode Title="about Program class" Url="html/664ac07f-26f4-e2ec-2fa9-53a359074630.htm" />
+    <HelpKINode Title="constructor" Url="html/ed949068-50c1-72ab-5d1e-062bfd2ec0a4.htm" />
+    <HelpKINode Title="methods" Url="html/e999d766-d93c-a923-fde5-a5d1d3799a38.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Program.Program constructor" Url="html/ed949068-50c1-72ab-5d1e-062bfd2ec0a4.htm" />
+  <HelpKINode Title="RandomGenerator class">
+    <HelpKINode Title="RandomGenerator Class" Url="html/dc77b870-75da-bec7-7fc0-b9bb50c8d47f.htm" />
+    <HelpKINode Title="about RandomGenerator class" Url="html/dc77b870-75da-bec7-7fc0-b9bb50c8d47f.htm" />
+    <HelpKINode Title="constructor" Url="html/1da9bfae-82da-ffcc-a130-c7063b796034.htm" />
+    <HelpKINode Title="methods" Url="html/9d4d571f-0400-6d69-5211-48ad2b7355bc.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RandomGenerator.GetInt method" Url="html/b30ee5f8-2f75-140f-339f-01b1fe346939.htm" />
+  <HelpKINode Title="RandomGenerator.RandomGenerator constructor" Url="html/1da9bfae-82da-ffcc-a130-c7063b796034.htm" />
+  <HelpKINode Title="Read method">
+    <HelpKINode Title="ConsoleInputHandler.Read Method " Url="html/6252fd4f-cdc2-c3ce-4ae6-1e3b1bc668a2.htm" />
+    <HelpKINode Title="IInputHandler.Read Method " Url="html/7795fae5-c7ea-a7ba-ee32-7af2f3a73438.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Reader property">
+    <HelpKINode Title="ConsoleUserInterface.Reader Property " Url="html/7ea28f75-6874-2fd1-78bc-3b6cb8c2e0a0.htm" />
+    <HelpKINode Title="IUserInterface.Reader Property " Url="html/cf8637df-bd49-0243-d48f-b0ea64d68412.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Reset method">
+    <HelpKINode Title="Board.Reset Method " Url="html/0e930024-f59b-de69-2641-eca18f870fd8.htm" />
+    <HelpKINode Title="IBoard.Reset Method " Url="html/1bfc53dd-d4e5-bc7a-df2e-80390adb5174.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RestartCommand class">
+    <HelpKINode Title="RestartCommand Class" Url="html/78a018e2-3e2d-aeb8-c045-2db66b80b4bf.htm" />
+    <HelpKINode Title="about RestartCommand class" Url="html/78a018e2-3e2d-aeb8-c045-2db66b80b4bf.htm" />
+    <HelpKINode Title="constructor" Url="html/d85a7cd9-82ad-9ab2-c056-9c8e263715ee.htm" />
+    <HelpKINode Title="fields" Url="html/b1dc98c0-d0ad-3a10-a061-47851cc30f01.htm" />
+    <HelpKINode Title="methods" Url="html/cdbb1e2a-e350-a9ac-4001-01ad801c45bc.htm" />
+  </HelpKINode>
+  <HelpKINode Title="RestartCommand.Execute method" Url="html/952f5f61-ab88-5ee8-2839-0eb54cbdf45e.htm" />
+  <HelpKINode Title="RestartCommand.RestartCommand constructor" Url="html/d85a7cd9-82ad-9ab2-c056-9c8e263715ee.htm" />
+  <HelpKINode Title="RestartCommand.WelcomeMessageKey field" Url="html/83c8e923-095f-5ed8-33d9-a5171c293025.htm" />
+  <HelpKINode Title="RestoreMemento method">
+    <HelpKINode Title="Board.RestoreMemento Method " Url="html/ee5a5064-0b8a-7dd3-6ac3-2939ac5bd1e1.htm" />
+    <HelpKINode Title="IMemorizeable(T).RestoreMemento Method " Url="html/8c6266b3-536a-a92b-cb27-9f087ee3a4ca.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Rows property">
+    <HelpKINode Title="Board.Rows Property " Url="html/7a7145f2-6f4e-8bed-4f79-fbe057b20400.htm" />
+    <HelpKINode Title="IBoard.Rows Property " Url="html/9120321f-c91f-6344-1257-a96c29b0c939.htm" />
+    <HelpKINode Title="Memento.Rows Property " Url="html/0c4f7a95-0b47-e913-7395-4034c0573a55.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Run method">
+    <HelpKINode Title="GameEngine.Run Method " Url="html/27406a7c-bf68-c033-05fd-559cf8c0c422.htm" />
+    <HelpKINode Title="IGameEngine.Run Method " Url="html/d8c515cc-3ac1-12d6-c58a-b668b35091b5.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SaveHighscore method">
+    <HelpKINode Title="HighscoreProcessor.SaveHighscore Method " Url="html/07bb7520-cfaa-c855-5ccc-445ecb37423b.htm" />
+    <HelpKINode Title="IHighscoreProcessor.SaveHighscore Method " Url="html/d7fb5c7d-1a4b-ac5c-cb70-4bb3cd07c0f4.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SaveMemento method">
+    <HelpKINode Title="Board.SaveMemento Method " Url="html/c083a179-4458-25ac-ae01-8fc9f4dcaa8e.htm" />
+    <HelpKINode Title="IMemorizeable(T).SaveMemento Method " Url="html/d0716828-0242-bb8a-cc03-317bfe4f518f.htm" />
+  </HelpKINode>
+  <HelpKINode Title="Score property">
+    <HelpKINode Title="CommandContext.Score Property " Url="html/e8c2e0b3-ae49-5bec-fac6-ccaefdca8c6a.htm" />
+    <HelpKINode Title="ICommandContext.Score Property " Url="html/049fbe77-a568-ae02-9f06-dd3b8b6996ce.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SetMoves method">
+    <HelpKINode Title="Highscore.SetMoves Method " Url="html/b2478aee-150d-88cd-3c79-4f1c9be9331e.htm" />
+    <HelpKINode Title="IHighscore.SetMoves Method " Url="html/0cf0d382-4201-7890-e969-3ae199336c37.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SetScore method">
+    <HelpKINode Title="Highscore.SetScore Method " Url="html/622464e3-3dfa-9061-8a24-247cdb8828d5.htm" />
+    <HelpKINode Title="IHighscore.SetScore Method " Url="html/14b72dfc-95f9-005b-e5e6-946df4421cba.htm" />
+  </HelpKINode>
+  <HelpKINode Title="SetUsername method">
+    <HelpKINode Title="Highscore.SetUsername Method " Url="html/d030a880-6d0a-b84c-0200-b5e53e033d7d.htm" />
+    <HelpKINode Title="IHighscore.SetUsername Method " Url="html/632d2a00-f94e-2243-f8e1-a3fc96a8c0f9.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ShowTopScoreCommand class">
+    <HelpKINode Title="ShowTopScoreCommand Class" Url="html/ba3360df-dcf0-3300-db74-9ed8999e568d.htm" />
+    <HelpKINode Title="about ShowTopScoreCommand class" Url="html/ba3360df-dcf0-3300-db74-9ed8999e568d.htm" />
+    <HelpKINode Title="constructor" Url="html/42ad07a6-0270-201d-293b-fac49bb58051.htm" />
+    <HelpKINode Title="methods" Url="html/1e8d63c0-775b-17b7-836a-a6e8a3744268.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ShowTopScoreCommand.Execute method" Url="html/b38d3835-cfbf-342d-802a-6546ff98e1b1.htm" />
+  <HelpKINode Title="ShowTopScoreCommand.ShowTopScoreCommand constructor" Url="html/42ad07a6-0270-201d-293b-fac49bb58051.htm" />
+  <HelpKINode Title="ToString method" Url="html/75452937-27cc-8438-2878-864394d2c5a6.htm" />
+  <HelpKINode Title="TraversalEffect class">
+    <HelpKINode Title="TraversalEffect Class" Url="html/1eb8cfb6-b383-a17d-5322-c7a896954557.htm" />
+    <HelpKINode Title="about TraversalEffect class" Url="html/1eb8cfb6-b383-a17d-5322-c7a896954557.htm" />
+    <HelpKINode Title="constructor" Url="html/be37fcd7-be31-433c-bea9-1ca0ee7f3299.htm" />
+    <HelpKINode Title="methods" Url="html/34dbbfa8-ab77-8b36-2cce-05dd132669ea.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TraversalEffect property">
+    <HelpKINode Title="Balloon.TraversalEffect Property " Url="html/00805716-04d0-fce4-9285-493fa850d232.htm" />
+    <HelpKINode Title="IBalloon.TraversalEffect Property " Url="html/d67813a8-0bc1-1aa4-e84c-e98c127da1c0.htm" />
+  </HelpKINode>
+  <HelpKINode Title="TraversalEffect.Pop method" Url="html/83ff8a1e-73ad-92fb-3dc0-565f89147cf1.htm" />
+  <HelpKINode Title="TraversalEffect.PopBalloons method" Url="html/09f4962b-c90b-3ec1-3bcc-44d1d25ad929.htm" />
+  <HelpKINode Title="TraversalEffect.TraversalEffect constructor" Url="html/be37fcd7-be31-433c-bea9-1ca0ee7f3299.htm" />
+  <HelpKINode Title="UndoCommand class">
+    <HelpKINode Title="UndoCommand Class" Url="html/97954ccf-6c2d-7902-c5aa-6855bba45bc4.htm" />
+    <HelpKINode Title="about UndoCommand class" Url="html/97954ccf-6c2d-7902-c5aa-6855bba45bc4.htm" />
+    <HelpKINode Title="constructor" Url="html/288f715e-ed75-31dc-e7a0-03f91669cfb4.htm" />
+    <HelpKINode Title="methods" Url="html/94886953-1b38-a135-c6a5-9ef1668ea73e.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UndoCommand.Execute method" Url="html/80b92010-3221-a4e8-8933-bda485842e9c.htm" />
+  <HelpKINode Title="UndoCommand.UndoCommand constructor" Url="html/288f715e-ed75-31dc-e7a0-03f91669cfb4.htm" />
+  <HelpKINode Title="UnpoppedBalloonsCount property">
+    <HelpKINode Title="Board.UnpoppedBalloonsCount Property " Url="html/b58f1d5f-e2af-9c82-67fe-5c269c694464.htm" />
+    <HelpKINode Title="IBoard.UnpoppedBalloonsCount Property " Url="html/a6f21c7b-3e8d-606d-7264-d0516df877fd.htm" />
+  </HelpKINode>
+  <HelpKINode Title="UserInterface property" Url="html/bd59402c-681e-518d-ee63-b645c8accdb7.htm" />
+  <HelpKINode Title="Username property">
+    <HelpKINode Title="Highscore.Username Property " Url="html/f762c959-9583-42cc-afae-1046487aff84.htm" />
+    <HelpKINode Title="IHighscore.Username Property " Url="html/67fe2ca6-45b5-409a-d46b-90d9cf8d6cae.htm" />
+  </HelpKINode>
+  <HelpKINode Title="ValidCommands field" Url="html/3f943248-5ccf-699e-8305-6ffdbd089506.htm" />
+  <HelpKINode Title="Value property">
+    <HelpKINode Title="Balloon.Value Property " Url="html/5497bf55-dd44-07be-ece0-73cf2c889b20.htm" />
+    <HelpKINode Title="IBalloon.Value Property " Url="html/684e7dba-d250-1efa-0453-060151422e79.htm" />
+  </HelpKINode>
+  <HelpKINode Title="WelcomeMessageKey field" Url="html/83c8e923-095f-5ed8-33d9-a5171c293025.htm" />
+</HelpKI>

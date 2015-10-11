@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Id="71a708b8-65db-4029-91a7-c208cf2b16a7" Title="BalloonsPop" Url="html/f1d06e80-9cd2-281d-a28d-e8c97b2337fc.htm">
+    <HelpTOCNode Id="cb0d1acf-c616-4889-8416-79751b154170" Title="IBalloon Interface" Url="html/2c3ec701-ebe6-9506-8b4c-daf2b0b10873.htm">
+      <HelpTOCNode Id="0f44a83d-373c-45a4-84b7-ee9d88dfe097" Title="IBalloon Properties" Url="html/09f8ea2b-1522-72d5-bdeb-00fdc6cc8c41.htm">
+        <HelpTOCNode Title="TraversalEffect Property " Url="html/d67813a8-0bc1-1aa4-e84c-e98c127da1c0.htm" />
+        <HelpTOCNode Title="Value Property " Url="html/684e7dba-d250-1efa-0453-060151422e79.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d1e7f144-4f81-4701-9e0a-609d4eb66f08" Title="IBalloonFactory Interface" Url="html/6b32a9d3-5a5b-c709-7cb7-8f3d6b58fd82.htm">
+      <HelpTOCNode Id="2be98f15-da0c-4a54-b4bd-9fbb0aaa5c52" Title="IBalloonFactory Methods" Url="html/41b3b181-a329-58d9-73bc-e53593d4af1d.htm">
+        <HelpTOCNode Title="GetBalloon Method " Url="html/aafa04b7-0e38-f4c8-82eb-26f670c9c19f.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="8ccd9ee2-b1e4-40e9-829d-88945bbf2d05" Title="IBoard Interface" Url="html/d0c1eec5-3b45-9874-4f3e-77edec58274d.htm">
+      <HelpTOCNode Id="a16b56c7-7d38-41e9-8b81-dc1ebb6cee26" Title="IBoard Methods" Url="html/09ff722f-e53f-06f9-d3c4-83be011dcf2c.htm">
+        <HelpTOCNode Title="IsValidPop Method " Url="html/5ae4245e-7859-f94f-4095-ee5f0a949448.htm" />
+        <HelpTOCNode Title="Reset Method " Url="html/1bfc53dd-d4e5-bc7a-df2e-80390adb5174.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="0fe02d41-f0dd-46f0-9197-bbfb4ad1d3a6" Title="IBoard Properties" Url="html/c825f060-3de5-3a02-16c8-c3fcd3484186.htm">
+        <HelpTOCNode Title="Cols Property " Url="html/1cce248c-b424-e007-59ce-6547606ae9c8.htm" />
+        <HelpTOCNode Title="Item Property " Url="html/1b4cd609-3bd9-6217-1c41-82639d40f21d.htm" />
+        <HelpTOCNode Title="Rows Property " Url="html/9120321f-c91f-6344-1257-a96c29b0c939.htm" />
+        <HelpTOCNode Title="UnpoppedBalloonsCount Property " Url="html/a6f21c7b-3e8d-606d-7264-d0516df877fd.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d2b3cbb2-1775-42df-93f2-c55eac88984e" Title="IBoardMemento Interface" Url="html/b3cf7289-14b9-b16d-96c6-5531afb133fa.htm">
+      <HelpTOCNode Id="2290f75e-e1d6-4e60-9369-510b03d5b0ff" Title="IBoardMemento Properties" Url="html/89296fc9-2fb4-549e-7566-6346e41e85b2.htm">
+        <HelpTOCNode Title="Board Property " Url="html/97cc6051-3946-cc9f-2048-c6c7f99afbf5.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="b017e44e-736b-47e7-ae1a-c9249765022e" Title="IBoardMemory Interface" Url="html/75839c1b-1fd4-2592-8909-ffa9eb0787c2.htm">
+      <HelpTOCNode Id="fcc84bd2-4977-41e3-ace6-91a89aa8c643" Title="IBoardMemory Properties" Url="html/abccb833-7caf-280b-0a2c-cc85bbff2d8a.htm">
+        <HelpTOCNode Title="Memento Property " Url="html/4ee17729-e3be-985c-9a00-ff4ba2869549.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="f0d1830f-7d4b-4e98-bc1c-6aa7c781c801" Title="ICommandContext Interface" Url="html/2b6dc93f-c33f-6c2d-d026-5728182bc3ac.htm">
+      <HelpTOCNode Id="4113671b-8a4d-4e75-b740-95764fe9964e" Title="ICommandContext Properties" Url="html/b16d27e7-e188-5824-46ad-d73bf94a9fef.htm">
+        <HelpTOCNode Title="ActiveCol Property " Url="html/366384c0-8d16-4e57-15f6-1a3b640d37ba.htm" />
+        <HelpTOCNode Title="ActiveRow Property " Url="html/0abfd835-6f39-9624-e3d2-c8b94abd134f.htm" />
+        <HelpTOCNode Title="Board Property " Url="html/78e968c9-0a21-942a-21c4-5aeaae929ab7.htm" />
+        <HelpTOCNode Title="CurrentMessage Property " Url="html/fe9a57c0-e67f-16d7-3d85-ec77ad89f300.htm" />
+        <HelpTOCNode Title="HighscoreProcessor Property " Url="html/11f5590d-675a-161f-7015-0660c3c199b2.htm" />
+        <HelpTOCNode Title="IsOver Property " Url="html/09b7aa97-cee0-e343-463a-93dae0d9c156.htm" />
+        <HelpTOCNode Title="Logger Property " Url="html/ef7ed3a6-d9b2-a2b4-2d4c-1b4dc5ded745.htm" />
+        <HelpTOCNode Title="Memory Property " Url="html/fa759115-7009-a6a9-3912-e72151817923.htm" />
+        <HelpTOCNode Title="Messages Property " Url="html/8605b2d2-bdff-b8e4-b5ce-1347ad4d9411.htm" />
+        <HelpTOCNode Title="Score Property " Url="html/049fbe77-a568-ae02-9f06-dd3b8b6996ce.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="83110d82-6797-43f7-832d-8dfb4e6a56fb" Title="ICommandFactory Interface" Url="html/62ca360b-7867-1f5a-453f-e870c9925522.htm">
+      <HelpTOCNode Id="3288e70d-8e4a-4feb-974b-2b2abcc27add" Title="ICommandFactory Methods" Url="html/6d826e77-82b1-e8c3-2a19-56dc4ac17925.htm">
+        <HelpTOCNode Title="GetCommand Method " Url="html/c7516966-9a09-fdc4-eef4-3ae3e37629b9.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="97dae1b8-d464-469e-9922-585633a31a1c" Title="IEffectFactory Interface" Url="html/84fa5bbb-6cdf-ec85-e486-0305ceabc32e.htm">
+      <HelpTOCNode Id="60f67315-5ccf-4bf5-9611-40990af4b024" Title="IEffectFactory Methods" Url="html/be10a0b3-307b-f81c-1138-069f5040365a.htm">
+        <HelpTOCNode Title="GetAreaPopEffect Method " Url="html/f277fa8a-dfff-949e-b4e0-60d73a3400cf.htm" />
+        <HelpTOCNode Title="GetDefaultEffect Method " Url="html/ca982918-2e67-8345-481f-7a1fcd82cee1.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="671e2190-4092-482b-a763-e6169563173f" Title="IHighscore Interface" Url="html/74bcf093-c863-668d-4b34-3c4041a60232.htm">
+      <HelpTOCNode Id="c0baef66-d52f-44cd-a18a-b79ee01654a1" Title="IHighscore Methods" Url="html/6131d332-888e-1532-f312-59400e826103.htm">
+        <HelpTOCNode Title="SetMoves Method " Url="html/0cf0d382-4201-7890-e969-3ae199336c37.htm" />
+        <HelpTOCNode Title="SetScore Method " Url="html/14b72dfc-95f9-005b-e5e6-946df4421cba.htm" />
+        <HelpTOCNode Title="SetUsername Method " Url="html/632d2a00-f94e-2243-f8e1-a3fc96a8c0f9.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="fa2e4273-1595-44a3-b6e0-a3eeab36525c" Title="IHighscore Properties" Url="html/a1e33eaa-2354-7c27-44d6-68a7eae40894.htm">
+        <HelpTOCNode Title="CurrentMoves Property " Url="html/b060703e-d67e-48ad-69b7-716a2c4cd03a.htm" />
+        <HelpTOCNode Title="CurrentScore Property " Url="html/3e6d792d-d6e0-0f39-01ad-f249ca2ba496.htm" />
+        <HelpTOCNode Title="Username Property " Url="html/67fe2ca6-45b5-409a-d46b-90d9cf8d6cae.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="329ac783-c8a8-4908-8cf1-2d02416e1d2b" Title="IHighscoreProcessor Interface" Url="html/7c0466fb-bb98-d338-337d-e8d09b4e6d97.htm">
+      <HelpTOCNode Id="a80be91a-4836-4ef6-afae-b5c1a96c781b" Title="IHighscoreProcessor Methods" Url="html/f400a292-81c9-1e0d-3b25-e3e385d62b50.htm">
+        <HelpTOCNode Title="GetTopHighscores Method " Url="html/77a7f058-54d2-e110-51e3-d1bd84cbbc44.htm" />
+        <HelpTOCNode Title="SaveHighscore Method " Url="html/d7fb5c7d-1a4b-ac5c-cb70-4bb3cd07c0f4.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="fff618e4-bd99-4513-bb37-e4993e3e223c" Title="IMemorizeable(T) Interface" Url="html/f6f26d89-1dca-b409-bcda-10994cc6fd61.htm">
+      <HelpTOCNode Id="2b22e651-eaee-41a7-876b-41e4d9887a73" Title="IMemorizeable(T) Methods" Url="html/689f1f53-8833-1243-5193-c83b244f6dfc.htm">
+        <HelpTOCNode Title="RestoreMemento Method " Url="html/8c6266b3-536a-a92b-cb27-9f087ee3a4ca.htm" />
+        <HelpTOCNode Title="SaveMemento Method " Url="html/d0716828-0242-bb8a-cc03-317bfe4f518f.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="9395181d-f719-4e49-832f-52482dfbdd70" Title="BalloonsPop.Commands" Url="html/7c25de1e-78bb-c055-9a0a-9fe23afd1e6d.htm">
+    <HelpTOCNode Id="fe43c4f4-544a-4fc7-bae6-d1fa217c05fc" Title="ICommand Interface" Url="html/fc56ca32-25c7-d51a-7817-5e8e0a00cbab.htm">
+      <HelpTOCNode Id="df7c8d1a-8208-49e8-bab1-2f794477cf4e" Title="ICommand Methods" Url="html/81155dbd-8957-52cf-8f20-e3bf2adb05ec.htm">
+        <HelpTOCNode Title="Execute Method " Url="html/4f99e817-3007-770b-5dcd-588cba8da984.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="c1d20c8d-6627-43c9-bd4d-590f643df2d2" Title="BalloonsPop.Logs" Url="html/67f60c24-cfb2-4cb2-f300-a0bda667d9a1.htm">
+    <HelpTOCNode Id="0f1ff7f3-c58e-4ec6-81c3-da2280f29c51" Title="ILogger Interface" Url="html/0cc8aca9-2824-ca7d-586b-f6c467399cc2.htm">
+      <HelpTOCNode Id="d2a85304-e970-476d-8cdd-8be6aa6394b1" Title="ILogger Methods" Url="html/3f6a04a0-ae1a-59af-57f7-28d6b444982d.htm">
+        <HelpTOCNode Title="Log Method " Url="html/7356f81a-b728-9b1b-25b0-0ca1422d3f31.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="16ecae84-6d97-4532-99ae-4747b17e6087" Title="BalloonsPop.Traversals" Url="html/6bea577c-b1ef-6583-64a8-25d4585cffe0.htm">
+    <HelpTOCNode Id="e8420012-3fb1-4a18-a3db-6a72308f37f4" Title="ITraversalEffect Interface" Url="html/e2f0a7e4-c895-714b-80c7-23ab5d8088f3.htm">
+      <HelpTOCNode Id="f20bc945-980c-4037-a1fc-cf97ea928390" Title="ITraversalEffect Methods" Url="html/79c9791a-64d0-6865-0674-a92288e074a3.htm">
+        <HelpTOCNode Title="Pop Method " Url="html/77a24a55-7469-0573-4e6b-2bcf6ebe60a6.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="e8a4206d-c63c-4ce8-bb2c-9fcd01919be5" Title="BalloonsPop.UI" Url="html/75bcc4d2-3f74-2030-c46e-11f146d13d4b.htm">
+    <HelpTOCNode Id="96cbb19b-5a62-41d5-b612-5b5f8fdb32a1" Title="IUserInterface Interface" Url="html/e3340a71-d456-c577-49f5-fc0a7bb47948.htm">
+      <HelpTOCNode Id="40868be7-e5d9-4845-85ec-6306a2fa9ec1" Title="IUserInterface Properties" Url="html/56b9e277-c3b5-f6a2-125b-edeb302fa96b.htm">
+        <HelpTOCNode Title="Drawer Property " Url="html/3c4b106b-9f2a-5b50-6cce-860f646d2f9e.htm" />
+        <HelpTOCNode Title="Reader Property " Url="html/cf8637df-bd49-0243-d48f-b0ea64d68412.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="80894727-5d5a-4c27-b99d-69d7cee92fab" Title="BalloonsPop.UI.Drawer" Url="html/d6d6de75-9a93-3b95-a3fb-06280d587414.htm">
+    <HelpTOCNode Id="cff90996-21a9-4295-945a-e5d80b0ac03e" Title="IPicasso Interface" Url="html/17f1ef17-777b-c67f-5756-3595311a0d56.htm">
+      <HelpTOCNode Id="d5d97334-a033-410f-9aff-bcef96a6161c" Title="IPicasso Methods" Url="html/36c42402-cfce-c983-0f28-e4aefc1f4520.htm">
+        <HelpTOCNode Title="Clear Method " Url="html/778cd558-f4ca-f52b-2414-ee0fa84b3319.htm" />
+        <HelpTOCNode Title="Draw Method " Url="html/47b5522b-6688-5190-7951-f6fed5d2c037.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="1a1c3a65-aa2e-4432-b88f-0c85f6fdb4c5" Title="BalloonsPop.UI.InputHandler" Url="html/ff47ea8e-720c-3785-2d4a-26d5bc2d63ab.htm">
+    <HelpTOCNode Id="3b6f271b-e7ec-45aa-957c-e1b06cdbc954" Title="IInputHandler Interface" Url="html/9792d2b9-5660-7213-18aa-b0dca1b7ab31.htm">
+      <HelpTOCNode Id="f28693d2-e53e-4fb7-ab69-9db19a3fbc48" Title="IInputHandler Methods" Url="html/4904cf24-88b5-8559-dcb3-d6e4c5ca473b.htm">
+        <HelpTOCNode Title="ParseInput Method " Url="html/59eb182a-7b97-0e35-0c11-c058e800eeff.htm" />
+        <HelpTOCNode Title="Read Method " Url="html/7795fae5-c7ea-a7ba-ee32-7af2f3a73438.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="a8a002c2-2012-4007-9790-db892aeee5d0" Title="BalloonsPopConsoleApp" Url="html/c5dec319-dc3f-4486-7692-2010da4377e5.htm">
+    <HelpTOCNode Id="4fd58a53-0aca-403d-92b3-83f7ea01dd65" Title="Program Class" Url="html/664ac07f-26f4-e2ec-2fa9-53a359074630.htm">
+      <HelpTOCNode Title="Program Constructor " Url="html/ed949068-50c1-72ab-5d1e-062bfd2ec0a4.htm" />
+      <HelpTOCNode Title="Program Methods" Url="html/e999d766-d93c-a923-fde5-a5d1d3799a38.htm" />
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="f38f67f2-fbae-46f4-a751-e126b9203343" Title="BalloonsPopConsoleApp.Commands" Url="html/f0d6e58a-9df3-9323-a80f-96e8ff99afef.htm">
+    <HelpTOCNode Id="907f6032-1d89-442f-aba7-6d9a3a274ea1" Title="ExitCommand Class" Url="html/4aa3f441-583f-8552-c1ec-f435a898c679.htm">
+      <HelpTOCNode Title="ExitCommand Constructor " Url="html/677b95be-6592-91bc-59e1-d67fb84b83c3.htm" />
+      <HelpTOCNode Id="19c6c783-b726-42e7-a259-3278580324d9" Title="ExitCommand Methods" Url="html/ec4a1172-78ff-6fc5-487e-ea93eef57627.htm">
+        <HelpTOCNode Title="Execute Method " Url="html/517acbf3-072d-a890-451a-b11ea7c5c7ad.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="e9c9c7f7-a3ca-46c4-a602-a5a9d125b3c3" Title="InvalidInputCommand Class" Url="html/fce78d5b-78d7-ae71-bd7d-25692615a5b0.htm">
+      <HelpTOCNode Title="InvalidInputCommand Constructor " Url="html/a7dedfa7-54f0-2202-126d-0a3a8244ea03.htm" />
+      <HelpTOCNode Id="16479e37-4c9d-482f-9ae5-2c41fd5646e5" Title="InvalidInputCommand Fields" Url="html/154750d1-7e05-42cb-b8ae-acdbf96408af.htm">
+        <HelpTOCNode Title="InvalidInputMessageKey Field" Url="html/ba7f4b0d-d9a5-fa89-45bf-01c4fdf3da3c.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="3a606424-d2d9-45cc-9e84-544769532844" Title="InvalidInputCommand Methods" Url="html/984ed922-6c75-b50e-05f1-16fe47e32549.htm">
+        <HelpTOCNode Title="Execute Method " Url="html/7a77eb28-3d69-eb4b-2ffc-768a11afde8b.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="cdb66992-329a-4217-b34b-4e65f9e05529" Title="PopBalloonCommand Class" Url="html/0b76811e-a137-4bcd-1c12-2251043d7bf3.htm">
+      <HelpTOCNode Title="PopBalloonCommand Constructor " Url="html/b02173b6-22e1-d24f-cbe6-0dea674d2d27.htm" />
+      <HelpTOCNode Id="0f3da263-cd23-4df1-af6e-c260418c812b" Title="PopBalloonCommand Methods" Url="html/d3030973-32f4-49a3-661d-75956beee877.htm">
+        <HelpTOCNode Title="Execute Method " Url="html/07915bb2-e2de-cc0d-7cf5-3d0cab68c98f.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d647df90-decd-44b3-bf6d-51731be2cf25" Title="RestartCommand Class" Url="html/78a018e2-3e2d-aeb8-c045-2db66b80b4bf.htm">
+      <HelpTOCNode Title="RestartCommand Constructor " Url="html/d85a7cd9-82ad-9ab2-c056-9c8e263715ee.htm" />
+      <HelpTOCNode Id="9d5f0d40-b9ab-48f2-b6d0-cf0cddaf420a" Title="RestartCommand Fields" Url="html/b1dc98c0-d0ad-3a10-a061-47851cc30f01.htm">
+        <HelpTOCNode Title="WelcomeMessageKey Field" Url="html/83c8e923-095f-5ed8-33d9-a5171c293025.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="488b41dc-b34c-40fa-8f2f-e7b267dee5f2" Title="RestartCommand Methods" Url="html/cdbb1e2a-e350-a9ac-4001-01ad801c45bc.htm">
+        <HelpTOCNode Title="Execute Method " Url="html/952f5f61-ab88-5ee8-2839-0eb54cbdf45e.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="dd8f9d33-b6af-481a-8a32-562fa6040890" Title="ShowTopScoreCommand Class" Url="html/ba3360df-dcf0-3300-db74-9ed8999e568d.htm">
+      <HelpTOCNode Title="ShowTopScoreCommand Constructor " Url="html/42ad07a6-0270-201d-293b-fac49bb58051.htm" />
+      <HelpTOCNode Id="c609a111-3547-444b-bd01-9172a8b094c7" Title="ShowTopScoreCommand Methods" Url="html/1e8d63c0-775b-17b7-836a-a6e8a3744268.htm">
+        <HelpTOCNode Title="Execute Method " Url="html/b38d3835-cfbf-342d-802a-6546ff98e1b1.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="2367cc8f-870f-4158-a75a-7cd490ffca6f" Title="UndoCommand Class" Url="html/97954ccf-6c2d-7902-c5aa-6855bba45bc4.htm">
+      <HelpTOCNode Title="UndoCommand Constructor " Url="html/288f715e-ed75-31dc-e7a0-03f91669cfb4.htm" />
+      <HelpTOCNode Id="9753c41d-d4e2-4221-930c-eadc8a8cac00" Title="UndoCommand Methods" Url="html/94886953-1b38-a135-c6a5-9ef1668ea73e.htm">
+        <HelpTOCNode Title="Execute Method " Url="html/80b92010-3221-a4e8-8933-bda485842e9c.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="ae934a61-5f5c-46b5-ade6-aeefab444edd" Title="BalloonsPopConsoleApp.Effects" Url="html/038889b6-eb5d-17d4-31f3-69a60af68f55.htm">
+    <HelpTOCNode Id="8dd3276f-0f5b-4600-8750-f4dccc100ac1" Title="AreaPopEffect Class" Url="html/5abc34d1-1b17-71fa-9c1f-2f9da6f27c95.htm">
+      <HelpTOCNode Title="AreaPopEffect Constructor " Url="html/95b8765c-5122-c045-acb7-e9e783f043b6.htm" />
+      <HelpTOCNode Id="82b1fb0b-4146-44c0-8fa8-5a9e93b44725" Title="AreaPopEffect Methods" Url="html/f3e4d921-62de-f04e-5308-3147b5c36529.htm">
+        <HelpTOCNode Title="PopBalloons Method " Url="html/0c2123cd-409b-37f9-280f-6a9852e1a7d4.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="fb747e01-65f7-4537-a1bf-c65561d00f2c" Title="BfsEffect Class" Url="html/04cc4f45-1cd7-2ae8-4526-a2859ed49591.htm">
+      <HelpTOCNode Title="BfsEffect Constructor " Url="html/2315e9db-e504-3bea-decd-c98fc8f1d5c9.htm" />
+      <HelpTOCNode Id="db7a81c9-42bd-4f77-ad9c-ee3a9969bb73" Title="BfsEffect Methods" Url="html/ae36f48d-2744-1df4-8955-8c82bd3385a9.htm">
+        <HelpTOCNode Title="PopBalloons Method " Url="html/3496ff58-e616-ebe1-b4da-6802350d9e61.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="cd7a434e-3d0a-4d5d-b6d9-3e2820e2004b" Title="TraversalEffect Class" Url="html/1eb8cfb6-b383-a17d-5322-c7a896954557.htm">
+      <HelpTOCNode Title="TraversalEffect Constructor " Url="html/be37fcd7-be31-433c-bea9-1ca0ee7f3299.htm" />
+      <HelpTOCNode Id="98d66d1b-502a-434b-b9c9-92465306e84e" Title="TraversalEffect Methods" Url="html/34dbbfa8-ab77-8b36-2cce-05dd132669ea.htm">
+        <HelpTOCNode Title="Pop Method " Url="html/83ff8a1e-73ad-92fb-3dc0-565f89147cf1.htm" />
+        <HelpTOCNode Title="PopBalloons Method " Url="html/09f4962b-c90b-3ec1-3bcc-44d1d25ad929.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="2ed702e4-d66d-4c1a-8a32-cfbf413b519a" Title="BalloonsPopConsoleApp.Engine" Url="html/1bcae4a2-704f-9c49-2641-e47f9a78875b.htm">
+    <HelpTOCNode Id="37411f97-d851-468c-abe7-dd57ed90c917" Title="GameEngine Class" Url="html/41b3545e-37cc-85f4-9975-412e48f38dd0.htm">
+      <HelpTOCNode Title="GameEngine Constructor " Url="html/f4c6c590-7ac1-09ec-fab5-80f73622502e.htm" />
+      <HelpTOCNode Id="73cbb6a3-9b58-4598-adaa-ee10968bf4b3" Title="GameEngine Methods" Url="html/04450d24-17ad-22a2-a1d2-e839d13717eb.htm">
+        <HelpTOCNode Title="Run Method " Url="html/27406a7c-bf68-c033-05fd-559cf8c0c422.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="6487da71-2dbe-47e4-a3f7-7dcffd494a9e" Title="IGameEngine Interface" Url="html/2ececb37-2ab0-d8bf-8224-9517d9b54f09.htm">
+      <HelpTOCNode Id="e2c4ac11-edd8-41d5-9bea-5408f1616dd9" Title="IGameEngine Methods" Url="html/67544218-4c38-2ff7-454f-798a94b63ced.htm">
+        <HelpTOCNode Title="Run Method " Url="html/d8c515cc-3ac1-12d6-c58a-b668b35091b5.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="91c662a6-8b90-4f23-8c1a-d1e3258c3ed4" Title="BalloonsPopConsoleApp.Factories" Url="html/53c4d5c8-a976-ca90-7611-4d4839151921.htm">
+    <HelpTOCNode Id="09dcdaee-09cf-48fe-bf20-62800979b558" Title="BalloonFactory Class" Url="html/ea128521-f1ec-d2d0-959d-9bad60b8bf7c.htm">
+      <HelpTOCNode Title="BalloonFactory Constructor " Url="html/2a095f3a-7626-2645-d908-05f8f80fecc2.htm" />
+      <HelpTOCNode Id="3d62fbb2-5871-4d00-9043-2bc4d8828473" Title="BalloonFactory Methods" Url="html/55b639c1-4f2b-e1ab-acc3-7bbff59641fe.htm">
+        <HelpTOCNode Title="GetBalloon Method " Url="html/98333938-f1b9-5ce2-1693-a6e1688acd55.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="669ebed2-c281-4a4e-b361-4f056d2e80e4" Title="CommandFactory Class" Url="html/d5ec8c2c-ace6-4bcd-38ab-ef742c4d7c3e.htm">
+      <HelpTOCNode Title="CommandFactory Constructor " Url="html/cec91d24-8ec9-9146-fa16-d92ae0775b2e.htm" />
+      <HelpTOCNode Id="b32f1479-a328-47bf-895b-5e5a969f312c" Title="CommandFactory Methods" Url="html/55a8df87-ac65-b4c2-3998-408bfa6aff8b.htm">
+        <HelpTOCNode Title="GetCommand Method " Url="html/af4028a7-4f83-a9f1-2d0b-c0dd140d471a.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="a578cbc9-90ae-4ef9-864a-16d964ce57b3" Title="EffectFactory Class" Url="html/cdc670e8-de12-e9d7-7ba9-f3bdec3e04d7.htm">
+      <HelpTOCNode Title="EffectFactory Constructor " Url="html/f7e4e848-7e80-3222-4599-d18a80478d0c.htm" />
+      <HelpTOCNode Id="7b835e25-6a1c-4b16-abe8-f5398f22593c" Title="EffectFactory Methods" Url="html/95a538a6-5bfc-761a-9817-723e6067bb9f.htm">
+        <HelpTOCNode Title="GetAreaPopEffect Method " Url="html/5372c38f-023d-7e7f-0ce7-7e2f784510f0.htm" />
+        <HelpTOCNode Title="GetDefaultEffect Method " Url="html/655a02a3-7809-290b-d136-abff085fadfe.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="4582637d-f7ea-4c48-aa63-8c1d5cea0850" Title="BalloonsPopConsoleApp.Logs" Url="html/616ce84e-4e47-e5cc-a03b-467bfd5d5465.htm">
+    <HelpTOCNode Id="8e8bdcbb-0961-4748-b32f-cde770b0d1c9" Title="Logger Class" Url="html/a4b09fd6-1ac4-728e-699d-a2f0b5f96e4a.htm">
+      <HelpTOCNode Title="Logger Constructor " Url="html/88b2fee5-443b-92d4-df54-5cb543de88f1.htm" />
+      <HelpTOCNode Id="fc232eca-1b91-4934-9e21-367aa767f9a2" Title="Logger Methods" Url="html/c80fd4ea-134e-22d1-7dbb-62c391bd49fe.htm">
+        <HelpTOCNode Title="Log Method " Url="html/708297bc-574d-17d5-94d0-03d90d6af088.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="56411877-de20-4421-8837-c73f4afe7f82" Title="BalloonsPopConsoleApp.Memory" Url="html/9825c1c3-22c1-b173-a56a-86abcb3affa4.htm">
+    <HelpTOCNode Id="71d4ed7f-8311-4d6f-b1d4-700b2dda7718" Title="BoardMemory Class" Url="html/fdb2142c-0acf-0814-4b47-6dceca9bb52f.htm">
+      <HelpTOCNode Title="BoardMemory Constructor " Url="html/6dee41b6-4852-bdf3-ea87-6abfdf467858.htm" />
+      <HelpTOCNode Title="BoardMemory Methods" Url="html/e011a4b7-ee4f-e351-fd07-24479b1f972e.htm" />
+      <HelpTOCNode Id="1d059604-302f-4d27-af2c-77c71b7e2903" Title="BoardMemory Properties" Url="html/7b93e0ea-d370-f3cd-ea20-264319ce89f2.htm">
+        <HelpTOCNode Title="Memento Property " Url="html/5582a1ca-c312-7e53-234b-fe9a270967a4.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="ab90c383-a8e2-4b6b-b288-000d1a396a46" Title="Memento Class" Url="html/19163854-0935-9569-3919-5ade82b7e077.htm">
+      <HelpTOCNode Title="Memento Constructor " Url="html/4cddcffa-4b66-6543-a42c-47cf52cb4e7a.htm" />
+      <HelpTOCNode Title="Memento Methods" Url="html/41eec93b-bade-7739-449f-9bd3dda4eb57.htm" />
+      <HelpTOCNode Id="0bfccfb1-7789-4dfd-ad35-f29bacdd3cdf" Title="Memento Properties" Url="html/855949fa-d9f6-e6ed-859e-b18a3e56adf6.htm">
+        <HelpTOCNode Title="Board Property " Url="html/0a7d1731-660d-e304-d1c7-de0b28ae105f.htm" />
+        <HelpTOCNode Title="Cols Property " Url="html/050a6c38-35aa-e2e5-94ab-0dbde71da65e.htm" />
+        <HelpTOCNode Title="Rows Property " Url="html/0c4f7a95-0b47-e913-7395-4034c0573a55.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="a7995f0b-97ef-4db2-996b-5c69522c368e" Title="BalloonsPopConsoleApp.Miscellaneous" Url="html/7c705d4c-e161-3337-b69e-f8a3e710b7e1.htm">
+    <HelpTOCNode Id="d66b3002-10d7-4acd-bc4e-f58f0911cc98" Title="CommandContext Class" Url="html/6c211547-b180-2b02-2c56-96e9094d6512.htm">
+      <HelpTOCNode Title="CommandContext Constructor " Url="html/a9d86121-1f7b-7b73-b2e2-2b363f132c17.htm" />
+      <HelpTOCNode Title="CommandContext Methods" Url="html/354e1442-59ab-745c-85c2-2d897eb44687.htm" />
+      <HelpTOCNode Id="e2c6819d-2971-4640-90fd-bd1c89ff6b8d" Title="CommandContext Properties" Url="html/11e00a6b-aec6-9620-4d93-02a177668c39.htm">
+        <HelpTOCNode Title="ActiveCol Property " Url="html/2238f9bd-157c-8a10-a9e9-cfa352211ef3.htm" />
+        <HelpTOCNode Title="ActiveRow Property " Url="html/eb22a21f-1ba4-6c3d-a8ff-0cefb616e171.htm" />
+        <HelpTOCNode Title="Board Property " Url="html/893ee730-0ca4-7117-9f35-8a1332fc5aa0.htm" />
+        <HelpTOCNode Title="CurrentMessage Property " Url="html/257f9e02-5120-6a80-3107-fc6c9a47c502.htm" />
+        <HelpTOCNode Title="HighscoreProcessor Property " Url="html/612a7848-0af8-4776-f3b2-aff5689c8b8d.htm" />
+        <HelpTOCNode Title="IsOver Property " Url="html/2e440700-ad93-0b4c-419e-333d01f804e1.htm" />
+        <HelpTOCNode Title="Logger Property " Url="html/9dd9dde3-daf2-3181-09a8-531f8f2e2962.htm" />
+        <HelpTOCNode Title="Memory Property " Url="html/ac78abbb-a2b5-4a43-5dc3-91660dd6fbb9.htm" />
+        <HelpTOCNode Title="Messages Property " Url="html/33457899-b855-fedc-5387-83c62ff381d6.htm" />
+        <HelpTOCNode Title="Score Property " Url="html/e8c2e0b3-ae49-5bec-fac6-ccaefdca8c6a.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="8c44d42c-f6fb-4231-bba2-8ae650f92672" Title="GameEngineDependencies Class" Url="html/6477fc64-ce15-fb93-7549-09d1667f3120.htm">
+      <HelpTOCNode Title="GameEngineDependencies Constructor " Url="html/2bd56196-2134-ae1a-906b-5b03835115ea.htm" />
+      <HelpTOCNode Title="GameEngineDependencies Methods" Url="html/8624c005-dc93-8250-29f0-c88d9fddc6ed.htm" />
+      <HelpTOCNode Id="c517d808-1a58-4d06-a234-858e70e2a9e0" Title="GameEngineDependencies Properties" Url="html/060efdaa-e516-9adb-728a-de195f1c08ee.htm">
+        <HelpTOCNode Title="Board Property " Url="html/86124a15-0fef-caef-24fb-d809d11913ff.htm" />
+        <HelpTOCNode Title="BoardMemory Property " Url="html/295a550a-07dd-58a4-e8a7-0447e09d80b0.htm" />
+        <HelpTOCNode Title="CommandFactory Property " Url="html/188feab7-0108-3738-1f16-a325c029fb7f.htm" />
+        <HelpTOCNode Title="Logger Property " Url="html/8e50736c-33c7-1f7d-26dd-7192205c4cee.htm" />
+        <HelpTOCNode Title="UserInterface Property " Url="html/bd59402c-681e-518d-ee63-b645c8accdb7.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="a3aee29f-6ec7-412b-b5e2-c7007004e8ef" Title="Highscore Class" Url="html/a5440f0a-2886-13b5-fc06-503cb0dc71c5.htm">
+      <HelpTOCNode Id="911f46fc-3957-4eb7-93e2-4d884f630bad" Title="Highscore Methods" Url="html/58ad3667-9ff1-0f9b-3607-3d708f738944.htm">
+        <HelpTOCNode Title="GetInstance Method " Url="html/e2d8c169-ff67-54b2-a4da-b0df20c5d14f.htm" />
+        <HelpTOCNode Title="SetMoves Method " Url="html/b2478aee-150d-88cd-3c79-4f1c9be9331e.htm" />
+        <HelpTOCNode Title="SetScore Method " Url="html/622464e3-3dfa-9061-8a24-247cdb8828d5.htm" />
+        <HelpTOCNode Title="SetUsername Method " Url="html/d030a880-6d0a-b84c-0200-b5e53e033d7d.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="7c375087-8bad-4db0-be3c-71fb68463b20" Title="Highscore Properties" Url="html/b5a4398c-6451-d5cd-a44e-ffe8a2e71134.htm">
+        <HelpTOCNode Title="CurrentMoves Property " Url="html/47c0c57e-36c0-d765-7815-5a7a7128b2b5.htm" />
+        <HelpTOCNode Title="CurrentScore Property " Url="html/5ce716bd-8bdf-c5cc-207c-2be38e318d82.htm" />
+        <HelpTOCNode Title="Username Property " Url="html/f762c959-9583-42cc-afae-1046487aff84.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="42b0449c-1af0-4974-8bee-2b81a3daade4" Title="HighscoreProcessor Class" Url="html/325e70e5-fba2-ce98-884e-1a9fcd1246ca.htm">
+      <HelpTOCNode Title="HighscoreProcessor Constructor " Url="html/4eee1d55-0f47-959d-a834-eca3018ae3df.htm" />
+      <HelpTOCNode Id="5c7a26c9-e1de-427c-9306-63e556150a1f" Title="HighscoreProcessor Methods" Url="html/b1dd5237-bc7e-8f92-aeff-9c3f05406dbe.htm">
+        <HelpTOCNode Title="GetTopHighscores Method " Url="html/1c8e788c-3878-5cd1-89ba-1a58d6f8d796.htm" />
+        <HelpTOCNode Title="SaveHighscore Method " Url="html/07bb7520-cfaa-c855-5ccc-445ecb37423b.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="922ee42c-7b8f-43db-aa71-a0e8cf5c46e2" Title="IRandomGenerator Interface" Url="html/2837aee6-e4a1-e45d-7ba1-226ac8db8035.htm">
+      <HelpTOCNode Id="b32b7a59-b546-4f2e-b7a8-6387b0754669" Title="IRandomGenerator Methods" Url="html/69d87280-0404-2b5b-0075-b93d8a94a40b.htm">
+        <HelpTOCNode Title="GetInt Method " Url="html/602b241e-a891-457a-e2f6-8fbf3594af46.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="04e150fa-d25b-4e13-b57c-4809c7ef9549" Title="RandomGenerator Class" Url="html/dc77b870-75da-bec7-7fc0-b9bb50c8d47f.htm">
+      <HelpTOCNode Title="RandomGenerator Constructor " Url="html/1da9bfae-82da-ffcc-a130-c7063b796034.htm" />
+      <HelpTOCNode Id="ab21c1ff-6fec-4764-83b6-104720fc083b" Title="RandomGenerator Methods" Url="html/9d4d571f-0400-6d69-5211-48ad2b7355bc.htm">
+        <HelpTOCNode Title="GetInt Method " Url="html/b30ee5f8-2f75-140f-339f-01b1fe346939.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="2e46ce44-c107-4c4b-8795-50046edc52c2" Title="BalloonsPopConsoleApp.Models" Url="html/7380fb5b-04d4-69c0-ccdc-09ecbbcfbb48.htm">
+    <HelpTOCNode Id="f56c268d-07c4-4fee-83fc-ec719fed04fd" Title="Balloon Class" Url="html/99961206-ff81-cb01-62b5-67cc62f5f3cc.htm">
+      <HelpTOCNode Title="Balloon Constructor " Url="html/e7bb5fb8-adb2-fd88-4169-de74b3501a06.htm" />
+      <HelpTOCNode Title="Balloon Methods" Url="html/774afbc7-b6b2-c536-f317-94e6959ae6eb.htm" />
+      <HelpTOCNode Id="51a1417d-4b60-44d1-bb2d-0beda19fc726" Title="Balloon Properties" Url="html/58111e56-a503-4e56-f347-101463ff5e64.htm">
+        <HelpTOCNode Title="Default Property " Url="html/6c6cba6a-7c6f-cd60-4860-92517fcdd095.htm" />
+        <HelpTOCNode Title="TraversalEffect Property " Url="html/00805716-04d0-fce4-9285-493fa850d232.htm" />
+        <HelpTOCNode Title="Value Property " Url="html/5497bf55-dd44-07be-ece0-73cf2c889b20.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="e6e2e45e-9de4-43b0-b6a6-5351e7bc701d" Title="Board Class" Url="html/aba3f8b7-9000-1210-85dd-405e0701c04b.htm">
+      <HelpTOCNode Title="Board Constructor " Url="html/7c5fcbd4-02df-dfb1-7fe2-e6c327e6374e.htm" />
+      <HelpTOCNode Id="48e6625f-f549-4678-9d78-92234e5187e6" Title="Board Methods" Url="html/a15e8f2d-0b4a-1305-ff06-cfef2eaa9505.htm">
+        <HelpTOCNode Title="IsValidPop Method " Url="html/fbcf4fee-b133-eeea-c81b-8e8c0a59a139.htm" />
+        <HelpTOCNode Title="Reset Method " Url="html/0e930024-f59b-de69-2641-eca18f870fd8.htm" />
+        <HelpTOCNode Title="RestoreMemento Method " Url="html/ee5a5064-0b8a-7dd3-6ac3-2939ac5bd1e1.htm" />
+        <HelpTOCNode Title="SaveMemento Method " Url="html/c083a179-4458-25ac-ae01-8fc9f4dcaa8e.htm" />
+        <HelpTOCNode Title="ToString Method " Url="html/75452937-27cc-8438-2878-864394d2c5a6.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="7c0fc168-2443-4a57-8e86-9e76237e731b" Title="Board Properties" Url="html/61969bc9-094e-a58d-261a-b7a53b7ccd3b.htm">
+        <HelpTOCNode Title="Cols Property " Url="html/8a2c46ce-1853-d9f3-637c-09ddb76ca23b.htm" />
+        <HelpTOCNode Title="Item Property " Url="html/d9834e36-f9b2-d304-fd52-afb7455f3de6.htm" />
+        <HelpTOCNode Title="Rows Property " Url="html/7a7145f2-6f4e-8bed-4f79-fbe057b20400.htm" />
+        <HelpTOCNode Title="UnpoppedBalloonsCount Property " Url="html/b58f1d5f-e2af-9c82-67fe-5c269c694464.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="f368e94d-c418-4724-8d6e-c1b66c5bd9c7" Title="BalloonsPopConsoleApp.UI.ConsoleUI" Url="html/20a01d8c-8f9a-75cd-5532-49d216f0a062.htm">
+    <HelpTOCNode Id="e7076ba9-633a-43ec-a0c3-23d8cf016db5" Title="ConsoleDrawer Class" Url="html/5a720563-7652-ab33-945f-1f20abcc461f.htm">
+      <HelpTOCNode Title="ConsoleDrawer Constructor " Url="html/d65dbe71-de64-f189-1766-926ea40d39f9.htm" />
+      <HelpTOCNode Id="8beb6964-99a3-4c37-9548-be1285fbf96d" Title="ConsoleDrawer Methods" Url="html/13bbfa62-c276-ba03-ed5a-7ba396e4b1b0.htm">
+        <HelpTOCNode Title="Clear Method " Url="html/f9b01d3c-1229-eb4f-03bc-bd3a6d1c73de.htm" />
+        <HelpTOCNode Title="Draw Method " Url="html/e22592ec-e77b-f844-a0bd-4e3a574ce088.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="ba4ed777-b150-434d-82ef-6ea3f4884e98" Title="ConsoleInputHandler Class" Url="html/7a06cec1-3c61-9f31-966c-e6a95904d30e.htm">
+      <HelpTOCNode Title="ConsoleInputHandler Constructor " Url="html/34b74805-f60c-765d-5630-e87948bf44d9.htm" />
+      <HelpTOCNode Id="1773a383-2170-4587-b4e3-7bb9748cd0dd" Title="ConsoleInputHandler Fields" Url="html/c0e2cff5-2472-358d-2b87-4f6cf6df37f3.htm">
+        <HelpTOCNode Title="ValidCommands Field" Url="html/3f943248-5ccf-699e-8305-6ffdbd089506.htm" />
+      </HelpTOCNode>
+      <HelpTOCNode Id="ab299788-cb08-47ea-b9a4-ce29f60168d0" Title="ConsoleInputHandler Methods" Url="html/fe74cd76-8045-cb4f-f63b-46d24b8fd0b4.htm">
+        <HelpTOCNode Title="ParseInput Method " Url="html/d3e6eb34-4e70-8cf6-d3f4-228531c27387.htm" />
+        <HelpTOCNode Title="Read Method " Url="html/6252fd4f-cdc2-c3ce-4ae6-1e3b1bc668a2.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="d5c07d94-78c6-486d-acc7-844e221c02cd" Title="ConsoleUserInterface Class" Url="html/7ab42c72-5867-e205-906a-ffa4176d49af.htm">
+      <HelpTOCNode Title="ConsoleUserInterface Constructor " Url="html/46932bf7-aaf3-f926-0804-c0e5593eafdc.htm" />
+      <HelpTOCNode Title="ConsoleUserInterface Methods" Url="html/66257f99-ef0c-51c4-f779-8e47e07c0c59.htm" />
+      <HelpTOCNode Id="4e77d4f9-ef5d-4e5f-ac31-0afdaf2a6435" Title="ConsoleUserInterface Properties" Url="html/753d6f77-ce28-a730-0f52-98d90b7bb429.htm">
+        <HelpTOCNode Title="Drawer Property " Url="html/8de27069-9575-6406-2a2e-d08592974098.htm" />
+        <HelpTOCNode Title="Reader Property " Url="html/7ea28f75-6874-2fd1-78bc-3b6cb8c2e0a0.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>
