@@ -21,3 +21,10 @@
 
 ### Behavioural Patterns
 * Command
+  - [Commands](BalloonsPopConsoleApp/Commands)
+* Strategy
+  - [Board](BalloonsPopConsoleApp/Models/Board.cs) (**Fill()**)
+* Template Method
+  - [Traversal Effect](BalloonsPopConsoleApp/Effects/TraversalEffect.cs) 
+* Memento
+  - [Memory](BalloonsPopConsoleApp/Memory) & [Board](BalloonsPopConsoleApp/Models/Board.cs)
