@@ -8,14 +8,24 @@ namespace BalloonsPopGraphics
 {
     public static class RandomGenerator
     {
-        static Random randomNumber = new Random();
+        static Random random = new Random();
 
         public static int GetRandomInt()
         {
-            string legalChars = "11122233344411122253334454111222333444";
-            string builder = null;
-            builder = legalChars[randomNumber.Next(0, legalChars.Length)].ToString();
-            return int.Parse(builder);
+            var probabilities = new[] { 35, 35, 35, 35, 10 };
+            var probabilitiesSum = probabilities.Sum();
+            int tempRand = random.Next(0, probabilitiesSum);
+            var currentSum = 0;
+            for (int i = 0; i < probabilities.Length; i++)
+            {
+                currentSum += probabilities[i];
+                if (tempRand < currentSum)
+                {
+                    return (i + 1);
+                }
+            }
+
+            throw new InvalidOperationException();
         }
     }
 }
